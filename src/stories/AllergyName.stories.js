@@ -12,9 +12,5 @@ export function Basic() {
   );
 }
 export function Milk() {
-  return (
-    <AllergyName>
-      <span>milk</span>
-    </AllergyName>
-  );
+  return <AllergyName name="milk" />;
 }
