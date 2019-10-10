@@ -1,7 +1,7 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
 import { Button } from "@storybook/react/demo";
-import MainLogo from "../icons/MainLogo";
+import MainLogo from "../icons/mainLogo";
 
 export default {
   title: "Button"
