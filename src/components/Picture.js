@@ -3,7 +3,7 @@ import styled from "styled-components";
 const PictureBox = styled.img`
   object-fit: cover;
   object-position: top center;
-  width: 146px;
+
   height: 111px;
 `;
 
