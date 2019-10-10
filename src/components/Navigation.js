@@ -4,11 +4,6 @@ import styled from "styled-components";
 import InfoIcon from "../icons/infoIcon";
 import FindIcon from "../icons/findIcon";
 import MainLogoSmall from "../icons/mainLogoSmall";
-// import {
-//   HomeNavigationItem,
-//   HelpNavigationItem,
-//   InfoNavigationItem
-// } from "../stories/NavigationItem.stories";
 
 const NavigationBar = styled.nav`
   display: flex;
