@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-const NavigationItemBtn = styled.button`
+const NavigationItemBtn = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -13,7 +13,6 @@ const NavigationItemBtn = styled.button`
   background-color: #e3ebee;
   border-style: "solid";
   border-width: 3px 1.5px 3px 1.5px;
-  border-color: ${props => (props.active ? "transparent" : "#bfccdd")};
   font-size: 16px;
   font-weight: bold;
   font-family: sans-serif;
@@ -21,6 +20,16 @@ const NavigationItemBtn = styled.button`
   color: #2d5f73;
 `;
 
-export default function NavigationItem({ active, children }) {
-  return <NavigationItemBtn active={active}>{children}</NavigationItemBtn>;
+export default function NavigationItem({ children }) {
+  const [navigationSelect, setNavigationSelect] = useState(false);
+  return (
+    <NavigationItemBtn
+      onClick={() => setNavigationSelect(true)}
+      style={{
+        border: navigationSelect ? " transparent" : "3px solid #bfccdd"
+      }}
+    >
+      {children}
+    </NavigationItemBtn>
+  );
 }

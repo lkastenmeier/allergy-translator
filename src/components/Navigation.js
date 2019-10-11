@@ -16,18 +16,18 @@ const NavigationBar = styled.nav`
   background-color: transparent;
 `;
 
-export default function Navigation({ selected }) {
+export default function Navigation() {
   return (
     <NavigationBar>
-      <NavigationItem active={"0" === selected}>
+      <NavigationItem>
         <MainLogoSmall />
         <span>Home</span>
       </NavigationItem>
-      <NavigationItem active={"1" === selected}>
+      <NavigationItem>
         <FindIcon />
         <span>Find Help</span>
       </NavigationItem>
-      <NavigationItem active={"2" === selected}>
+      <NavigationItem>
         <InfoIcon />
         <span>Info</span>
       </NavigationItem>
