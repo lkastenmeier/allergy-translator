@@ -6,26 +6,13 @@ export default {
   title: "Button"
 };
 export function Basic() {
-  return <Button active={true} />;
+  return <Button name="test" />;
 }
 
 export function ExampleDownload() {
   return (
-    <Button active={true} name="Download">
+    <Button name="Download">
       <DownloadIcon />
     </Button>
   );
-}
-export function ExampleDownloadInactive() {
-  return (
-    <Button active={false} name="Download">
-      <DownloadIcon />
-    </Button>
-  );
-}
-export function ExampleChange(tet) {
-  return <Button active={true} name="Suggest Change"></Button>;
-}
-export function ExampleChangeInactive(tet) {
-  return <Button active={false} name="Suggest Change"></Button>;
 }
