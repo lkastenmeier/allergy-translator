@@ -38,12 +38,6 @@ const style1 = {
 const style2 = {
   color: "#2D5F73"
 };
-const style3 = {
-  color: "#2D5F73"
-};
-const style4 = {
-  color: "#F25260"
-};
 
 export default function StartScreen() {
   return (
@@ -57,10 +51,10 @@ export default function StartScreen() {
           safe
         </Span>
         <br />
-        <Span style={style3} delay="1.5s">
+        <Span style={style2} delay="1.5s">
           travel
         </Span>
-        <Span style={style4} delay="2s">
+        <Span style={style1} delay="2s">
           much
         </Span>
       </StartAnimation>
