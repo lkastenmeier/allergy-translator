@@ -6,9 +6,8 @@ const AllergyNameField = styled.div`
   justify-content: center;
   background-color: #e3ebee;
   color: #2d5f73;
-  width: 146px;
+  width: 140px;
   height: 26px;
-  font-family: sans-serif;
   font-weight: bold;
 `;
 

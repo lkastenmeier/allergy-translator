@@ -15,7 +15,6 @@ const NavigationItemBtn = styled.div`
   border-width: 3px 1.5px 3px 1.5px;
   font-size: 16px;
   font-weight: bold;
-  font-family: sans-serif;
   text-transform: uppercase;
   color: #2d5f73;
 `;

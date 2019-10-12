@@ -19,7 +19,6 @@ const Image = styled.img`
 `;
 const Paragraph = styled.p`
   font-size: 28px;
-  font-family: sans-serif;
   color: #f25260;
   font-weight: bold;
   text-align: center;

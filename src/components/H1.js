@@ -5,7 +5,6 @@ const Headline = styled.h1`
   font-size: 20px;
   color: #2d5f73;
   padding: 4px 15px;
-  font-family: sans-serif;
   text-transform: uppercase;
 `;
 
