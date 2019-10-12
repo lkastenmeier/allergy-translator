@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-// export default function Select({ children }) {
-//   return <SelectInput>{children}</SelectInput>;
-// }
 const SelectInput = styled.select`
   display: flex;
   justify-content: center;
