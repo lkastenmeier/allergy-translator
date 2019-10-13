@@ -7,6 +7,7 @@ import Card from "./pages/Card";
 import Help from "./pages/Help";
 import Change from "./pages/Change";
 import Info from "./pages/Info";
+import Start from "./pages/Start";
 
 const Container = styled.div`
   width: 100vw;
@@ -20,11 +21,12 @@ function App() {
     <Container>
       <GlobalStyles />
       <Router>
-        <Route path="/" exact component={Home} />
-        <Route path="/card" exact component={Card} />
-        <Route path="/help" exact component={Help} />
-        <Route path="/change" exact component={Change} />
-        <Route path="/info" exact component={Info} />
+        <Route path="/" exact component={Start} />
+        <Route path="/home" component={Home} />
+        <Route path="/card" component={Card} />
+        <Route path="/help" component={Help} />
+        <Route path="/change" component={Change} />
+        <Route path="/info" component={Info} />
       </Router>
     </Container>
   );
