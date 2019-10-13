@@ -6,8 +6,9 @@ const Headline = styled.h1`
   color: #2d5f73;
   padding: 4px 15px;
   text-transform: uppercase;
+  text-align: center;
 `;
 
-export function H1(props) {
+export default function H1(props) {
   return <Headline {...props}>What is your dietary restriction?</Headline>;
 }
