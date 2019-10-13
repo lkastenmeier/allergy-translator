@@ -9,6 +9,6 @@ const Headline = styled.h1`
   text-align: center;
 `;
 
-export default function H1() {
-  return <Headline>What is your dietary restriction?</Headline>;
+export default function H1({ name }) {
+  return <Headline name={name}>{name}</Headline>;
 }
