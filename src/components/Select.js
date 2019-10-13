@@ -13,6 +13,7 @@ const SelectInput = styled.select`
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
+  padding-left: 120px;
 `;
 
 export default function Select({ children, filter, onChange, selectedValue }) {
@@ -24,7 +25,7 @@ export default function Select({ children, filter, onChange, selectedValue }) {
         }}
         value={selectedValue}
       >
-        <option value="0">Language</option>
+        <option value="0">Language ▽ </option>
         {children}
       </SelectInput>
     </>

@@ -10,6 +10,7 @@ const WarningCardDiv = styled.div`
   background: white;
   height: 550px;
   width: 350px;
+  margin: 10px;
 `;
 const Image = styled.img`
   object-fit: cover;
