@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import MainLogo from "../icons/mainLogo";
+import MainLogoMedium from "../icons/mainLogoMedium";
 import BurgerIcon from "../icons/burgerIcon";
 
 const AppHeader = styled.div`
@@ -17,7 +17,7 @@ export function Header(props) {
   return (
     <AppHeader {...props}>
       <span></span>
-      <MainLogo />
+      <MainLogoMedium />
       <BurgerIcon />
     </AppHeader>
   );
