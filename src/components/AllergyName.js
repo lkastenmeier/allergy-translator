@@ -11,6 +11,6 @@ const AllergyNameField = styled.div`
   font-weight: bold;
 `;
 
-export default function AllergyName({ name }) {
-  return <AllergyNameField name={name}>{name}</AllergyNameField>;
+export default function AllergyName({ children }) {
+  return <AllergyNameField>{children}</AllergyNameField>;
 }

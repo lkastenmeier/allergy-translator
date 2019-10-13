@@ -11,6 +11,7 @@ const NavigationBar = styled.nav`
   width: 100%;
   height: 60px;
   position: sticky;
+  top: 0;
   align-items: center;
   justify-content: stretch;
   background-color: transparent;

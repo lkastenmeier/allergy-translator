@@ -25,7 +25,7 @@ export default function Select({ children, filter, onChange, selectedValue }) {
         value={selectedValue}
       >
         <option value="0">Language</option>
-        {children};
+        {children}
       </SelectInput>
     </>
   );

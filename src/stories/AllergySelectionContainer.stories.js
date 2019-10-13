@@ -6,15 +6,21 @@ export default {
   title: "AllergySelectionContainer"
 };
 export function Example() {
+  const allergies = [
+    "milk",
+    "eggs",
+    "treenuts",
+    "peanuts",
+    "wheat",
+    "shellfish",
+    "fish",
+    "soy"
+  ];
   return (
     <AllergySelectionContainer>
-      <AllergySelection />
-      <AllergySelection />
-      <AllergySelection />
-      <AllergySelection />
-      <AllergySelection />
-      <AllergySelection />
-      <AllergySelection />
+      {allergies.map(allergy => (
+        <AllergySelection name={allergy} key={allergy} />
+      ))}
     </AllergySelectionContainer>
   );
 }

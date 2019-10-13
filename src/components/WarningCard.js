@@ -27,8 +27,8 @@ const Paragraph = styled.p`
 
 export default function Picture({ src, alt, text }) {
   return (
-    <WarningCardDiv src={src} alt={alt} text={text}>
-      <Image className="warning-img" src={src} alt={alt} />
+    <WarningCardDiv>
+      <Image src={src} alt={alt} />
       <Paragraph>{text}</Paragraph>
     </WarningCardDiv>
   );

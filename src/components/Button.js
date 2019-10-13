@@ -12,16 +12,12 @@ const BasicButton = styled.button`
   background-color: transparent;
   font-size: 16px;
   font-weight: bold;
+  color: #2d5f73;
 `;
 
 export default function Button({ name, children }) {
-  const [activeButton, setButton] = useState(false);
   return (
-    <BasicButton
-      onClick={() => setButton(true)}
-      style={{ color: activeButton ? "#2D5F73" : "#e3ebee" }}
-      name={name}
-    >
+    <BasicButton name={name}>
       {children}
       {name}
     </BasicButton>

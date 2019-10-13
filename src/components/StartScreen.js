@@ -20,43 +20,34 @@ const StartAnimation = styled.div`
   align-items: center;
   font-weight: bold;
 `;
-const AppearAnimation1 = keyframes`
+const appearAnimation = keyframes`
 
   0% { opacity: 1; }
   50%   { opacity: 0; }
   100% { opacity: 1; }
 `;
 
-const Span = styled.span`
-  animation: ${AppearAnimation1} 2s ease-in-out;
+const SpanPrimary = styled.span`
+  color: #f25260;
+  animation: ${appearAnimation} 2s ease-in-out;
   animation-delay: ${props => props.delay};
 `;
-
-const style1 = {
-  color: "#F25260"
-};
-const style2 = {
-  color: "#2D5F73"
-};
+const SpanSecondary = styled.span`
+  color: #2d5f73;
+  animation: ${appearAnimation} 2s ease-in-out;
+  animation-delay: ${props => props.delay};
+`;
 
 export default function StartScreen() {
   return (
     <StartPage>
       <MainLogo />
       <StartAnimation>
-        <Span style={style1} delay=".5s">
-          eat
-        </Span>
-        <Span style={style2} delay="1s">
-          safe
-        </Span>
+        <SpanPrimary delay=".5s">eat</SpanPrimary>
+        <SpanSecondary delay="1s">safe</SpanSecondary>
         <br />
-        <Span style={style2} delay="1.5s">
-          travel
-        </Span>
-        <Span style={style1} delay="2s">
-          much
-        </Span>
+        <SpanSecondary delay="1.5s">travel</SpanSecondary>
+        <SpanPrimary delay="2s">much</SpanPrimary>
       </StartAnimation>
     </StartPage>
   );

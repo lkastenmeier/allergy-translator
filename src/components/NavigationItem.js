@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const NavigationItemBtn = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   height: 60px;
@@ -13,6 +12,8 @@ const NavigationItemBtn = styled.div`
   background-color: #e3ebee;
   border-style: "solid";
   border-width: 3px 1.5px 3px 1.5px;
+  border-style: solid;
+  border-color: #bfccdd;
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
@@ -20,15 +21,5 @@ const NavigationItemBtn = styled.div`
 `;
 
 export default function NavigationItem({ children }) {
-  const [navigationSelect, setNavigationSelect] = useState(false);
-  return (
-    <NavigationItemBtn
-      onClick={() => setNavigationSelect(true)}
-      style={{
-        border: navigationSelect ? " transparent" : "3px solid #bfccdd"
-      }}
-    >
-      {children}
-    </NavigationItemBtn>
-  );
+  return <NavigationItemBtn>{children}</NavigationItemBtn>;
 }
