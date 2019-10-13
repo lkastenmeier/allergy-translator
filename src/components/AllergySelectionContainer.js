@@ -7,7 +7,7 @@ const SelectionContainer = styled.form`
   flex-flow: wrap;
   width: 100%;
   height: 60px;
-  justify-content: space-between;
+  justify-content: center;
   background-color: transparent;
 `;
 

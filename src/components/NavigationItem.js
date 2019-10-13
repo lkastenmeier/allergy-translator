@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 
 const NavigationItemBtn = styled.div`
@@ -14,7 +14,7 @@ const NavigationItemBtn = styled.div`
   border-width: 3px 1.5px 3px 1.5px;
   border-style: solid;
   border-color: #bfccdd;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
   color: #2d5f73;
