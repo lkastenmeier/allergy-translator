@@ -28,19 +28,24 @@ export default function Home() {
     <body>
       <Header />
       <Navigation />
-      <Select>
+      <Select name="language">
         {languages.map(language => (
           <option name={language} key={language}>
             {language}
           </option>
         ))}
       </Select>
-      <WarningCard src="https://www.lovablelabels.ca/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/A/L/ALLGY-DRY.jpg" text="I am allergic to milk - to prevent a severe allergic reaction, please make sure my food does not contain any milk!" alt="no milk"/>
+      <WarningCard
+        src="https://www.lovablelabels.ca/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/A/L/ALLGY-DRY.jpg"
+        text="I am allergic to milk - to prevent a severe allergic reaction, please make sure my food does not contain any milk!"
+        alt="no milk"
+      />
       <ButtonContainer>
         <Button>
-          <DownloadIcon/>Download
+          <DownloadIcon />
+          Download
         </Button>
-        <Button>Request change</Button>
+        <Button>Change</Button>
       </ButtonContainer>
     </body>
   );

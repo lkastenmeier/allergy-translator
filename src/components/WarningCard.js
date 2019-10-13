@@ -4,7 +4,7 @@ const WarningCardDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 20px;
+  padding: 15px;
   align-items: center;
   border: 5px solid #f25260;
   background: white;
@@ -13,10 +13,10 @@ const WarningCardDiv = styled.div`
   margin: 10px;
 `;
 const Image = styled.img`
-  object-fit: cover;
-  object-position: top center;
   width: 250px;
   height: 250px;
+  object-fit: cover;
+  object-position: top center;
 `;
 const Paragraph = styled.p`
   font-size: 28px;

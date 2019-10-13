@@ -6,7 +6,6 @@ const SelectionContainer = styled.form`
   flex-direction: row;
   flex-flow: wrap;
   width: 100%;
-  height: 60px;
   justify-content: center;
   background-color: transparent;
 `;

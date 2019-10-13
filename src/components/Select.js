@@ -16,7 +16,13 @@ const SelectInput = styled.select`
   padding-left: 120px;
 `;
 
-export default function Select({ children, filter, onChange, selectedValue }) {
+export default function Select({
+  name,
+  children,
+  filter,
+  onChange,
+  selectedValue
+}) {
   return (
     <>
       <SelectInput
@@ -25,7 +31,9 @@ export default function Select({ children, filter, onChange, selectedValue }) {
         }}
         value={selectedValue}
       >
-        <option value="0">Language ▽ </option>
+        <option name={name} value="0">
+          {name} ▽
+        </option>
         {children}
       </SelectInput>
     </>
