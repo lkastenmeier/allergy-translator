@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <body>
       <Header />
-      <Navigation />
+      <Navigation selected="2" />
       <H1 name="Here will be some Info such as FAQ, Instructions and Impressum" />
     </body>
   );

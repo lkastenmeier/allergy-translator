@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <body>
       <Header />
-      <Navigation />
+      <Navigation selected="0" />
       <H1 />
       <AllergySelectionContainer>
         {allergies.map(allergy => (
