@@ -14,8 +14,11 @@ const TextInput = styled.textarea`
   font-family: sans-serif;
   margin: 10px;
   padding: 10px;
+  ::-webkit-input-placeholder {
+    color: red;
+  }
 `;
 
 export default function Textfield({ placeholder }) {
-  return <TextInput placeholder={placeholder} />;
+  return <TextInput defaultValue={placeholder} />;
 }

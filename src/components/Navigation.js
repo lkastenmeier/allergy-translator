@@ -4,7 +4,6 @@ import styled from "styled-components";
 import InfoIcon from "../icons/infoIcon";
 import FindIcon from "../icons/findIcon";
 import MainLogoSmall from "../icons/mainLogoSmall";
-import { NavLink } from "react-router-dom";
 
 const NavigationBar = styled.nav`
   display: flex;
@@ -18,7 +17,7 @@ const NavigationBar = styled.nav`
   background-color: transparent;
 `;
 
-export default function Navigation({ path, selected }) {
+export default function Navigation({ selected }) {
   return (
     <NavigationBar>
       <NavigationItem path="/home" active={"0" === selected}>
