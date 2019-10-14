@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import MainLogoMedium from "../icons/mainLogoMedium";
 import BurgerIcon from "../icons/BurgerIcon";
+import { NavLink } from "react-router-dom";
 
 const AppHeader = styled.div`
   display: flex;
@@ -18,7 +19,10 @@ export default function Header(props) {
     <AppHeader {...props}>
       <span></span>
       <span></span>
-      <MainLogoMedium />
+      <NavLink to="/home">
+        <MainLogoMedium />
+      </NavLink>
+
       <BurgerIcon />
     </AppHeader>
   );

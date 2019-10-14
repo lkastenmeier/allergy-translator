@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
-const NavigationItemBtn = styled.div`
+const NavigationItemBtn = styled(NavLink)`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -17,8 +18,13 @@ const NavigationItemBtn = styled.div`
   font-weight: bold;
   text-transform: uppercase;
   color: #2d5f73;
+  text-decoration: none;
 `;
 
-export default function NavigationItem({ active, children }) {
-  return <NavigationItemBtn active={active}>{children}</NavigationItemBtn>;
+export default function NavigationItem({ path, active, children }) {
+  return (
+    <NavigationItemBtn to={path} active={active}>
+      {children}
+    </NavigationItemBtn>
+  );
 }
