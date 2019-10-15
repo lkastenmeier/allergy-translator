@@ -15,9 +15,8 @@ const WarningCardDiv = styled.div`
 const Image = styled.img`
   width: 250px;
   height: 250px;
-  object-fit: cover;
-  object-position: top center;
 `;
+
 const Paragraph = styled.p`
   font-size: 28px;
   color: #f25260;
