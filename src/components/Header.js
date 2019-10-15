@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import MainLogoMedium from "../icons/mainLogoMedium";
-import BurgerIcon from "../icons/burgerIcon";
+import BurgerIcon from "../icons/BurgerIcon";
+import { NavLink } from "react-router-dom";
 
 const AppHeader = styled.div`
   display: flex;
@@ -13,11 +14,15 @@ const AppHeader = styled.div`
   padding: 5px;
 `;
 
-export function Header(props) {
+export default function Header(props) {
   return (
     <AppHeader {...props}>
       <span></span>
-      <MainLogoMedium />
+      <span></span>
+      <NavLink to="/home">
+        <MainLogoMedium />
+      </NavLink>
+
       <BurgerIcon />
     </AppHeader>
   );

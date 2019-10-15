@@ -8,10 +8,11 @@ export default createGlobalStyle`
 }
 body {
   font-size: 16px;
-  margin: 5px;
+  margin: 1px;
   background-image: linear-gradient(#e3ebee, #bfccdd);
   font-family: 'Roboto', sans-serif;
-  height:100vh;
+  height:100%;
+  overflow: scroll;
 }
 
 `;

@@ -17,18 +17,20 @@ const NavigationBar = styled.nav`
   background-color: transparent;
 `;
 
-export default function Navigation() {
+export default function Navigation({ selected }) {
   return (
     <NavigationBar>
-      <NavigationItem>
+      <NavigationItem path="/home" active={"0" === selected}>
         <MainLogoSmall />
         <span>Home</span>
       </NavigationItem>
-      <NavigationItem>
+
+      <NavigationItem path="/help" active={"1" === selected}>
         <FindIcon />
         <span>Find Help</span>
       </NavigationItem>
-      <NavigationItem>
+
+      <NavigationItem path="/info" active={"2" === selected}>
         <InfoIcon />
         <span>Info</span>
       </NavigationItem>

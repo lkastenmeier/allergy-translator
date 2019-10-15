@@ -1,22 +1,34 @@
 import React from "react";
+import styled from "styled-components";
+import GlobalStyles from "./GlobalStyles";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Card from "./pages/Card";
+import Help from "./pages/Help";
+import Change from "./pages/Change";
+import Info from "./pages/Info";
+import Start from "./pages/Start";
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <GlobalStyles />
+      <Router>
+        <Route path="/" exact component={Start} />
+        <Route path="/home" component={Home} />
+        <Route path="/card" component={Card} />
+        <Route path="/help" component={Help} />
+        <Route path="/change" component={Change} />
+        <Route path="/info" component={Info} />
+      </Router>
+    </Container>
   );
 }
 

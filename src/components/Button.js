@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 const BasicButton = styled.button`
   display: flex;
@@ -13,6 +13,7 @@ const BasicButton = styled.button`
   font-size: 16px;
   font-weight: bold;
   color: #2d5f73;
+  text-transform: uppercase;
 `;
 
 export default function Button({ name, children }) {

@@ -5,9 +5,8 @@ const StartPage = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
-  justify-content: center;
   align-items: center;
-  padding: 20px;
+  margin-top: 120px;
 `;
 
 const StartAnimation = styled.div`
