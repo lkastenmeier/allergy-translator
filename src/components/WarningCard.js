@@ -12,6 +12,11 @@ const WarningCardDiv = styled.div`
   width: 350px;
   margin: 10px;
 `;
+const Image = styled.img`
+  width: 250px;
+  height: 250px;
+`;
+
 const Paragraph = styled.p`
   font-size: 28px;
   color: #f25260;
@@ -20,10 +25,10 @@ const Paragraph = styled.p`
   line-height: 40px;
 `;
 
-export default function Picture({ children, text }) {
+export default function Picture({ src, alt, text }) {
   return (
     <WarningCardDiv>
-      {children}
+      <Image src={src} alt={alt} />
       <Paragraph>{text}</Paragraph>
     </WarningCardDiv>
   );

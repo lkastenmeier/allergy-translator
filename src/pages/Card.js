@@ -36,7 +36,7 @@ export default function Home() {
         ))}
       </Select>
       <WarningCard
-        src="src/warning-images/milk.svg"
+        src="/images/milkWarning.svg"
         text="I am allergic to milk - to prevent a severe allergic reaction, please make sure my food does not contain any milk!"
         alt="no milk"
       />
