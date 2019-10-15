@@ -20,7 +20,7 @@ export default function Home() {
     <>
       <Header />
       <Navigation selected="0" />
-      <H1 />
+      <H1 name="what is your dietary restriction?" />
       <AllergySelectionContainer>
         {Object.keys(allergies).map(key => (
           <AllergySelection key={key} name={key} src={allergies[key]}>

@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Navigation from "../components/Navigation";
 import Select from "../components/Select";
-import Button from "../components/Button";
+import NavButton from "../components/NavButton";
 import Textfield from "../components/Textfield";
 import styled from "styled-components";
 const ButtonContainer = styled.div`
@@ -32,7 +32,7 @@ const languages = [
 ];
 export default function Home() {
   return (
-    <body>
+    <>
       <Header />
       <Navigation />
       <Select name="allergy">
@@ -51,9 +51,9 @@ export default function Home() {
       </Select>
       <Textfield placeholder="I am allergic to milk - to prevent a severe allergic reaction, please make sure my food does not contain any milk!" />
       <ButtonContainer>
-        <Button>Submit</Button>
-        <Button>Cancel</Button>
+        <NavButton path="/card" name="cancel" />
+        <NavButton path="/card" name="change" />
       </ButtonContainer>
-    </body>
+    </>
   );
 }

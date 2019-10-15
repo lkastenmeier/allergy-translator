@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation";
 import Select from "../components/Select";
 import WarningCard from "../components/WarningCard";
 import Button from "../components/Button";
+import NavButton from "../components/NavButton";
 import styled from "styled-components";
 import DownloadIcon from "../icons/downloadIcon";
 
@@ -25,7 +26,7 @@ const languages = [
 ];
 export default function Home() {
   return (
-    <body>
+    <>
       <Header />
       <Navigation />
       <Select name="language">
@@ -37,7 +38,7 @@ export default function Home() {
       </Select>
       <WarningCard
         src="/images/milkWarning.svg"
-        text="I am allergic to milk - to prevent a severe allergic reaction, please make sure my food does not contain any milk!"
+        text="चेतावनी मृत्युको खतरा: मैले दुग्ध पदार्थ अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।"
         alt="no milk"
       />
       <ButtonContainer>
@@ -45,8 +46,8 @@ export default function Home() {
           <DownloadIcon />
           Download
         </Button>
-        <Button>Change</Button>
+        <NavButton path="/change" name="change" />
       </ButtonContainer>
-    </body>
+    </>
   );
 }
