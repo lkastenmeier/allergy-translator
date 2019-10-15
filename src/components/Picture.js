@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const PictureBox = styled.img`
-  /* object-fit: cover;
-  object-position: top center; */
+  background-color: white;
 
   height: 111px;
 `;
