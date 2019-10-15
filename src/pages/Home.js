@@ -5,14 +5,14 @@ import AllergySelectionContainer from "../components/AllergySelectionContainer";
 import AllergySelection from "../components/AllergySelection";
 import H1 from "../components/H1";
 const allergies = {
-  milk: "../../public/warning-images/milk.svg",
-  eggs: "../../public/warningImages/eggs.svg",
-  treenuts: "/src/warning-images/treenuts.svg",
-  peanuts: "src/warning-images/peanuts.svg",
-  wheat: "public/warning-images/wheat.svg",
-  shellfish: "src/warning-images/shellfish.svg",
-  fish: "src/warning-images/fish.svg",
-  soy: "src/warning-images/soy.svg"
+  milk: "/images/milk.svg",
+  eggs: "/images/eggs.svg",
+  treenuts: "/images/treenuts.svg",
+  peanuts: "/images/peanuts.svg",
+  wheat: "/images/wheat.svg",
+  shellfish: "/images/shellfish.svg",
+  fish: "/images/fish.svg",
+  soy: "/images/soy.svg"
 };
 
 export default function Home() {
