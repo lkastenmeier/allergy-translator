@@ -10,27 +10,21 @@ export default function BurgerIcon({ className }) {
           transform="translate(-4.5 -7)"
           fill="none"
           stroke="#e3ebee"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="4"
+          strokeWidth="4"
         />
         <path
           d="M4.5,9h34"
           transform="translate(-4.5 -9)"
           fill="none"
           stroke="#e3ebee"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="4"
+          strokeWidth="4"
         />
         <path
           d="M4.5,27h34"
           transform="translate(-4.5 -5)"
           fill="none"
           stroke="#e3ebee"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="4"
+          strokeWidth="4"
         />
       </g>
     </svg>

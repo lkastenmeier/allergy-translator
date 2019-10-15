@@ -8,27 +8,27 @@ export default function InfoIcon({ className }) {
           transform="translate(-3 -3)"
           fill="none"
           stroke="#bfccdd"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         />
         <path
           d="M18,21.4V18"
           transform="translate(-9.5 -10.395)"
           fill="none"
           stroke="#bfccdd"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         />
         <path
           d="M18,12h0"
           transform="translate(-9.5 -6.9)"
           fill="none"
           stroke="#bfccdd"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
         />
       </g>
     </svg>
