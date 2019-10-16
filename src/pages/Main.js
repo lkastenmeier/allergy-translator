@@ -43,7 +43,8 @@ const allergies = {
 export default function Main() {
   const history = useHistory();
   const [allergyFilterSelection, setAllergyFilterSelection] = useState("");
-  let imagesource = `/images/${allergyFilterSelection}Warning.svg`;
+  const imagesource = `/images/${allergyFilterSelection}Warning.svg`;
+
   return (
     <>
       <Header />
@@ -57,7 +58,7 @@ export default function Main() {
                 key={key}
                 name={key}
                 src={allergies[key]}
-                onClick={() => {
+                handleAllergySelection={() => {
                   setAllergyFilterSelection(key);
                   history.push("/main/card");
                 }}
