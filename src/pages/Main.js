@@ -43,7 +43,6 @@ const allergies = {
 export default function Main() {
   const history = useHistory();
   const [allergyFilterSelection, setAllergyFilterSelection] = useState("");
-  console.log(allergyFilterSelection);
   let imagesource = `/images/${allergyFilterSelection}Warning.svg`;
   return (
     <>
