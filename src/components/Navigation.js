@@ -20,7 +20,7 @@ const NavigationBar = styled.nav`
 export default function Navigation({ selected }) {
   return (
     <NavigationBar>
-      <NavigationItem path="/home" active={"0" === selected}>
+      <NavigationItem path="/main" active={"0" === selected}>
         <MainLogoSmall />
         <span>Home</span>
       </NavigationItem>

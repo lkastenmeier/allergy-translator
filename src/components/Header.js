@@ -19,7 +19,7 @@ export default function Header(props) {
     <AppHeader {...props}>
       <span></span>
       <span></span>
-      <NavLink to="/home">
+      <NavLink to="/main">
         <MainLogoMedium />
       </NavLink>
 
