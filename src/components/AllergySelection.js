@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import AllergyName from "../components/AllergyName";
 import Picture from "./Picture";
@@ -13,8 +13,14 @@ const AllergySelectionBox = styled.div`
 `;
 
 export default function AllergySelection({ src, alt, name }) {
+  const [allergySelection, setAllergySelection] = useState("");
+  console.log(allergySelection);
   return (
-    <AllergySelectionBox>
+    <AllergySelectionBox
+      onClick={() => {
+        setAllergySelection(name);
+      }}
+    >
       <Picture src={src} alt={alt} />
       <AllergyName name={name}>{name}</AllergyName>
     </AllergySelectionBox>
