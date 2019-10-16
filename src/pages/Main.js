@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Navigation from "../components/Navigation";
 import AllergySelectionContainer from "../components/AllergySelectionContainer";
 import AllergySelection from "../components/AllergySelection";
+import { useHistory } from "react-router-dom";
 import H1 from "../components/H1";
 import { Switch, Route } from "react-router-dom";
 import Select from "../components/Select";
@@ -40,16 +41,28 @@ const allergies = {
 };
 
 export default function Main() {
+  const history = useHistory();
+  const [allergyFilterSelection, setAllergyFilterSelection] = useState("");
+  console.log(allergyFilterSelection);
+  let imagesource = `/images/${allergyFilterSelection}Warning.svg`;
   return (
     <>
       <Header />
       <Navigation selected="0" />
       <Switch>
         <Route exact path="/main">
-          <H1 name="what is your dietary restriction?" />
+          <H1 name={"what is your dietary restriction?"} />
           <AllergySelectionContainer>
             {Object.keys(allergies).map(key => (
-              <AllergySelection key={key} name={key} src={allergies[key]}>
+              <AllergySelection
+                key={key}
+                name={key}
+                src={allergies[key]}
+                onClick={() => {
+                  setAllergyFilterSelection(key);
+                  history.push("/main/card");
+                }}
+              >
                 {key}
               </AllergySelection>
             ))}
@@ -64,7 +77,7 @@ export default function Main() {
             ))}
           </Select>
           <WarningCard
-            src="/images/milkWarning.svg"
+            src={imagesource}
             text="चेतावनी मृत्युको खतरा: मैले दुग्ध पदार्थ अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।"
             alt="no milk"
           />
