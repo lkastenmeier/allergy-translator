@@ -18,7 +18,7 @@ const Image = styled.img`
 `;
 
 const Paragraph = styled.p`
-  font-size: 28px;
+  font-size: 18px;
   color: #f25260;
   font-weight: bold;
   text-align: center;

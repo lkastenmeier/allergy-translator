@@ -12,7 +12,7 @@ export const allergyData = {
       french:
         "Je suis allergique au lait. Pour éviter une réaction allergique sévère, s'il vous plait soyez sûrs que ma nourriture ne contienne pas de lait.",
       spanish:
-        "Soy alérgico a leche - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga ningún leche!",
+        "Soy alérgico a leche - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga leche!",
       romanian:
         "Sunt alergic/alergică la lapte - pentru a preveni o severă reacție alergică, vă rog să vă asigurați că mâncarea mea nu conține nici o urmă de lapte!",
       swedish:
@@ -36,7 +36,7 @@ export const allergyData = {
       french:
         "Je suis allergique au soja. Pour éviter une réaction allergique sévère, s'il vous plait soyez sûrs que ma nourriture ne contienne pas de soja.",
       spanish:
-        "Soy alérgico a soja - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga ningún soja!",
+        "Soy alérgico a soja - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga soja!",
       romanian:
         "Sunt alergic/alergică la soia - pentru a preveni o severă reacție alergică, vă rog să vă asigurați că mâncarea mea nu conține nici o urmă de soia!",
       swedish:
@@ -63,7 +63,7 @@ export const allergyData = {
       french:
         "Je suis allergique aux cacahuètes. Pour éviter une réaction allergique sévère, s'il vous plait soyez sûrs que ma nourriture ne contienne pas de cachuètes.",
       spanish:
-        "Soy alérgico a cacahuetes - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga ningún cacahuetes!",
+        "Soy alérgico a cacahuetes - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga cacahuetes!",
       romanian:
         "Sunt alergic/alergică la alune - pentru a preveni o severă reacție alergică, vă rog să vă asigurați că mâncarea mea nu conține nici o urmă de alune!",
       swedish:
@@ -89,7 +89,7 @@ export const allergyData = {
       french:
         "Je suis allergique aux noix. Pour éviter une réaction allergique sévère, s'il vous plait soyez sûrs que ma nourriture ne contienne pas de noix.",
       spanish:
-        "Soy alérgico a nueces - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga ningún nueces!",
+        "Soy alérgico a nueces - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga nueces!",
       romanian:
         "Sunt alergic/alergică la fructe cu coaja lemnoasă (nuci, migdale) - pentru a preveni o severă reacție alergică, vă rog să vă asigurați că mâncarea mea nu conține nici o urmă de fructe cu coaja lemnoasă (nuci, migdale)!",
       swedish:
@@ -115,7 +115,7 @@ export const allergyData = {
       french:
         "Je suis allergique aux œufs. Pour éviter une réaction allergique sévère, s'il vous plait soyez sûrs que ma nourriture ne contienne pas d'œufs.",
       spanish:
-        "Soy alérgico a huevos - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga ningún huevos!",
+        "Soy alérgico a huevos - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga huevos!",
       romanian:
         "Sunt alergic/alergică la ouă - pentru a preveni o severă reacție alergică, vă rog să vă asigurați că mâncarea mea nu conține nici o urmă de ouă!",
       swedish:
@@ -141,7 +141,7 @@ export const allergyData = {
       french:
         "Je suis allergique au blé. Pour éviter une réaction allergique sévère, s'il vous plait soyez sûrs que ma nourriture ne contienne pas de blé.",
       spanish:
-        "Soy alérgico a trigo - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga ningún trigo!",
+        "Soy alérgico a trigo - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga trigo!",
       romanian:
         "Sunt alergic/alergică la cereale - pentru a preveni o severă reacție alergică, vă rog să vă asigurați că mâncarea mea nu conține nici o urmă de cereale!",
       swedish:
@@ -167,7 +167,7 @@ export const allergyData = {
       french:
         "Je suis allergique au poisson. Pour éviter une réaction allergique sévère, s'il vous plait soyez sûrs que ma nourriture ne contienne pas de poisson.",
       spanish:
-        "Soy alérgico a pescado - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga ningún pescado!",
+        "Soy alérgico a pescado - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga pescado!",
       romanian:
         "Sunt alergic/alergică la pește - pentru a preveni o severă reacție alergică, vă rog să vă asigurați că mâncarea mea nu conține nici o urmă de pește!",
       swedish:
@@ -193,7 +193,7 @@ export const allergyData = {
       french:
         "Je suis allergique aux fruits de mer. Pour éviter une réaction allergique sévère, s'il vous plait soyez sûrs que ma nourriture ne contienne pas de fruits de mer.",
       spanish:
-        "Soy alérgico a cascaras de marisco - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga ningún cascaras de marisco!",
+        "Soy alérgico a cascaras de marisco - para prevenir una reacción alérgica severa, por favor asegúrese de que mi comida no contenga mariscos!",
       romanian:
         "Sunt alergic/alergică la fructe de mare - pentru a preveni o severă reacție alergică, vă rog să vă asigurați că mâncarea mea nu conține nici o urmă de fructe de mare!",
       swedish:
