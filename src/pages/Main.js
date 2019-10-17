@@ -31,9 +31,9 @@ export default function Main() {
   function handleSelect(value) {
     setLanguageFilterSelection(value);
   }
-  let allergy = allergyFilterSelection;
-  let language = languageFilterSelection;
-  let languages = "languages";
+  const allergy = allergyFilterSelection;
+  const language = languageFilterSelection;
+  const languages = "languages";
   return (
     <>
       <Header />
@@ -58,7 +58,7 @@ export default function Main() {
           </AllergySelectionContainer>
         </Route>
         <Route exact path="/Main/Card">
-          <Select onSelect={handleSelect} />
+          <Select select={handleSelect} />
 
           <WarningCard
             src={imagesource}

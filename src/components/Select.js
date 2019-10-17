@@ -17,10 +17,10 @@ const SelectInput = styled.select`
   text-transform: uppercase;
 `;
 
-export default function Select({ onSelect }) {
+export default function Select({ select }) {
   function handleFilter(event) {
     const { value } = event.target;
-    onSelect(value);
+    select(value);
   }
   return (
     <SelectInput onChange={handleFilter}>
