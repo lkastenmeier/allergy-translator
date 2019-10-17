@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
+import { allergyData } from "../api/DummyData";
 
 const SelectInput = styled.select`
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  text-align-last: center;
   width: 350px;
   height: 50px;
   margin: 10px;
@@ -13,29 +15,21 @@ const SelectInput = styled.select`
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
-  padding-left: 120px;
 `;
 
-export default function Select({
-  name,
-  children,
-  filter,
-  onChange,
-  selectedValue
-}) {
+export default function Select({ onSelect }) {
+  function handleFilter(event) {
+    const { value } = event.target;
+    onSelect(value);
+  }
   return (
-    <>
-      <SelectInput
-        onChange={event => {
-          onChange(filter.title, event.target.value);
-        }}
-        value={selectedValue}
-      >
-        <option name={name} value="0">
-          {name} ▽
+    <SelectInput onChange={handleFilter}>
+      <option value="0">change language</option>
+      {Object.entries(allergyData.milk.languages).map(([key]) => (
+        <option value={key} key={key}>
+          {key}
         </option>
-        {children}
-      </SelectInput>
-    </>
+      ))}
+    </SelectInput>
   );
 }

@@ -22,9 +22,18 @@ const ButtonContainer = styled.div`
 
 export default function Main() {
   const history = useHistory();
-  const [allergyFilterSelection, setAllergyFilterSelection] = useState("");
+  const [allergyFilterSelection, setAllergyFilterSelection] = useState("milk");
+  const [languageFilterSelection, setLanguageFilterSelection] = useState(
+    "english"
+  );
   const imagesource = `/images/${allergyFilterSelection}Warning.svg`;
 
+  function handleSelect(value) {
+    setLanguageFilterSelection(value);
+  }
+  let allergy = allergyFilterSelection;
+  let language = languageFilterSelection;
+  let languages = "languages";
   return (
     <>
       <Header />
@@ -49,17 +58,12 @@ export default function Main() {
           </AllergySelectionContainer>
         </Route>
         <Route exact path="/Main/Card">
-          <Select name="language">
-            {Object.entries(allergyData.milk.languages).map(([key]) => (
-              <option name={key} key={key}>
-                {key}
-              </option>
-            ))}
-          </Select>
+          <Select onSelect={handleSelect} />
+
           <WarningCard
             src={imagesource}
-            text="चेतावनी मृत्युको खतरा: मैले दुग्ध पदार्थ अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।"
-            alt="no milk"
+            alt={`no ${allergyFilterSelection}`}
+            text={allergyData[allergy][languages][language]}
           />
           <ButtonContainer>
             <Button>
