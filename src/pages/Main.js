@@ -12,7 +12,7 @@ import Button from "../components/Button";
 import NavButton from "../components/NavButton";
 import styled from "styled-components";
 import DownloadIcon from "../icons/downloadIcon";
-import { languages, allergies, allergyData } from "../api/DummyData";
+import { allergyData } from "../api/DummyData";
 
 const ButtonContainer = styled.div`
   display: flex;

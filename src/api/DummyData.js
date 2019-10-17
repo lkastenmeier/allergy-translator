@@ -20,7 +20,9 @@ export const allergyData = {
       dutch:
         "Ik ben allergisch voor melk- om een ​​ernstige allergische reactie te voorkomen, moet u ervoor zorgen dat mijn voedsel geen melk bevat!",
       nepali:
-        "चेतावनी (मृत्युको खतरा): मैले दुग्ध पदार्थ अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।"
+        "चेतावनी (मृत्युको खतरा): मैले दुग्ध पदार्थ अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।",
+      italian:
+        "Io sono allergica al latte - Per evitare una grave reazione allergica devo essere sicura che la mia alimentazione non contenga questi prodotti!"
     }
   },
 
@@ -42,7 +44,9 @@ export const allergyData = {
       dutch:
         "Ik ben allergisch voor soja- om een ​​ernstige allergische reactie te voorkomen, moet u ervoor zorgen dat mijn voedsel geen soja bevat!",
       nepali:
-        "चेतावनी मृत्युको खतरा: मैले भटमास अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।"
+        "चेतावनी मृत्युको खतरा: मैले भटमास अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।",
+      italian:
+        "Io sono allergica al soja - Per evitare una grave reazione allergica devo essere sicura che la mia alimentazione non contenga questi prodotti!"
     }
   },
 
@@ -67,7 +71,9 @@ export const allergyData = {
       dutch:
         "Ik ben allergisch voor pindas- om een ​​ernstige allergische reactie te voorkomen, moet u ervoor zorgen dat mijn voedsel geen pinda bevat!",
       nepali:
-        "चेतावनी मृत्युको खतरा: मैले बदाम अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।"
+        "चेतावनी मृत्युको खतरा: मैले बदाम अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।",
+      italian:
+        "Io sono allergica al arachidi - Per evitare una grave reazione allergica devo essere sicura che la mia alimentazione non contenga questi prodotti!"
     }
   },
   treenuts: {
@@ -91,7 +97,9 @@ export const allergyData = {
       dutch:
         "Ik ben allergisch voor soja- om een ​​ernstige allergische reactie te voorkomen, moet u ervoor zorgen dat mijn voedsel geen soja bevat!",
       nepali:
-        "चेतावनी मृत्युको खतरा: मैले ओखर अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।"
+        "चेतावनी मृत्युको खतरा: मैले ओखर अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।",
+      italian:
+        "Io sono allergica al nocciole - Per evitare una grave reazione allergica devo essere sicura che la mia alimentazione non contenga questi prodotti!"
     }
   },
   eggs: {
@@ -115,7 +123,9 @@ export const allergyData = {
       dutch:
         "Ik ben allergisch voor eieren- om een ​​ernstige allergische reactie te voorkomen, moet u ervoor zorgen dat mijn voedsel geen eieren bevat!",
       nepali:
-        "चेतावनी मृत्युको खतरा: मैले अण्डा अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।"
+        "चेतावनी मृत्युको खतरा: मैले अण्डा अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।",
+      italian:
+        "Io sono allergica alle uova - Per evitare una grave reazione allergica devo essere sicura che la mia alimentazione non contenga questi prodotti!"
     }
   },
   wheat: {
@@ -139,7 +149,9 @@ export const allergyData = {
       dutch:
         "Ik ben allergisch voor tarwe- om een ​​ernstige allergische reactie te voorkomen, moet u ervoor zorgen dat mijn voedsel geen tarwe bevat!",
       nepali:
-        "चेतावनी मृत्युको खतरा: मैले गहुँ अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।"
+        "चेतावनी मृत्युको खतरा: मैले गहुँ अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।",
+      italian:
+        "Io sono allergica al grano - Per evitare una grave reazione allergica devo essere sicura che la mia alimentazione non contenga questi prodotti!"
     }
   },
   fish: {
@@ -163,7 +175,9 @@ export const allergyData = {
       dutch:
         "Ik ben allergisch voor vis- om een ​​ernstige allergische reactie te voorkomen, moet u ervoor zorgen dat mijn voedsel geen vis bevat!",
       nepali:
-        "चेतावनी मृत्युको खतरा: मैले माछा अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।"
+        "चेतावनी मृत्युको खतरा: मैले माछा अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।",
+      italian:
+        "Io sono allergica al pesce - Per evitare una grave reazione allergica devo essere sicura che la mia alimentazione non contenga questi prodotti!"
     }
   },
   shellfish: {
@@ -187,7 +201,9 @@ export const allergyData = {
       dutch:
         "Ik ben allergisch voor schaaldieren- om een ​​ernstige allergische reactie te voorkomen, moet u ervoor zorgen dat mijn voedsel geen schaaldieren bevat!",
       nepali:
-        "चेतावनी मृत्युको खतरा: मैले शेलफिश अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।"
+        "चेतावनी मृत्युको खतरा: मैले शेलफिश अथवा यो भएको खाना एलर्जीका कारणले खान मिल्दैन। यदि खानामा रैछ भने एलर्जीले मरणाशन्न हुनेछु।",
+      italian:
+        "Io sono allergica al frutti di mare - Per evitare una grave reazione allergica devo essere sicura che la mia alimentazione non contenga questi prodotti!"
     }
   }
 };
