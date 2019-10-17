@@ -12,33 +12,13 @@ import Button from "../components/Button";
 import NavButton from "../components/NavButton";
 import styled from "styled-components";
 import DownloadIcon from "../icons/downloadIcon";
+import { languages, allergies, allergyData } from "../api/DummyData";
 
 const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
 `;
-
-const languages = [
-  "english",
-  "german",
-  "french",
-  "spanish",
-  "italian",
-  "russian",
-  "thai",
-  "swedish"
-];
-const allergies = {
-  milk: "/images/milk.svg",
-  eggs: "/images/eggs.svg",
-  treenuts: "/images/treenuts.svg",
-  peanuts: "/images/peanuts.svg",
-  wheat: "/images/wheat.svg",
-  shellfish: "/images/shellfish.svg",
-  fish: "/images/fish.svg",
-  soy: "/images/soy.svg"
-};
 
 export default function Main() {
   const history = useHistory();
@@ -53,11 +33,11 @@ export default function Main() {
         <Route exact path="/main">
           <H1 name={"what is your dietary restriction?"} />
           <AllergySelectionContainer>
-            {Object.keys(allergies).map(key => (
+            {Object.entries(allergyData).map(([key, value]) => (
               <AllergySelection
                 key={key}
                 name={key}
-                src={allergies[key]}
+                src={value.images.basic}
                 handleAllergySelection={() => {
                   setAllergyFilterSelection(key);
                   history.push("/main/card");
@@ -70,9 +50,9 @@ export default function Main() {
         </Route>
         <Route exact path="/Main/Card">
           <Select name="language">
-            {languages.map(language => (
-              <option name={language} key={language}>
-                {language}
+            {Object.entries(allergyData.milk.languages).map(([key]) => (
+              <option name={key} key={key}>
+                {key}
               </option>
             ))}
           </Select>
