@@ -26,14 +26,11 @@ export default function Main() {
   const [languageFilterSelection, setLanguageFilterSelection] = useState(
     "english"
   );
-  const imagesource = `/images/${allergyFilterSelection}Warning.svg`;
-
   function handleSelect(value) {
     setLanguageFilterSelection(value);
   }
   const allergy = allergyFilterSelection;
   const language = languageFilterSelection;
-  const languages = "languages";
   return (
     <>
       <Header />
@@ -61,9 +58,9 @@ export default function Main() {
           <Select select={handleSelect} />
 
           <WarningCard
-            src={imagesource}
+            src={allergyData[allergy].images.warning}
             alt={`no ${allergyFilterSelection}`}
-            text={allergyData[allergy][languages][language]}
+            text={allergyData[allergy].languages[language]}
           />
           <ButtonContainer>
             <Button>
