@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "html2canvas": "^1.0.0-rc.5",
+    "jspdf": "^1.5.3",
+    "jspdf-react": "^1.0.11",
     "proptypes": "^1.1.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",

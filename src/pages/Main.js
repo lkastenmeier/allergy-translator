@@ -13,11 +13,18 @@ import NavButton from "../components/NavButton";
 import styled from "styled-components";
 import DownloadIcon from "../icons/downloadIcon";
 import { allergyData } from "../api/DummyData";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 
 const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+`;
+
+const CardContainer = styled.div`
+  height: 100%;
+  width: 100%;
 `;
 
 export default function Main() {
@@ -31,6 +38,20 @@ export default function Main() {
   }
   const allergy = allergyFilterSelection;
   const language = languageFilterSelection;
+
+  function printDocument() {
+    const input = document.getElementById("divToPrint");
+    html2canvas(input).then(canvas => {
+      const imgData = canvas.toDataURL("image/png");
+      const pdf = new jsPDF({
+        orientation: "portrait",
+        unit: "px",
+        format: [830, 530]
+      });
+      pdf.addImage(imgData, "JPEG", -20, -10);
+      pdf.save("warningcard.pdf");
+    });
+  }
   return (
     <>
       <Header />
@@ -56,14 +77,19 @@ export default function Main() {
         </Route>
         <Route exact path="/Main/Card">
           <Select select={handleSelect} />
-
-          <WarningCard
-            src={allergyData[allergy].images.warning}
-            alt={`no ${allergyFilterSelection}`}
-            text={allergyData[allergy].languages[language]}
-          />
+          <CardContainer id="divToPrint" key={allergyFilterSelection}>
+            <WarningCard
+              src={allergyData[allergy].images.warning}
+              alt={`no ${allergyFilterSelection}`}
+              text={allergyData[allergy].languages[language]}
+            />
+          </CardContainer>
           <ButtonContainer>
-            <Button>
+            <Button
+              onEvent={() => {
+                printDocument();
+              }}
+            >
               <DownloadIcon />
               Download
             </Button>

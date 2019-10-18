@@ -16,9 +16,9 @@ const BasicButton = styled.button`
   text-transform: uppercase;
 `;
 
-export default function Button({ name, children }) {
+export default function Button({ name, children, onEvent }) {
   return (
-    <BasicButton name={name}>
+    <BasicButton onClick={onEvent} name={name}>
       {children}
       {name}
     </BasicButton>
