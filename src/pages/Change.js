@@ -10,6 +10,12 @@ const ButtonContainer = styled.div`
   align-items: center;
   justify-content: space-around;
 `;
+const TextContainer = styled.div`
+  height: 100%;
+  width: 90%;
+  margin: 10px 0px 30px 30px;
+`;
+
 const allergies = [
   "milk",
   "eggs",
@@ -49,7 +55,10 @@ export default function Home() {
           </option>
         ))}
       </Select>
-      <Textfield placeholder="I am allergic to milk - to prevent a severe allergic reaction, please make sure my food does not contain any milk!" />
+      <TextContainer>
+        <Textfield placeholder="I am allergic to milk - to prevent a severe allergic reaction, please make sure my food does not contain any milk!" />
+      </TextContainer>
+
       <ButtonContainer>
         <NavButton path="/main/card" name="cancel" />
         <NavButton path="/main/card" name="change" />

@@ -5,8 +5,9 @@ const TextInput = styled.textarea`
   border: 3px solid #e3ebee;
   background-color: #bfccdd;
   color: red;
-  height: 50%;
-  width: 350px;
+  height: 100%;
+  width: 95%;
+
   padding: 5px;
   font-size: 25px;
   text-align: center;
