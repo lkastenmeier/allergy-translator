@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Card from "./pages/Card";
@@ -8,17 +7,23 @@ import Change from "./pages/Change";
 import Info from "./pages/Info";
 import Start from "./pages/Start";
 import Main from "./pages/Main";
-
-const Container = styled.div`
+import styled from "styled-components";
+const Body = styled.body`
   width: 100vw;
-  height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-bottom: 15px;
+  font-size: 16px;
+  margin: 1px;
+  background-image: linear-gradient(#e3ebee, #bfccdd);
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  overflow-y: scroll;
 `;
 
 function App() {
   return (
-    <Container>
+    <Body>
       <GlobalStyles />
       <Router>
         <Route path="/" exact component={Start} />
@@ -28,7 +33,7 @@ function App() {
         <Route path="/change" component={Change} />
         <Route path="/info" component={Info} />
       </Router>
-    </Container>
+    </Body>
   );
 }
 

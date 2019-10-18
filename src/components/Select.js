@@ -6,9 +6,9 @@ const SelectInput = styled.select`
   display: flex;
   flex-direction: row;
   text-align-last: center;
-  width: 350px;
-  height: 50px;
-  margin: 10px;
+  width: 90%;
+  min-height: 50px;
+  margin: 10px 0px 10px 20px;
   background-color: #e3ebee;
   border: 3px solid #bfccdd;
   color: #2d5f73;

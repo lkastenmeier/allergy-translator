@@ -9,7 +9,7 @@ const AllergySelectionBox = styled.div`
   width: 146px;
   height: 137px;
   border: 3px solid #e3ebee;
-  margin: 10px;
+  margin: 7px;
 `;
 
 export default function AllergySelection({

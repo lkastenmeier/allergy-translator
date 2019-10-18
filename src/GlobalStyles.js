@@ -7,12 +7,8 @@ export default createGlobalStyle`
   box-sizing: border-box;
 }
 body {
-  font-size: 16px;
-  margin: 1px;
-  background-image: linear-gradient(#e3ebee, #bfccdd);
-  font-family: 'Roboto', sans-serif;
-  height:100;
-  overflow: scroll;
+  margin: 0px;
+
 }
 
 `;
