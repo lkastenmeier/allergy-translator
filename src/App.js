@@ -8,7 +8,7 @@ import Info from "./pages/Info";
 import Start from "./pages/Start";
 import Main from "./pages/Main";
 import styled from "styled-components";
-const Body = styled.body`
+const Container = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -16,14 +16,13 @@ const Body = styled.body`
   font-size: 16px;
   margin: 1px;
   background-image: linear-gradient(#e3ebee, #bfccdd);
-  font-family: "Roboto", sans-serif;
   height: 100vh;
   overflow-y: scroll;
 `;
 
 function App() {
   return (
-    <Body>
+    <Container>
       <GlobalStyles />
       <Router>
         <Route path="/" exact component={Start} />
@@ -33,7 +32,7 @@ function App() {
         <Route path="/change" component={Change} />
         <Route path="/info" component={Info} />
       </Router>
-    </Body>
+    </Container>
   );
 }
 

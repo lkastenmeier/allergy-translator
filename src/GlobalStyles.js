@@ -8,7 +8,7 @@ export default createGlobalStyle`
 }
 body {
   margin: 0px;
-
+  font-family: "Roboto", sans-serif;
 }
 
 `;
