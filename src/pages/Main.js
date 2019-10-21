@@ -12,9 +12,15 @@ import Button from "../components/Button";
 import NavButton from "../components/NavButton";
 import styled from "styled-components";
 import DownloadIcon from "../icons/downloadIcon";
-import { allergyData } from "../api/DummyData";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+
+async function getAllergies() {
+  const promise = await fetch("http://localhost:3000/allergies").then(
+    response => response.json()
+  );
+  return promise;
+}
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -28,11 +34,19 @@ const CardContainer = styled.div`
 `;
 
 export default function Main() {
-  const history = useHistory();
   const [allergyFilterSelection, setAllergyFilterSelection] = useState("milk");
   const [languageFilterSelection, setLanguageFilterSelection] = useState(
     "english"
   );
+  const [allergyData, setAllergyData] = React.useState(false);
+  React.useEffect(() => {
+    getAllergies().then(fetchedAllergies => {
+      setAllergyData(fetchedAllergies);
+    });
+  }, []);
+
+  const history = useHistory();
+
   function handleSelect(value) {
     setLanguageFilterSelection(value);
   }
@@ -52,6 +66,7 @@ export default function Main() {
       pdf.save("warningcard.pdf");
     });
   }
+
   return (
     <>
       <Header />
@@ -76,13 +91,17 @@ export default function Main() {
           </AllergySelectionContainer>
         </Route>
         <Route exact path="/Main/Card">
-          <Select select={handleSelect} />
+          <Select allergyData={allergyData} select={handleSelect} />
           <CardContainer id="divToPrint" key={allergyFilterSelection}>
-            <WarningCard
-              src={allergyData[allergy].images.warning}
-              alt={`no ${allergyFilterSelection}`}
-              text={allergyData[allergy].languages[language]}
-            />
+            {allergyFilterSelection &&
+              allergyData &&
+              languageFilterSelection && (
+                <WarningCard
+                  src={allergyData[allergy].images.warning}
+                  alt={`no ${allergy}`}
+                  text={allergyData[allergy].languages[language]}
+                />
+              )}
           </CardContainer>
           <ButtonContainer>
             <Button
