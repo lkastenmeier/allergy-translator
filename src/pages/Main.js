@@ -42,9 +42,8 @@ export default function Main() {
   React.useEffect(() => {
     getAllergies().then(fetchedAllergies => {
       setAllergyData(fetchedAllergies);
-      console.log(allergyData);
     });
-  }, [allergyFilterSelection, languageFilterSelection]);
+  }, []);
 
   const history = useHistory();
 
