@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { allergyData } from "../api/DummyData";
+// import { allergyData } from "../api/DummyData";
 
 const SelectInput = styled.select`
   display: flex;
@@ -17,13 +17,13 @@ const SelectInput = styled.select`
   text-transform: uppercase;
 `;
 
-export default function Select({ select }) {
+export default function Select({ select, allergyData }) {
   function handleFilter(event) {
     const { value } = event.target;
     select(value);
   }
   return (
-    <SelectInput onChange={handleFilter}>
+    <SelectInput onChange={handleFilter} all>
       <option value="0">change language</option>
       {Object.entries(allergyData.milk.languages).map(([key]) => (
         <option value={key} key={key}>
