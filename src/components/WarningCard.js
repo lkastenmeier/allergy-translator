@@ -8,9 +8,6 @@ const WarningCardDiv = styled.div`
   align-items: center;
   border: 5px solid #f25260;
   background: white;
-  height: 550px;
-  width: 350px;
-  margin: 10px 0px 10px 20px;
 `;
 const Image = styled.img`
   width: 250px;
