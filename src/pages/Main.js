@@ -12,7 +12,6 @@ import Button from "../components/Button";
 import NavButton from "../components/NavButton";
 import styled from "styled-components";
 import DownloadIcon from "../icons/downloadIcon";
-import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 
 async function getAllergies() {
@@ -29,8 +28,8 @@ const ButtonContainer = styled.div`
 `;
 
 const CardContainer = styled.div`
-  height: 100%;
-  width: 100%;
+  width: 90vw;
+  margin: auto;
 `;
 
 export default function Main() {
@@ -52,20 +51,6 @@ export default function Main() {
   }
   const allergy = allergyFilterSelection;
   const language = languageFilterSelection;
-
-  function printDocument() {
-    const input = document.getElementById("divToPrint");
-    html2canvas(input).then(canvas => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF({
-        orientation: "portrait",
-        unit: "px",
-        format: [830, 530]
-      });
-      pdf.addImage(imgData, "JPEG", -20, -10);
-      pdf.save("warningcard.pdf");
-    });
-  }
 
   return (
     <>
@@ -105,8 +90,14 @@ export default function Main() {
           </CardContainer>
           <ButtonContainer>
             <Button
+              id="download"
               onEvent={() => {
-                printDocument();
+                html2canvas(document.querySelector("#divToPrint")).then(
+                  function(canvas) {
+                    console.log(canvas);
+                    saveAs(canvas.toDataURL(), "file-name.png");
+                  }
+                );
               }}
             >
               <DownloadIcon />
@@ -118,4 +109,23 @@ export default function Main() {
       </Switch>
     </>
   );
+}
+function saveAs(uri, filename) {
+  const link = document.createElement("a");
+
+  if (typeof link.download === "string") {
+    link.href = uri;
+    link.download = filename;
+
+    //Firefox requires the link to be in the body
+    document.body.appendChild(link);
+
+    //simulate click
+    link.click();
+
+    //remove the link when done
+    document.body.removeChild(link);
+  } else {
+    window.open(uri);
+  }
 }
