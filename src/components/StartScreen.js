@@ -5,6 +5,7 @@ const StartPage = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
+  height: 100vh;
   align-items: center;
   margin-top: 120px;
 `;
@@ -33,20 +34,30 @@ const SpanPrimary = styled.span`
 `;
 const SpanSecondary = styled.span`
   color: #2d5f73;
-  animation: ${appearAnimation} 2s ease-in-out;
+  animation: ${appearAnimation} 1.5s ease-in-out;
   animation-delay: ${props => props.delay};
+`;
+const Title = styled.h1`
+  font-size: 32px;
+  color: #f25260;
+  font-weight: bold;
+  margin-bottom: 80px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-family: "Comfortaa", cursive;
 `;
 
 export default function StartScreen() {
   return (
     <StartPage>
+      <Title>Allergy Translator</Title>
       <MainLogo />
       <StartAnimation>
-        <SpanPrimary delay=".5s">eat</SpanPrimary>
-        <SpanSecondary delay="1s">safe</SpanSecondary>
+        <SpanPrimary delay="0.4s">eat</SpanPrimary>
+        <SpanSecondary delay="0.8s">safe</SpanSecondary>
         <br />
-        <SpanSecondary delay="1.5s">travel</SpanSecondary>
-        <SpanPrimary delay="2s">much</SpanPrimary>
+        <SpanSecondary delay="1.2s">travel</SpanSecondary>
+        <SpanPrimary delay="1.6s">much</SpanPrimary>
       </StartAnimation>
     </StartPage>
   );

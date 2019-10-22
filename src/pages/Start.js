@@ -4,7 +4,7 @@ import { Redirect } from "react-router-dom";
 
 export default function Home() {
   const [toMain, setToMain] = useState(false);
-  setTimeout(() => setToMain(true), 4500);
+  setTimeout(() => setToMain(true), 3200);
   return (
     <>
       {toMain ? (
