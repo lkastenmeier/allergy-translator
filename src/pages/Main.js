@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Navigation from "../components/Navigation";
 import { useHistory } from "react-router-dom";
@@ -8,12 +8,13 @@ import StartPage from "../components/StartPage";
 import CardPage from "../components/Card";
 
 export default function Main({ key }) {
-  const [allergyData, setAllergyData] = React.useState(false);
+  const [allergyData, setAllergyData] = useState(false);
   const [allergyFilterSelection, setAllergyFilterSelection] = useState("milk");
-  React.useEffect(() => {
+  useEffect(() => {
     getAllergies().then(fetchedAllergies => {
       setAllergyData(fetchedAllergies);
     });
+    console.log("Test");
   }, []);
 
   const history = useHistory();
@@ -21,6 +22,7 @@ export default function Main({ key }) {
     setAllergyFilterSelection(key);
     history.push("/main/card");
   }
+  console.log(`This is the data ${allergyData}`);
   return (
     <>
       <Header />
