@@ -11,7 +11,7 @@ app.get("/api/allergydata", async (request, response) => {
   try {
     response.writeHead(200, { "Content-Type": "application/json" });
     const allergyName = await get(request.params.name);
-    return response.end(JSON.stringify(allergyName));
+    return response.end(JSON.stringify(allergyName[0]));
   } catch (error) {
     throw error;
   }

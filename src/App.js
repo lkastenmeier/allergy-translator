@@ -1,7 +1,6 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Card from "./pages/Card";
 import Help from "./pages/Help";
 import Change from "./pages/Change";
 import Info from "./pages/Info";
@@ -27,7 +26,6 @@ function App() {
       <Router>
         <Route path="/" exact component={Start} />
         <Route path="/main" component={Main} />
-        <Route path="/card" component={Card} />
         <Route path="/help" component={Help} />
         <Route path="/change" component={Change} />
         <Route path="/info" component={Info} />
