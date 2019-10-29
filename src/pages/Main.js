@@ -10,17 +10,18 @@ import CardPage from "../components/Card";
 export default function Main({ key }) {
   const [allergyData, setAllergyData] = useState(false);
   const [allergyFilterSelection, setAllergyFilterSelection] = useState("milk");
+  const history = useHistory();
   useEffect(() => {
     getAllergies().then(fetchedAllergies => {
-      setAllergyData(fetchedAllergies.allergies);
+      setAllergyData(fetchedAllergies);
     });
   }, []);
-
-  const history = useHistory();
   function handleAllergySelection(key) {
     setAllergyFilterSelection(key);
     history.push("/main/card");
   }
+
+  // const selectedAllergy = allergyData[allergyFilterSelection];
 
   return (
     <>

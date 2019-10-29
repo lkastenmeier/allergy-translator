@@ -7,17 +7,17 @@ app.use(cors());
 
 const port = 8080;
 
-app.get("/api/allergydata", async (request, response) => {
+app.get("/api/allergies", async (request, response) => {
   try {
     response.writeHead(200, { "Content-Type": "application/json" });
     const allergyName = await get(request.params.name);
-    return response.end(JSON.stringify(allergyName[0]));
+    return response.end(JSON.stringify(allergyName));
   } catch (error) {
     throw error;
   }
 });
 
-app.post("/api/allergydata", async (request, response) => {
+app.post("/api/allergies", async (request, response) => {
   try {
     let body = {};
     request.on("data", function(data) {
@@ -34,15 +34,14 @@ app.post("/api/allergydata", async (request, response) => {
 });
 
 async function set(allergydata) {
-  const allergyCollection = await getCollection("allergydata");
+  const allergyCollection = await getCollection("allergies");
   await allergyCollection.insertOne({ allergydata });
 }
 
-async function get(key) {
+async function get() {
   const allergyCollection = await getCollection();
-  const result = await allergyCollection.find({}).toArray();
-  console.log(result);
-  return result;
+  const allergies = await allergyCollection.find({}).toArray();
+  return allergies;
 }
 
 initDatabase().then(() => {

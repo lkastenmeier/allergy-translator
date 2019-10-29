@@ -15,7 +15,7 @@ async function getCollection() {
   if (!db) {
     await initDatabase();
   }
-  return db.collection("allergydata");
+  return db.collection("allergies");
 }
 
 exports.initDatabase = initDatabase;
