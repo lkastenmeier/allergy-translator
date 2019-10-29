@@ -1,6 +1,8 @@
 {
   "name": "allergy-translator",
   "version": "0.1.0",
+  "author": "lkastenmeier",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "html2canvas": "^1.0.0-rc.5",
