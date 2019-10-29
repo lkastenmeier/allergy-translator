@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import MainLogoMedium from "../icons/mainLogoMedium";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const AppHeader = styled.div`
+const AppHeader = styled.header`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -16,9 +16,9 @@ const AppHeader = styled.div`
 export default function Header(prop) {
   return (
     <AppHeader>
-      <NavLink to="/main">
+      <Link to="/main">
         <MainLogoMedium />
-      </NavLink>
+      </Link>
     </AppHeader>
   );
 }

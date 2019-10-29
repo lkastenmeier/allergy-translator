@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const NavigationItemBtn = styled(NavLink)`
+const NavigationItemBtn = styled(Link)`
   display: flex;
   justify-content: space-around;
   align-items: center;
