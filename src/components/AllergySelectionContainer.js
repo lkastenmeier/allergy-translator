@@ -1,7 +1,6 @@
-import React from "react";
 import styled from "styled-components";
 
-const SelectionContainer = styled.form`
+const AllergySelectionContainer = styled.form`
   display: flex;
   flex-direction: row;
   flex-flow: wrap;
@@ -10,6 +9,4 @@ const SelectionContainer = styled.form`
   background-color: transparent;
 `;
 
-export default function AllergySelectionContainer({ children }) {
-  return <SelectionContainer>{children}</SelectionContainer>;
-}
+export default AllergySelectionContainer;

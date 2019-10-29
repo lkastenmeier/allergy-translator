@@ -19,8 +19,8 @@ export default function AllergySelection({
 }) {
   return (
     <AllergySelectionBox onClick={handleAllergySelection}>
-      <Picture src={src} />
-      <AllergyName name={name}>{name}</AllergyName>
+      <Picture src={src} alt={name} />
+      <AllergyName>{name}</AllergyName>
     </AllergySelectionBox>
   );
 }

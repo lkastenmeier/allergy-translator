@@ -7,6 +7,7 @@ import Info from "./pages/Info";
 import Start from "./pages/Start";
 import Main from "./pages/Main";
 import styled from "styled-components";
+
 const Container = styled.div`
   width: 100vw;
   display: flex;
