@@ -54,7 +54,7 @@ export default function CardPage({ allergyData, allergyFilterSelection }) {
           <DownloadIcon />
           Download
         </Button>
-        <NavButton path="/change" name="change" />
+        <NavButton path="/main" name="back" />
       </ButtonContainer>
     </>
   );

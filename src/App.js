@@ -27,7 +27,6 @@ function App() {
         <Route path="/" exact component={Start} />
         <Route path="/main" component={Main} />
         <Route path="/help" component={Help} />
-        <Route path="/change" component={Change} />
         <Route path="/info" component={Info} />
       </Router>
     </Container>

@@ -11,6 +11,7 @@ export default function Main({ key }) {
   const [allergyData, setAllergyData] = useState(false);
   const [allergyFilterSelection, setAllergyFilterSelection] = useState("milk");
   const history = useHistory();
+
   useEffect(() => {
     getAllergies().then(fetchedAllergies => {
       setAllergyData(fetchedAllergies);
@@ -20,8 +21,6 @@ export default function Main({ key }) {
     setAllergyFilterSelection(key);
     history.push("/main/card");
   }
-
-  // const selectedAllergy = allergyData[allergyFilterSelection];
 
   return (
     <>

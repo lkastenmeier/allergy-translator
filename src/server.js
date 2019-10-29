@@ -17,26 +17,26 @@ app.get("/api/allergies", async (request, response) => {
   }
 });
 
-app.post("/api/allergies", async (request, response) => {
-  try {
-    let body = {};
-    request.on("data", function(data) {
-      body += data;
-    });
-    request.on("end", async function() {
-      response.writeHead(200, { "Content-Type": "application/json" });
-      const allergydata = await set(body);
-      return response.end({ allergydata });
-    });
-  } catch (error) {
-    throw error;
-  }
-});
+// app.post("/api/allergies", async (request, response) => {
+//   try {
+//     let body = {};
+//     request.on("data", function(data) {
+//       body += data;
+//     });
+//     request.on("end", async function() {
+//       response.writeHead(200, { "Content-Type": "application/json" });
+//       const allergydata = await set(body);
+//       return response.end({ allergydata });
+//     });
+//   } catch (error) {
+//     throw error;
+//   }
+// });
 
-async function set(allergydata) {
-  const allergyCollection = await getCollection("allergies");
-  await allergyCollection.insertOne({ allergydata });
-}
+// async function set(allergydata) {
+//   const allergyCollection = await getCollection("allergies");
+//   await allergyCollection.insertOne({ allergydata });
+// }
 
 async function get() {
   const allergyCollection = await getCollection();
