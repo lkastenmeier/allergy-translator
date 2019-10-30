@@ -7,6 +7,7 @@ export default function StartPage({ allergyData, handleAllergySelection }) {
   return (
     <>
       <H1 name={"what is your dietary restriction?"} />
+
       <AllergySelectionContainer>
         {Object.entries(allergyData).map(([key, value]) => (
           <AllergySelection
