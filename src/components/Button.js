@@ -5,14 +5,14 @@ const BasicButton = styled.button`
   justify-content: space-evenly;
   padding: 5px;
   align-items: center;
-  border: 3px solid #e3ebee;
+  border: 3px solid ${props => props.theme.light};
   background: transparent;
   height: 50px;
   width: 165px;
   background-color: transparent;
   font-size: 16px;
   font-weight: bold;
-  color: #2d5f73;
+  color: ${props => props.theme.text};
   text-transform: uppercase;
 `;
 

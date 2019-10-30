@@ -28,18 +28,18 @@ const appearAnimation = keyframes`
 `;
 
 const SpanPrimary = styled.span`
-  color: #f25260;
+  color: ${props => props.theme.highlight};
   animation: ${appearAnimation} 2s ease-in-out;
   animation-delay: ${props => props.delay};
 `;
 const SpanSecondary = styled.span`
-  color: #2d5f73;
+  color: ${props => props.theme.text};
   animation: ${appearAnimation} 1.5s ease-in-out;
   animation-delay: ${props => props.delay};
 `;
 const Title = styled.h1`
   font-size: 32px;
-  color: #f25260;
+  color: ${props => props.theme.highlight};
   font-weight: bold;
   margin-bottom: 80px;
   letter-spacing: 1px;
@@ -50,7 +50,7 @@ const Title = styled.h1`
 export default function StartScreen() {
   return (
     <StartPage>
-      <Title>Allergy Translator</Title>
+      <Title>Trallergy</Title>
       <MainLogo />
       <StartAnimation>
         <SpanPrimary delay="0.4s">eat</SpanPrimary>

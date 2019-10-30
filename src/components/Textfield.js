@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const TextInput = styled.textarea`
-  border: 3px solid #e3ebee;
-  background-color: #bfccdd;
+  border: 3px solid ${props => props.theme.light};
+  background-color: ${props => props.theme.medium};
   color: red;
   height: 100%;
   width: 95%;

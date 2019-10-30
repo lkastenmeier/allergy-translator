@@ -8,7 +8,7 @@ const AppHeader = styled.header`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: #bfccdd;
+  background-color: ${props => props.theme.medium};
   height: 65px;
   padding: 5px;
 `;

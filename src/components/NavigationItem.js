@@ -10,14 +10,15 @@ const NavigationItemBtn = styled(Link)`
   width: 90%;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: ${props => (props.active ? "transparent" : "#e3ebee")};
+  background-color: ${props =>
+    props.active ? "transparent" : `${props => props.theme.light};`};
   border-width: 3px 1.5px 3px 1.5px;
-  border-color: #bfccdd;
+  border-color: ${props => props.theme.medium};
   border-style: ${props => (props.active ? "none" : "solid")};
   font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
-  color: #2d5f73;
+  color: ${props => props.theme.text};
   text-decoration: none;
 `;
 

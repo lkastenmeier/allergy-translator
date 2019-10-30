@@ -8,7 +8,7 @@ const AllergySelectionBox = styled.div`
   flex-direction: column;
   width: 146px;
   height: 137px;
-  border: 3px solid #e3ebee;
+  border: 3px solid ${props => props.theme.light};
   margin: 7px;
 `;
 

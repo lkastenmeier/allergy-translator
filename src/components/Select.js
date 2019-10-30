@@ -8,9 +8,9 @@ const SelectInput = styled.select`
   width: 90%;
   min-height: 50px;
   margin: 10px 0px 10px 20px;
-  background-color: #e3ebee;
-  border: 3px solid #bfccdd;
-  color: #2d5f73;
+  background-color: ${props => props.theme.light};
+  border: 3px solid ${props => props.theme.medium};
+  color: ${props => props.theme.text};
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;

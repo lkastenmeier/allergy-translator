@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const PictureBox = styled.img`
   background-color: white;
-
   height: 111px;
 `;
 

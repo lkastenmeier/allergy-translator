@@ -6,7 +6,7 @@ const WarningCardDiv = styled.div`
   justify-content: center;
   padding: 15px;
   align-items: center;
-  border: 5px solid #f25260;
+  border: 5px solid ${props => props.theme.highlight};
   background: white;
 `;
 const Image = styled.img`
@@ -16,7 +16,7 @@ const Image = styled.img`
 
 const Paragraph = styled.p`
   font-size: 18px;
-  color: #f25260;
+  color: ${props => props.theme.highlight};
   font-weight: bold;
   text-align: center;
   line-height: 40px;

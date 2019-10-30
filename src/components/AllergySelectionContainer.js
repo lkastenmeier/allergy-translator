@@ -6,7 +6,6 @@ const AllergySelectionContainer = styled.form`
   flex-flow: wrap;
   width: 100%;
   justify-content: center;
-  background-color: transparent;
 `;
 
 export default AllergySelectionContainer;
