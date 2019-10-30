@@ -1,9 +1,9 @@
 import NavigationItem from "../components/NavigationItem";
 import React from "react";
 import styled from "styled-components";
-import InfoIcon from "../icons/infoIcon";
-import FindIcon from "../icons/findIcon";
-import MainLogoSmall from "../icons/mainLogoSmall";
+import InfoIcon from "../icons/InfoIcon";
+import FindIcon from "../icons/FindIcon";
+import MainLogoSmall from "../icons/MainLogoSmall";
 
 const NavigationBar = styled.nav`
   display: flex;

@@ -4,7 +4,7 @@ import WarningCard from "../components/WarningCard";
 import Button from "../components/Button";
 import NavButton from "../components/NavButton";
 import styled from "styled-components";
-import DownloadIcon from "../icons/downloadIcon";
+import DownloadIcon from "../icons/DownloadIcon";
 import html2canvas from "html2canvas";
 
 const ButtonContainer = styled.div`

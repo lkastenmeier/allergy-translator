@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-// import { allergyData } from "../api/DummyData";
 
 const SelectInput = styled.select`
   display: flex;

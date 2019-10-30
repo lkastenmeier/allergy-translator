@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import MainLogo from "../icons/mainLogo";
+import MainLogo from "../icons/MainLogo";
 const StartPage = styled.div`
   display: flex;
   flex-direction: column;
