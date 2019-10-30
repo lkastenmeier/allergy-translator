@@ -30,11 +30,10 @@ export default function Main({ key }) {
         <Route exact path="/main">
           <StartPage
             allergies={allergies}
-            key={key}
             handleAllergySelection={handleAllergySelection}
           />
         </Route>
-        <Route exact path="/main/card">
+        <Route path="/main/card">
           <CardPage
             allergyFilterSelection={allergyFilterSelection}
             allergies={allergies}

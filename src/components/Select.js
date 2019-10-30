@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const SelectInput = styled.select`
   display: flex;
-  flex-direction: row;
   text-align-last: center;
   width: 90%;
   min-height: 50px;
