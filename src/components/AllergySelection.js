@@ -3,7 +3,7 @@ import styled from "styled-components";
 import AllergyName from "../components/AllergyName";
 import Picture from "./Picture";
 
-const AllergySelectionBox = styled.div`
+const AllergySelectionBox = styled.section`
   display: flex;
   flex-direction: column;
   width: 146px;

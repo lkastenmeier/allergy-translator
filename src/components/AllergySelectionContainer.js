@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const AllergySelectionContainer = styled.form`
+const AllergySelectionContainer = styled.main`
   display: flex;
   flex-direction: row;
   flex-flow: wrap;

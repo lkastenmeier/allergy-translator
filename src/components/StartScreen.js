@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import MainLogo from "../icons/MainLogo";
-const StartPage = styled.div`
+const StartPage = styled.main`
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -10,7 +10,7 @@ const StartPage = styled.div`
   margin-top: 120px;
 `;
 
-const StartAnimation = styled.div`
+const StartAnimation = styled.section`
   display: flex;
   flex-wrap: wrap;
   width: 170px;
