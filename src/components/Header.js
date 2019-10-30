@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const AppHeader = styled.header`
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   background-color: ${props => props.theme.medium};
