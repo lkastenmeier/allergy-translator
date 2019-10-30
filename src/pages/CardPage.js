@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, createRef } from "react";
 import Select from "../components/Select";
 import WarningCard from "../components/WarningCard";
 import Button from "../components/Button";
@@ -17,10 +17,11 @@ export default function CardPage({ allergies, allergyFilterSelection }) {
   }
   const allergy = allergyFilterSelection;
   const language = languageFilterSelection;
+  const cardToPrint = createRef(null);
   return (
     <>
       <Select allergies={allergies} select={handleSelect} />
-      <CardContainer id="divToPrint" key={allergyFilterSelection}>
+      <CardContainer ref={cardToPrint} key={allergyFilterSelection}>
         {allergyFilterSelection && allergies && languageFilterSelection && (
           <WarningCard
             src={allergies[allergy].images.warning}
@@ -32,9 +33,7 @@ export default function CardPage({ allergies, allergyFilterSelection }) {
       <ButtonContainer>
         <Button
           onEvent={() => {
-            html2canvas(document.querySelector("#divToPrint")).then(function(
-              canvas
-            ) {
+            html2canvas(cardToPrint.current).then(function(canvas) {
               saveAs(
                 canvas.toDataURL(),
                 `${allergy}-warningcard-${language}.png`
