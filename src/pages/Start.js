@@ -10,9 +10,9 @@ export default function Home() {
       {toMain ? (
         <Redirect to="/main" />
       ) : (
-        <body>
+        <>
           <StartScreen />
-        </body>
+        </>
       )}
     </>
   );

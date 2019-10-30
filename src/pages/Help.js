@@ -3,12 +3,12 @@ import Header from "../components/Header";
 import Navigation from "../components/Navigation";
 import Title from "../components/Title";
 
-export default function Home() {
+export default function Help() {
   return (
-    <body>
+    <>
       <Header />
-      <Navigation selected="1" />
+      <Navigation selected="help" />
       <Title name="Here will be a map and an emergency number" />
-    </body>
+    </>
   );
 }

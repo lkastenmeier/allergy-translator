@@ -16,7 +16,7 @@ const SelectInput = styled.select`
   text-transform: uppercase;
 `;
 
-export default function Select({ select, allergyData }) {
+export default function Select({ select, allergies }) {
   function handleFilter(event) {
     const { value } = event.target;
     select(value);
@@ -24,7 +24,7 @@ export default function Select({ select, allergyData }) {
   return (
     <SelectInput onChange={handleFilter} all>
       <option value="0">change language</option>
-      {Object.entries(allergyData.milk.languages).map(([key]) => (
+      {Object.entries(allergies.milk.languages).map(([key]) => (
         <option value={key} key={key}>
           {key}
         </option>
