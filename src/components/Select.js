@@ -30,6 +30,7 @@ export default function Select({ select, allergies }) {
     </SelectInput>
   );
 }
+
 Select.propTypes = {
   key: PropTypes.string,
   onChange: PropTypes.func

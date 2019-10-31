@@ -7,9 +7,9 @@ const AppHeader = styled.header`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: ${props => props.theme.medium};
   height: 65px;
   padding: 5px;
+  background-color: ${props => props.theme.medium};
 `;
 
 export default function Header() {

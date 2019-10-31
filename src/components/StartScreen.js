@@ -5,20 +5,20 @@ import MainLogo from "../icons/MainLogo";
 const StartPage = styled.main`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100vw;
   height: 100vh;
-  align-items: center;
   margin-top: 120px;
 `;
 
 const StartAnimation = styled.section`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px;
   width: 170px;
   font-size: 30px;
-  justify-content: space-evenly;
-  margin: 30px;
-  align-items: center;
   font-weight: bold;
 `;
 const appearAnimation = keyframes`
@@ -33,18 +33,20 @@ const SpanPrimary = styled.span`
   animation: ${appearAnimation} 2s ease-in-out;
   animation-delay: ${props => props.delay};
 `;
+
 const SpanSecondary = styled.span`
   color: ${props => props.theme.text};
   animation: ${appearAnimation} 1.5s ease-in-out;
   animation-delay: ${props => props.delay};
 `;
+
 const Title = styled.h1`
-  font-size: 32px;
+  text-align: center;
+  margin-bottom: 80px;
   color: ${props => props.theme.highlight};
   font-weight: bold;
-  margin-bottom: 80px;
+  font-size: 32px;
   letter-spacing: 1px;
-  text-align: center;
   font-family: "Comfortaa", cursive;
 `;
 

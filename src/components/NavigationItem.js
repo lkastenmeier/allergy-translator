@@ -12,14 +12,13 @@ const NavigationButton = styled(Link)`
   padding-left: 10px;
   padding-right: 10px;
   background-color: ${props => props.theme.light};
+  color: ${props => props.theme.text};
   border-width: 3px 1.5px 3px 1.5px;
   border-color: ${props => props.theme.medium};
   border-style: ${props => (props.active ? "none" : "solid")};
   font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
-  color: ${props => props.theme.text};
-  text-decoration: none;
 `;
 
 export default function NavigationItem({ path, active, children }) {
@@ -29,6 +28,7 @@ export default function NavigationItem({ path, active, children }) {
     </NavigationButton>
   );
 }
+
 NavigationItem.propTypes = {
   path: PropTypes.string.isRequired,
   active: PropTypes.bool,

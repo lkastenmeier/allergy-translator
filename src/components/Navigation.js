@@ -9,10 +9,10 @@ import PropTypes from "prop-types";
 const NavigationBar = styled.nav`
   display: flex;
   flex-direction: row;
-  width: 100%;
-  height: 60px;
   align-items: center;
   justify-content: stretch;
+  width: 100%;
+  height: 60px;
   background-color: transparent;
 `;
 

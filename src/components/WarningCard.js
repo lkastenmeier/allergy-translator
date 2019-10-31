@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+
 const WarningCardDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 15px;
   align-items: center;
-  border: 5px solid ${props => props.theme.highlight};
+  padding: 15px;
   background: white;
+  border: 6px solid ${props => props.theme.highlight};
 `;
 const Image = styled.img`
   width: 250px;
@@ -31,6 +32,7 @@ export default function WarningCard({ src, alt, text }) {
     </WarningCardDiv>
   );
 }
+
 WarningCard.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string,

@@ -1,19 +1,20 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+
 const BasicButton = styled.button`
   display: flex;
   justify-content: space-evenly;
-  padding: 5px;
   align-items: center;
-  border: 3px solid ${props => props.theme.light};
-  background: transparent;
   height: 50px;
   width: 165px;
-  background-color: transparent;
+  padding: 5px;
+  color: ${props => props.theme.text};
+  border: 3px solid ${props => props.theme.light};
+  background: ${props => props.theme.medium};
   font-size: 16px;
   font-weight: bold;
-  color: ${props => props.theme.text};
+
   text-transform: uppercase;
 `;
 

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+
 const AllergyNameField = styled.div`
   display: flex;
   align-items: center;
@@ -10,6 +11,7 @@ const AllergyNameField = styled.div`
   width: 140px;
   height: 26px;
   font-weight: bold;
+  text-transform: lowercase;
 `;
 
 export default function AllergyName({ children }) {
