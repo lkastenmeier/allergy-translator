@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const NavigationButton = styled(Link)`
   display: flex;
@@ -28,3 +29,8 @@ export default function NavigationItem({ path, active, children }) {
     </NavigationButton>
   );
 }
+NavigationItem.propTypes = {
+  path: PropTypes.string.isRequired,
+  active: PropTypes.bool,
+  children: PropTypes.node.isRequired
+};

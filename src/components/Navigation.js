@@ -4,6 +4,7 @@ import styled from "styled-components";
 import InfoIcon from "../icons/InfoIcon";
 import FindIcon from "../icons/FindIcon";
 import MainLogoSmall from "../icons/MainLogoSmall";
+import PropTypes from "prop-types";
 
 const NavigationBar = styled.nav`
   display: flex;
@@ -35,3 +36,7 @@ export default function Navigation({ selected }) {
     </NavigationBar>
   );
 }
+
+Navigation.propTypes = {
+  selected: PropTypes.string.isRequired
+};

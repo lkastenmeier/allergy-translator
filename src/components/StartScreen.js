@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import MainLogo from "../icons/MainLogo";
+
 const StartPage = styled.main`
   display: flex;
   flex-direction: column;

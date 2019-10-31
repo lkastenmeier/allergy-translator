@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const SelectInput = styled.select`
   display: flex;
@@ -24,10 +25,12 @@ export default function Select({ select, allergies }) {
     <SelectInput onChange={handleFilter} all>
       <option value="0">change language</option>
       {Object.entries(allergies.milk.languages).map(([key]) => (
-        <option value={key} key={key}>
-          {key}
-        </option>
+        <option key={key}>{key}</option>
       ))}
     </SelectInput>
   );
 }
+Select.propTypes = {
+  key: PropTypes.string,
+  onChange: PropTypes.func
+};

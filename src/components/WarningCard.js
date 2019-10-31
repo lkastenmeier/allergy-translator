@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 const WarningCardDiv = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,7 +23,7 @@ const Paragraph = styled.p`
   line-height: 40px;
 `;
 
-export default function Picture({ src, alt, text }) {
+export default function WarningCard({ src, alt, text }) {
   return (
     <WarningCardDiv>
       <Image src={src} alt={alt} />
@@ -30,3 +31,8 @@ export default function Picture({ src, alt, text }) {
     </WarningCardDiv>
   );
 }
+WarningCard.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+  text: PropTypes.string.isRequired
+};

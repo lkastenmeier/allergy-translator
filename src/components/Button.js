@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 const BasicButton = styled.button`
   display: flex;
   justify-content: space-evenly;
@@ -17,10 +18,9 @@ const BasicButton = styled.button`
 `;
 
 export default function Button({ name, children, onEvent }) {
-  return (
-    <BasicButton onClick={onEvent} name={name}>
-      {children}
-      {name}
-    </BasicButton>
-  );
+  return <BasicButton onClick={onEvent}>{children}</BasicButton>;
 }
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func
+};

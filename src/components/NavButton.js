@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 const NavigationButton = styled(Link)`
   display: flex;
   justify-content: space-evenly;
@@ -18,9 +19,10 @@ const NavigationButton = styled(Link)`
   text-decoration: none;
 `;
 export default function NavButton({ path, name }) {
-  return (
-    <NavigationButton to={path} name={name}>
-      {name}
-    </NavigationButton>
-  );
+  return <NavigationButton to={path}>{name}</NavigationButton>;
 }
+
+NavButton.propTypes = {
+  path: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
+};

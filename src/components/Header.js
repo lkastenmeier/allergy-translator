@@ -12,7 +12,7 @@ const AppHeader = styled.header`
   padding: 5px;
 `;
 
-export default function Header(prop) {
+export default function Header() {
   return (
     <AppHeader>
       <Link to="/main">

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const TextInput = styled.textarea`
   border: 3px solid ${props => props.theme.light};
@@ -23,3 +24,7 @@ const TextInput = styled.textarea`
 export default function Textfield({ placeholder }) {
   return <TextInput defaultValue={placeholder} />;
 }
+
+Textfield.propTypes = {
+  placeholder: PropTypes.string
+};

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import AllergyName from "../components/AllergyName";
 import Picture from "./Picture";
+import PropTypes from "prop-types";
 
 const AllergySelectionBox = styled.section`
   display: flex;
@@ -24,3 +25,9 @@ export default function AllergySelection({
     </AllergySelectionBox>
   );
 }
+AllergySelection.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  onClick: PropTypes.func
+};
