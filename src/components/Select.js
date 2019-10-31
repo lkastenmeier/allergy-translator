@@ -17,12 +17,12 @@ const SelectInput = styled.select`
 `;
 
 export default function Select({ select, allergies }) {
-  function handleFilter(event) {
+  function onFilterSelect(event) {
     const { value } = event.target;
     select(value);
   }
   return (
-    <SelectInput onChange={handleFilter} all>
+    <SelectInput onChange={onFilterSelect} all>
       <option value="0">change language</option>
       {Object.entries(allergies.milk.languages).map(([key]) => (
         <option key={key}>{key}</option>

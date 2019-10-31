@@ -13,13 +13,9 @@ const AllergySelectionBox = styled.section`
   margin: 7px;
 `;
 
-export default function AllergySelection({
-  handleAllergySelection,
-  src,
-  name
-}) {
+export default function AllergySelection({ onAllergySelect, src, name }) {
   return (
-    <AllergySelectionBox onClick={handleAllergySelection}>
+    <AllergySelectionBox onClick={onAllergySelect}>
       <Picture src={src} alt={name} />
       <AllergyName>{name}</AllergyName>
     </AllergySelectionBox>

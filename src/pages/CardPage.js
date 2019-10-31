@@ -12,7 +12,7 @@ export default function CardPage({ allergies, allergyFilterSelection }) {
   const [languageFilterSelection, setLanguageFilterSelection] = useState(
     "english"
   );
-  function handleSelect(value) {
+  function onFilterSelect(value) {
     setLanguageFilterSelection(value);
   }
   const allergy = allergyFilterSelection;
@@ -20,7 +20,7 @@ export default function CardPage({ allergies, allergyFilterSelection }) {
   const cardToPrint = createRef(null);
   return (
     <>
-      <Select allergies={allergies} select={handleSelect} />
+      <Select allergies={allergies} select={onFilterSelect} />
       <CardContainer ref={cardToPrint} key={allergyFilterSelection}>
         {allergyFilterSelection && allergies && languageFilterSelection && (
           <WarningCard

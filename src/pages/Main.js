@@ -17,7 +17,7 @@ export default function Main({ key }) {
       setAllergies(fetchedAllergies);
     });
   }, []);
-  function handleAllergySelection(key) {
+  function onAllergySelect(key) {
     setAllergyFilterSelection(key);
     history.push("/main/card");
   }
@@ -28,10 +28,7 @@ export default function Main({ key }) {
       <Navigation selected="0" />
       <Switch>
         <Route exact path="/main">
-          <StartPage
-            allergies={allergies}
-            handleAllergySelection={handleAllergySelection}
-          />
+          <StartPage allergies={allergies} onAllergySelect={onAllergySelect} />
         </Route>
         <Route path="/main/card">
           <CardPage

@@ -3,7 +3,7 @@ import AllergySelectionContainer from "../components/AllergySelectionContainer";
 import AllergySelection from "../components/AllergySelection";
 import Title from "../components/Title";
 
-export default function StartPage({ allergies, handleAllergySelection }) {
+export default function StartPage({ allergies, onAllergySelect }) {
   return (
     <>
       <Title name={"what is your dietary restriction?"} />
@@ -13,7 +13,7 @@ export default function StartPage({ allergies, handleAllergySelection }) {
             name={key}
             key={key}
             src={value.images.basic}
-            handleAllergySelection={() => handleAllergySelection(key)}
+            onAllergySelect={() => onAllergySelect(key)}
           >
             {key}
           </AllergySelection>
