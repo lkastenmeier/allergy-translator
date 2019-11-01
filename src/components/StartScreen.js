@@ -1,23 +1,24 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import MainLogo from "../icons/mainLogo";
-const StartPage = styled.div`
+import MainLogo from "../icons/MainLogo";
+
+const StartPage = styled.main`
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100vw;
   height: 100vh;
-  align-items: center;
   margin-top: 120px;
 `;
 
-const StartAnimation = styled.div`
+const StartAnimation = styled.section`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 30px;
   width: 170px;
   font-size: 30px;
-  justify-content: space-evenly;
-  margin: 30px;
-  align-items: center;
   font-weight: bold;
 `;
 const appearAnimation = keyframes`
@@ -28,29 +29,31 @@ const appearAnimation = keyframes`
 `;
 
 const SpanPrimary = styled.span`
-  color: #f25260;
+  color: ${props => props.theme.highlight};
   animation: ${appearAnimation} 2s ease-in-out;
   animation-delay: ${props => props.delay};
 `;
+
 const SpanSecondary = styled.span`
-  color: #2d5f73;
+  color: ${props => props.theme.text};
   animation: ${appearAnimation} 1.5s ease-in-out;
   animation-delay: ${props => props.delay};
 `;
+
 const Title = styled.h1`
-  font-size: 32px;
-  color: #f25260;
-  font-weight: bold;
-  margin-bottom: 80px;
-  letter-spacing: 1px;
   text-align: center;
+  margin-bottom: 80px;
+  color: ${props => props.theme.highlight};
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: 1px;
   font-family: "Comfortaa", cursive;
 `;
 
 export default function StartScreen() {
   return (
     <StartPage>
-      <Title>Allergy Translator</Title>
+      <Title>Trallergy</Title>
       <MainLogo />
       <StartAnimation>
         <SpanPrimary delay="0.4s">eat</SpanPrimary>

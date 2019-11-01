@@ -1,24 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import MainLogoMedium from "../icons/mainLogoMedium";
-import { NavLink } from "react-router-dom";
+import MainLogoMedium from "../icons/MainLogoMedium";
+import { Link } from "react-router-dom";
 
-const AppHeader = styled.div`
+const AppHeader = styled.header`
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background-color: #bfccdd;
   height: 65px;
   padding: 5px;
+  background-color: ${props => props.theme.medium};
 `;
 
-export default function Header(prop) {
+export default function Header() {
   return (
     <AppHeader>
-      <NavLink to="/main">
+      <Link to="/main">
         <MainLogoMedium />
-      </NavLink>
+      </Link>
     </AppHeader>
   );
 }

@@ -4,20 +4,20 @@ import Navigation from "../components/Navigation";
 import { useHistory } from "react-router-dom";
 import { Switch, Route } from "react-router-dom";
 import getAllergies from "../api/getAllergies";
-import StartPage from "../components/StartPage";
-import CardPage from "../components/Card";
+import StartPage from "../pages/StartPage";
+import CardPage from "../pages/CardPage";
 
 export default function Main({ key }) {
-  const [allergyData, setAllergyData] = useState(false);
+  const [allergies, setAllergies] = useState(false);
   const [allergyFilterSelection, setAllergyFilterSelection] = useState("milk");
   const history = useHistory();
 
   useEffect(() => {
     getAllergies().then(fetchedAllergies => {
-      setAllergyData(fetchedAllergies);
+      setAllergies(fetchedAllergies);
     });
   }, []);
-  function handleAllergySelection(key) {
+  function onAllergySelect(key) {
     setAllergyFilterSelection(key);
     history.push("/main/card");
   }
@@ -28,16 +28,12 @@ export default function Main({ key }) {
       <Navigation selected="0" />
       <Switch>
         <Route exact path="/main">
-          <StartPage
-            allergyData={allergyData}
-            key={key}
-            handleAllergySelection={handleAllergySelection}
-          />
+          <StartPage allergies={allergies} onAllergySelect={onAllergySelect} />
         </Route>
-        <Route exact path="/main/card">
+        <Route path="/main/card">
           <CardPage
             allergyFilterSelection={allergyFilterSelection}
-            allergyData={allergyData}
+            allergies={allergies}
           />
         </Route>
       </Switch>

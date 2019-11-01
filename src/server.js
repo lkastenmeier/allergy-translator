@@ -1,44 +1,18 @@
 const express = require("express");
-const { getCollection } = require("./database");
-const { initDatabase } = require("./database");
-const cors = require("cors");
+const { getCollection, initDatabase } = require("./database");
 const app = express();
-app.use(cors());
 
 const port = 8080;
-
-app.get("/api/allergies", async (request, response) => {
+app.get(`/api/allergies`, async (request, response) => {
   try {
-    response.writeHead(200, { "Content-Type": "application/json" });
-    const allergyName = await get(request.params.name);
-    return response.end(JSON.stringify(allergyName));
+    const allergyName = await getAllergies(request.params);
+    return response.json(allergyName);
   } catch (error) {
-    throw error;
+    return response.end("Error");
   }
 });
 
-// app.post("/api/allergies", async (request, response) => {
-//   try {
-//     let body = {};
-//     request.on("data", function(data) {
-//       body += data;
-//     });
-//     request.on("end", async function() {
-//       response.writeHead(200, { "Content-Type": "application/json" });
-//       const allergydata = await set(body);
-//       return response.end({ allergydata });
-//     });
-//   } catch (error) {
-//     throw error;
-//   }
-// });
-
-// async function set(allergydata) {
-//   const allergyCollection = await getCollection("allergies");
-//   await allergyCollection.insertOne({ allergydata });
-// }
-
-async function get() {
+async function getAllergies() {
   const allergyCollection = await getCollection();
   const allergies = await allergyCollection.find({}).toArray();
   return allergies;

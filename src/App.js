@@ -2,11 +2,12 @@ import React from "react";
 import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Help from "./pages/Help";
-import Change from "./pages/Change";
 import Info from "./pages/Info";
 import Start from "./pages/Start";
 import Main from "./pages/Main";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import defaultTheme from "./themes/default";
+
 const Container = styled.div`
   width: 100vw;
   display: flex;
@@ -21,15 +22,17 @@ const Container = styled.div`
 
 function App() {
   return (
-    <Container>
-      <GlobalStyles />
-      <Router>
-        <Route path="/" exact component={Start} />
-        <Route path="/main" component={Main} />
-        <Route path="/help" component={Help} />
-        <Route path="/info" component={Info} />
-      </Router>
-    </Container>
+    <ThemeProvider theme={defaultTheme}>
+      <Container>
+        <GlobalStyles />
+        <Router>
+          <Route path="/" exact component={Start} />
+          <Route path="/main" component={Main} />
+          <Route path="/help" component={Help} />
+          <Route path="/info" component={Info} />
+        </Router>
+      </Container>
+    </ThemeProvider>
   );
 }
 

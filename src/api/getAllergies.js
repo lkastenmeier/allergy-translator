@@ -1,6 +1,6 @@
 export default async function getAllergies() {
-  const allergies = await fetch("http://localhost:8080/api/allergies").then(
-    response => response.json()
+  const allergies = await fetch("/api/allergies").then(response =>
+    response.json()
   );
   return arrayToObject(allergies);
 }

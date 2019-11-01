@@ -1,26 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
-const NavigationButton = styled(NavLink)`
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
+const NavigationButton = styled(Link)`
   display: flex;
   justify-content: space-evenly;
-  padding: 5px;
   align-items: center;
-  border: 3px solid #e3ebee;
-  background: transparent;
   height: 50px;
   width: 165px;
-  background-color: transparent;
+  padding: 5px;
+  background: ${props => props.theme.medium};
+  color: ${props => props.theme.text};
+  border: 3px solid ${props => props.theme.light};
   font-size: 16px;
   font-weight: bold;
-  color: #2d5f73;
   text-transform: uppercase;
-  text-decoration: none;
 `;
+
 export default function NavButton({ path, name }) {
-  return (
-    <NavigationButton to={path} name={name}>
-      {name}
-    </NavigationButton>
-  );
+  return <NavigationButton to={path}>{name}</NavigationButton>;
 }
+
+NavButton.propTypes = {
+  path: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
+};

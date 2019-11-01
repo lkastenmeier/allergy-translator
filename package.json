@@ -1,14 +1,15 @@
 {
   "name": "allergy-translator",
   "version": "0.1.0",
+  "author": "lkastenmeier",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "html2canvas": "^1.0.0-rc.5",
-    "jspdf": "^1.5.3",
-    "jspdf-react": "^1.0.11",
-    "proptypes": "^1.1.0",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
+    "mongodb": "^3.3.3",
+    "prop-types": "^15.7.2",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "styled-components": "^4.4.0"
@@ -19,7 +20,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "server": "nodemon src/server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,6 +45,8 @@
     "@storybook/addons": "^5.2.3",
     "@storybook/react": "^5.2.3",
     "babel-loader": "^8.0.6",
-    "eslint": "^6.5.1"
-  }
+    "eslint": "^6.5.1",
+    "nodemon": "^1.19.4"
+  },
+  "proxy": "http://localhost:8080"
 }

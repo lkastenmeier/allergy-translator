@@ -1,49 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, createRef } from "react";
 import Select from "../components/Select";
 import WarningCard from "../components/WarningCard";
 import Button from "../components/Button";
 import NavButton from "../components/NavButton";
-import styled from "styled-components";
-import DownloadIcon from "../icons/downloadIcon";
+import ButtonContainer from "../components/ButtonContainer";
+import DownloadIcon from "../icons/DownloadIcon";
+import CardContainer from "../components/CardContainer";
 import html2canvas from "html2canvas";
 
-const ButtonContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-`;
-const CardContainer = styled.div`
-  width: 90vw;
-  margin: auto;
-`;
-
-export default function CardPage({ allergyData, allergyFilterSelection }) {
+export default function CardPage({ allergies, allergyFilterSelection }) {
   const [languageFilterSelection, setLanguageFilterSelection] = useState(
     "english"
   );
-  function handleSelect(value) {
+  function onFilterSelect(value) {
     setLanguageFilterSelection(value);
   }
   const allergy = allergyFilterSelection;
   const language = languageFilterSelection;
+  const cardToPrint = createRef(null);
   return (
     <>
-      <Select allergyData={allergyData} select={handleSelect} />
-      <CardContainer id="divToPrint" key={allergyFilterSelection}>
-        {allergyFilterSelection && allergyData && languageFilterSelection && (
+      <Select allergies={allergies} select={onFilterSelect} />
+      <CardContainer ref={cardToPrint} key={allergyFilterSelection}>
+        {allergyFilterSelection && allergies && languageFilterSelection && (
           <WarningCard
-            src={allergyData[allergy].images.warning}
+            src={allergies[allergy].images.warning}
             alt={`no ${allergy}`}
-            text={allergyData[allergy].languages[language]}
+            text={allergies[allergy].languages[language]}
           />
         )}
       </CardContainer>
       <ButtonContainer>
         <Button
           onEvent={() => {
-            html2canvas(document.querySelector("#divToPrint")).then(function(
-              canvas
-            ) {
+            html2canvas(cardToPrint.current).then(function(canvas) {
               saveAs(
                 canvas.toDataURL(),
                 `${allergy}-warningcard-${language}.png`

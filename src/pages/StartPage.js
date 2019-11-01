@@ -1,20 +1,19 @@
 import React from "react";
 import AllergySelectionContainer from "../components/AllergySelectionContainer";
 import AllergySelection from "../components/AllergySelection";
-import H1 from "../components/H1";
+import Title from "../components/Title";
 
-export default function StartPage({ allergyData, handleAllergySelection }) {
+export default function StartPage({ allergies, onAllergySelect }) {
   return (
     <>
-      <H1 name={"what is your dietary restriction?"} />
-
+      <Title name={"what is your dietary restriction?"} />
       <AllergySelectionContainer>
-        {Object.entries(allergyData).map(([key, value]) => (
+        {Object.entries(allergies).map(([key, value]) => (
           <AllergySelection
             name={key}
             key={key}
             src={value.images.basic}
-            handleAllergySelection={() => handleAllergySelection(key)}
+            onAllergySelect={() => onAllergySelect(key)}
           >
             {key}
           </AllergySelection>

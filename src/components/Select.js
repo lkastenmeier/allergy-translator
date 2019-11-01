@@ -1,35 +1,37 @@
 import React from "react";
 import styled from "styled-components";
-// import { allergyData } from "../api/DummyData";
+import PropTypes from "prop-types";
 
 const SelectInput = styled.select`
   display: flex;
-  flex-direction: row;
   text-align-last: center;
   width: 90%;
   min-height: 50px;
   margin: 10px 0px 10px 20px;
-  background-color: #e3ebee;
-  border: 3px solid #bfccdd;
-  color: #2d5f73;
+  background-color: ${props => props.theme.light};
+  border: 3px solid ${props => props.theme.medium};
+  color: ${props => props.theme.text};
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
 `;
 
-export default function Select({ select, allergyData }) {
-  function handleFilter(event) {
+export default function Select({ select, allergies }) {
+  function onFilterSelect(event) {
     const { value } = event.target;
     select(value);
   }
   return (
-    <SelectInput onChange={handleFilter} all>
+    <SelectInput onChange={onFilterSelect} all>
       <option value="0">change language</option>
-      {Object.entries(allergyData.milk.languages).map(([key]) => (
-        <option value={key} key={key}>
-          {key}
-        </option>
+      {Object.entries(allergies.milk.languages).map(([key]) => (
+        <option key={key}>{key}</option>
       ))}
     </SelectInput>
   );
 }
+
+Select.propTypes = {
+  key: PropTypes.string,
+  onChange: PropTypes.func
+};
