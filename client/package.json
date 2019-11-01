@@ -6,7 +6,6 @@
   "private": true,
   "dependencies": {
     "html2canvas": "^1.0.0-rc.5",
-    "mongodb": "^3.3.3",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
@@ -20,8 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "server": "nodemon src/server.js"
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,8 +43,7 @@
     "@storybook/addons": "^5.2.3",
     "@storybook/react": "^5.2.3",
     "babel-loader": "^8.0.6",
-    "eslint": "^6.5.1",
-    "nodemon": "^1.19.4"
+    "eslint": "^6.5.1"
   },
   "proxy": "http://localhost:8080"
 }
