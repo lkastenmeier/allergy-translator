@@ -7,9 +7,9 @@ const InputField = styled.input`
   text-align-last: center;
   width: 50%;
   min-height: 50px;
-  margin: 10px auto;
+  margin: 10px auto 5px auto;
   background-color: ${props => props.theme.light};
-  border: 3px solid ${props => props.theme.highlight};
+  border: 2px solid ${props => props.theme.highlight};
   color: ${props => props.theme.text};
   font-size: 16px;
 `;
