@@ -12,7 +12,7 @@ export default function Help() {
   return (
     <>
       <Header />
-      <Navigation selected="1" />
+      <Navigation selected={window.location.pathname} />
       <SearchField input={onLocationInput} />
       <Iframe location={location} />
     </>

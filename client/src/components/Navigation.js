@@ -19,17 +19,17 @@ const NavigationBar = styled.nav`
 export default function Navigation({ selected }) {
   return (
     <NavigationBar>
-      <NavigationItem path="/main" active={"0" === selected}>
+      <NavigationItem path="/main" active={"/main" === selected}>
         <MainLogoSmall />
         <span>Home</span>
       </NavigationItem>
 
-      <NavigationItem path="/help" active={"1" === selected}>
+      <NavigationItem path="/help" active={"/help" === selected}>
         <FindIcon />
         <span>Find Help</span>
       </NavigationItem>
 
-      <NavigationItem path="/info" active={"2" === selected}>
+      <NavigationItem path="/info" active={"/info" === selected}>
         <InfoIcon />
         <span>Info</span>
       </NavigationItem>
