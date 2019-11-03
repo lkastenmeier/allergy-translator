@@ -7,7 +7,7 @@ export default function Info() {
   return (
     <>
       <Header />
-      <Navigation selected="2" />
+      <Navigation selected={window.location.pathname} />
       <Title name="Here will be some Info such as FAQ, Instructions and Impressum" />
     </>
   );

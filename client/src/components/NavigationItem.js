@@ -23,7 +23,7 @@ const NavigationButton = styled(Link)`
 
 export default function NavigationItem({ path, active, children }) {
   return (
-    <NavigationButton to={path} active={active}>
+    <NavigationButton to={path} active={active ? 1 : 0}>
       {children}
     </NavigationButton>
   );

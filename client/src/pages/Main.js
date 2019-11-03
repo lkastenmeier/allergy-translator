@@ -7,7 +7,7 @@ import getAllergies from "../api/getAllergies";
 import StartPage from "../pages/StartPage";
 import CardPage from "../pages/CardPage";
 
-export default function Main({ key }) {
+export default function Main() {
   const [allergies, setAllergies] = useState(false);
   const [allergyFilterSelection, setAllergyFilterSelection] = useState("milk");
   const history = useHistory();
@@ -25,7 +25,7 @@ export default function Main({ key }) {
   return (
     <>
       <Header />
-      <Navigation selected="0" />
+      <Navigation selected={window.location.pathname} />
       <Switch>
         <Route exact path="/main">
           <StartPage allergies={allergies} onAllergySelect={onAllergySelect} />
