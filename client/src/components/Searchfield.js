@@ -14,7 +14,7 @@ const InputField = styled.input`
   font-size: 16px;
 `;
 
-export default function Searchfield({ input }) {
+export default function SearchField({ input }) {
   function onLocationInput(event) {
     const { value } = event.target;
     input(value);
