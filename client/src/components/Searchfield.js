@@ -15,11 +15,11 @@ const InputField = styled.input`
 `;
 
 export default function Searchfield({ input }) {
-  function onSearch(event) {
+  function onLocationInput(event) {
     const { value } = event.target;
     input(value);
   }
-  return <InputField placeholder="Your Location" onChange={onSearch} />;
+  return <InputField placeholder="Your Location" onChange={onLocationInput} />;
 }
 
 Searchfield.propTypes = {
