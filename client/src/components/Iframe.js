@@ -10,6 +10,12 @@ const Frame = styled.article`
   border-radius: 2px;
   border: 3px solid ${props => props.theme.light};
 `;
+const iframeStyle = {
+  border: `0`,
+  margin: `auto`,
+  width: `100%`,
+  height: `100%`
+};
 
 export default function Iframe({ location }) {
   return (
@@ -17,12 +23,7 @@ export default function Iframe({ location }) {
       <iframe
         title="hospitals"
         location={location}
-        style={{
-          border: `0`,
-          margin: `auto`,
-          width: `100%`,
-          height: `100%`
-        }}
+        style={iframeStyle}
         src={`https://www.google.com/maps/embed/v1/search?&q=hospital+near+${location}&key=${apiKey}`}
       />
     </Frame>
