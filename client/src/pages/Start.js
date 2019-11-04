@@ -4,11 +4,14 @@ import { useHistory } from "react-router-dom";
 
 export default function StartAnimation() {
   const history = useHistory();
-  const [toMain, setToMain] = useState(false);
+  const redirect = () => {
+    history.push("/main");
+  };
+  const [animation, setAnimation] = useState(true);
   React.useEffect(() => {
-    const timeout = () => setTimeout(() => setToMain(true), 3100);
+    const timeout = () => setTimeout(() => setAnimation(false), 3200);
     timeout();
     return clearTimeout(timeout);
   }, []);
-  return <>{toMain ? history.push("/main") : <StartScreen />}</>;
+  return <>{animation ? <StartScreen /> : redirect()}</>;
 }
