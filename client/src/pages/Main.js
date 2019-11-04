@@ -19,7 +19,7 @@ export default function Main() {
   }, []);
   function onAllergySelect(key) {
     setAllergyFilterSelection(key);
-    history.push("/main/card");
+    history.push(`/main/card/${key}?lang=english`);
   }
 
   return (
@@ -30,11 +30,14 @@ export default function Main() {
         <Route exact path="/main">
           <StartPage allergies={allergies} onAllergySelect={onAllergySelect} />
         </Route>
-        <Route path="/main/card">
-          <CardPage
-            allergyFilterSelection={allergyFilterSelection}
-            allergies={allergies}
-          />
+        <Route path="/main/card/:name">
+          {props => (
+            <CardPage
+              {...props}
+              allergyFilterSelection={allergyFilterSelection}
+              allergies={allergies}
+            />
+          )}
         </Route>
       </Switch>
     </>

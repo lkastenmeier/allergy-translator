@@ -5,7 +5,7 @@ const app = express();
 const port = 8080;
 app.get(`/api/allergies`, async (request, response) => {
   try {
-    const allergyName = await getAllergies(request.params);
+    const allergyName = await getAllergies();
     return response.json(allergyName);
   } catch (error) {
     return response.end("Error");
