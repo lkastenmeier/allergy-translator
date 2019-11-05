@@ -5,6 +5,7 @@ import Help from "./pages/Help";
 import Info from "./pages/Info";
 import Start from "./pages/Start";
 import Main from "./pages/Main";
+import MyCards from "./pages/MyCards";
 import styled, { ThemeProvider } from "styled-components";
 import defaultTheme from "./themes/default";
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" exact component={Start} />
           <Route path="/main" component={Main} />
           <Route path="/help" component={Help} />
+          <Route path="/mycards" component={MyCards} />
           <Route path="/info" component={Info} />
         </Router>
       </Container>

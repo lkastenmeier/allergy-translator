@@ -1,7 +1,7 @@
 import NavigationItem from "../components/NavigationItem";
 import React from "react";
 import styled from "styled-components";
-import InfoIcon from "../icons/InfoIcon";
+import { MyCardIconDark } from "../icons/MyCardIcon";
 import FindIcon from "../icons/FindIcon";
 import MainLogoSmall from "../icons/MainLogoSmall";
 import PropTypes from "prop-types";
@@ -29,9 +29,9 @@ export default function Navigation({ selected }) {
         <span>Find Help</span>
       </NavigationItem>
 
-      <NavigationItem path="/info" active={"/info" === selected}>
-        <InfoIcon />
-        <span>Info</span>
+      <NavigationItem path="/mycards" active={"/mycards" === selected}>
+        <MyCardIconDark />
+        <span>Saved Cards</span>
       </NavigationItem>
     </NavigationBar>
   );

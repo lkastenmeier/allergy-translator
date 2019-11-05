@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const Title = styled.h1`
-  font-size: 19px;
+  font-size: 17px;
   color: ${props => props.theme.text};
-  padding: 5px;
+  padding: 3px;
   text-transform: uppercase;
   text-align: center;
 `;
