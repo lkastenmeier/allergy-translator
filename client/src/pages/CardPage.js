@@ -3,11 +3,12 @@ import { useHistory } from "react-router-dom";
 import Select from "../components/Select";
 import WarningCard from "../components/WarningCard";
 import Button from "../components/Button";
-import NavButton from "../components/NavButton";
 import ButtonContainer from "../components/ButtonContainer";
 import DownloadIcon from "../icons/DownloadIcon";
 import CardContainer from "../components/CardContainer";
 import html2canvas from "html2canvas";
+import { setCardsToStorage } from "../api/storage";
+import { MyCardIconLight } from "../icons/MyCardIcon";
 
 export default function CardPage({ allergies, match }) {
   const [languageFilterSelection, setLanguageFilterSelection] = useState(
@@ -17,9 +18,13 @@ export default function CardPage({ allergies, match }) {
   const allergy = match.params.name;
   const language = window.location.search.substr(6);
   const cardToPrint = createRef(null);
+  const cardURL = `/main/card/${allergy}${window.location.search}`;
 
   function onFilterSelect(value) {
     setLanguageFilterSelection(value);
+  }
+  function handleAddCard() {
+    setCardsToStorage([allergy, language, cardURL]);
   }
 
   useEffect(() => {
@@ -54,7 +59,14 @@ export default function CardPage({ allergies, match }) {
               <DownloadIcon />
               Download
             </Button>
-            <NavButton path="/main" name="back" />
+            <Button
+              onEvent={() => {
+                handleAddCard();
+              }}
+            >
+              <MyCardIconLight />
+              Add +
+            </Button>
           </ButtonContainer>
         </>
       )}

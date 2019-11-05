@@ -19,6 +19,7 @@ const NavigationButton = styled(Link)`
   font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
+  text-decoration: none;
 `;
 
 export default function NavigationItem({ path, active, children }) {
