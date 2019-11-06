@@ -1,3 +1,4 @@
+![TrallergyLogo](/Users/lenakastenmeier/Documents/neuefische/allergy-translator/client/public/images/Logo.svg)
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
