@@ -7,17 +7,21 @@ const AppHeader = styled.header`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 65px;
+  min-height: 65px;
   padding: 5px;
   background-color: ${props => props.theme.medium};
 `;
-
+const HomeLink = styled(Link)`
+  :hover {
+    transform: scale(1.1);
+  }
+`;
 export default function Header() {
   return (
     <AppHeader>
-      <Link to="/main">
+      <HomeLink to="/main">
         <MainLogoMedium />
-      </Link>
+      </HomeLink>
     </AppHeader>
   );
 }

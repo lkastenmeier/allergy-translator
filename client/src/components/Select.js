@@ -6,12 +6,13 @@ const SelectInput = styled.select`
   display: flex;
   text-align-last: center;
   width: 90%;
-  min-height: 50px;
-  margin: 10px 0px 10px 20px;
+  height: 50px;
+  margin: 7px auto;
   background-color: ${props => props.theme.light};
   border: 3px solid ${props => props.theme.medium};
+  border-radius: 0px;
   color: ${props => props.theme.text};
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
 `;

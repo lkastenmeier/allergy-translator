@@ -5,12 +5,12 @@ import PropTypes from "prop-types";
 const TextInput = styled.textarea`
   margin: 10px;
   height: 100%;
-  width: 95%;
+  width: 85%;
   padding: 5px;
   border: 3px solid ${props => props.theme.light};
   background-color: ${props => props.theme.medium};
   color: red;
-  font-size: 25px;
+  font-size: 1.5rem;
   text-align: center;
   font-family: sans-serif;
   ::-webkit-input-placeholder {

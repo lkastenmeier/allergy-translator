@@ -9,10 +9,17 @@ const CardButton = styled(Link)`
   display: flex;
   flex-direction: column;
   width: 146px;
-  height: 137px;
+  height: 121px;
   border: 3px solid ${props => props.theme.light};
   margin: 7px;
   text-decoration: none;
+  :hover {
+    transform: scale(1.1);
+  }
+  @media (min-width: 800px) {
+    width: 246px;
+    height: 221px;
+  }
 `;
 export default function MyCardBox({ path, allergy, language }) {
   return (

@@ -5,8 +5,8 @@ const apiKey = `${process.env.REACT_APP_GOOGLE_KEY}`;
 
 const Frame = styled.article`
   margin: auto;
-  width: 97%;
-  height: 97%;
+  width: 95%;
+  height: 95%;
   border-radius: 2px;
   border: 3px solid ${props => props.theme.light};
 `;

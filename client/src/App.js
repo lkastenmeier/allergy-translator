@@ -14,7 +14,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: 15px;
-  font-size: 16px;
+  font-size: 1rem;
   margin: 1px;
   background-image: linear-gradient(#e3ebee, #bfccdd);
   height: 100vh;

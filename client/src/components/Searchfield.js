@@ -11,7 +11,11 @@ const InputField = styled.input`
   background-color: ${props => props.theme.light};
   border: 2px solid ${props => props.theme.highlight};
   color: ${props => props.theme.text};
-  font-size: 16px;
+  font-size: 1rem;
+  input:active {
+    border-color: transparent;
+    border-bottom: 2px solid red;
+  }
 `;
 
 export default function SearchField({ input }) {
@@ -19,7 +23,7 @@ export default function SearchField({ input }) {
     const { value } = event.target;
     input(value);
   }
-  return <InputField placeholder="Your Location" onChange={onLocationInput} />;
+  return <InputField placeholder="Where are you?" onChange={onLocationInput} />;
 }
 
 SearchField.propTypes = {

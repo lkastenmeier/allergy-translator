@@ -4,12 +4,17 @@ import Select from "../components/Select";
 import WarningCard from "../components/WarningCard";
 import Button from "../components/Button";
 import ButtonContainer from "../components/ButtonContainer";
+import styled from "styled-components";
 import DownloadIcon from "../icons/DownloadIcon";
 import CardContainer from "../components/CardContainer";
 import html2canvas from "html2canvas";
 import { setCardsToStorage } from "../api/storage";
 import { MyCardIconLight } from "../icons/MyCardIcon";
 
+const Article = styled.article`
+  display: flex;
+  margin: 3px auto;
+`;
 export default function CardPage({ allergies, match }) {
   const [languageFilterSelection, setLanguageFilterSelection] = useState(
     window.location.search.substr(6)
@@ -38,13 +43,15 @@ export default function CardPage({ allergies, match }) {
       {language && allergy && allergies && (
         <>
           <Select allergies={allergies} select={onFilterSelect} />
-          <CardContainer ref={cardToPrint} key={allergy}>
-            <WarningCard
-              src={allergies[allergy].images.warning}
-              alt={`no ${allergy}`}
-              text={allergies[allergy].languages[language]}
-            />
-          </CardContainer>
+          <Article>
+            <CardContainer ref={cardToPrint} key={allergy}>
+              <WarningCard
+                src={allergies[allergy].images.warning}
+                alt={`no ${allergy}`}
+                text={allergies[allergy].languages[language]}
+              />
+            </CardContainer>
+          </Article>
           <ButtonContainer>
             <Button
               onEvent={() => {
@@ -64,8 +71,7 @@ export default function CardPage({ allergies, match }) {
                 handleAddCard();
               }}
             >
-              <MyCardIconLight />
-              Add +
+              <MyCardIconLight /> save
             </Button>
           </ButtonContainer>
         </>

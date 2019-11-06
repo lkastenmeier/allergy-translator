@@ -26,12 +26,12 @@ export default function Navigation({ selected }) {
 
       <NavigationItem path="/help" active={"/help" === selected}>
         <FindIcon />
-        <span>Find Help</span>
+        <span>Help</span>
       </NavigationItem>
 
       <NavigationItem path="/mycards" active={"/mycards" === selected}>
         <MyCardIconDark />
-        <span>Saved Cards</span>
+        <span>Saved</span>
       </NavigationItem>
     </NavigationBar>
   );

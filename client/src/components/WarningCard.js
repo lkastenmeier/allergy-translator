@@ -7,21 +7,22 @@ const WarningCardDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 12px;
   background: white;
   border: 6px solid ${props => props.theme.highlight};
 `;
 const Image = styled.img`
-  width: 250px;
-  height: 250px;
+  width: 50%;
+  height: 50%;
 `;
 
 const Paragraph = styled.p`
-  font-size: 18px;
+  width: 83%;
+  font-size: 1.2rem;
   color: ${props => props.theme.highlight};
   font-weight: bold;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
 `;
 
 export default function WarningCard({ src, alt, text }) {

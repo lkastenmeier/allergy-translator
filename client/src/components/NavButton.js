@@ -13,7 +13,7 @@ const NavigationButton = styled(Link)`
   background: ${props => props.theme.medium};
   color: ${props => props.theme.text};
   border: 3px solid ${props => props.theme.light};
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: bold;
   text-transform: uppercase;
 `;

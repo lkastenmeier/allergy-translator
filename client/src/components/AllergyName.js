@@ -8,8 +8,8 @@ const AllergyNameField = styled.div`
   justify-content: center;
   background-color: ${props => props.theme.light};
   color: ${props => props.theme.text};
-  width: 140px;
-  height: 26px;
+  width: 100%;
+  height: 20%;
   font-weight: bold;
   text-transform: lowercase;
 `;
