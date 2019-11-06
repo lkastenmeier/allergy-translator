@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
-import Navigation from "../components/Navigation";
 import { useHistory } from "react-router-dom";
 import { Switch, Route } from "react-router-dom";
 import getAllergies from "../api/getAllergies";
@@ -24,8 +23,7 @@ export default function Main() {
 
   return (
     <>
-      <Header />
-      <Navigation selected={window.location.pathname} />
+      <Header selected={window.location.pathname} />
       <Switch>
         <Route exact path="/main">
           <StartPage allergies={allergies} onAllergySelect={onAllergySelect} />

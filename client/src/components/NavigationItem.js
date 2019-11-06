@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const NavigationButton = styled(Link)`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 60px;
   width: 90%;

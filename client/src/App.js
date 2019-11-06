@@ -2,7 +2,6 @@ import React from "react";
 import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Help from "./pages/Help";
-import Info from "./pages/Info";
 import Start from "./pages/Start";
 import Main from "./pages/Main";
 import MyCards from "./pages/MyCards";
@@ -31,7 +30,6 @@ function App() {
           <Route path="/main" component={Main} />
           <Route path="/help" component={Help} />
           <Route path="/mycards" component={MyCards} />
-          <Route path="/info" component={Info} />
         </Router>
       </Container>
     </ThemeProvider>
