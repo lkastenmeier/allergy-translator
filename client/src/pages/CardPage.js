@@ -15,6 +15,9 @@ const Article = styled.article`
   display: flex;
   margin: 3px auto;
 `;
+const ButtonName = styled.span`
+  margin-left: 15px;
+`;
 export default function CardPage({ allergies, match }) {
   const [languageFilterSelection, setLanguageFilterSelection] = useState(
     window.location.search.substr(6)
@@ -64,14 +67,15 @@ export default function CardPage({ allergies, match }) {
               }}
             >
               <DownloadIcon />
-              Download
+              <ButtonName>Download</ButtonName>
             </Button>
             <Button
               onEvent={() => {
                 handleAddCard();
               }}
             >
-              <MyCardIconLight /> save
+              <MyCardIconLight />
+              <ButtonName>save</ButtonName>
             </Button>
           </ButtonContainer>
         </>
