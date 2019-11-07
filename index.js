@@ -19,12 +19,6 @@ async function getAllergies() {
   const allergies = await allergyCollection.find({}).toArray();
   return allergies;
 }
-const DB_URL =
-  "mongodb+srv//admin:Pyzq9IepHHMjkR6V@cluster0-d4w8h.mongodb.net/test?retryWrites=true&w=majority";
-
-const DB_NAME = "allergytranslator";
-
-const PORT = 8080;
 
 initDatabase(process.env.DB_URL, process.env.DB_NAME).then(() => {
   console.log(`Database ${process.env.DB_NAME} is ready`);

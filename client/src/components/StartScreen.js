@@ -54,7 +54,7 @@ export default function StartScreen() {
   return (
     <StartPage>
       <Title>Trallergy</Title>
-      <MainLogo className="cuttlery" />
+      <MainLogo />
       <StartAnimation>
         <SpanPrimary delay="0.4s">eat</SpanPrimary>
         <SpanSecondary delay="0.8s">safe</SpanSecondary>
