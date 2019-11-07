@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "author": "lkastenmeier",
   "license": "MIT",
+  "engines": {
+    "node": "10.16.2"
+  },
   "private": true,
   "dependencies": {
     "concurrently": "^5.0.0",
