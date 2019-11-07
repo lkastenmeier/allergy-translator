@@ -19,7 +19,14 @@ async function getAllergies() {
   const allergies = await allergyCollection.find({}).toArray();
   return allergies;
 }
-
+if (process.env.NODE_ENV === "production") {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, "client/build")));
+  // Handle React routing, return all requests to React app
+  app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+  });
+}
 initDatabase(process.env.DB_URL, process.env.DB_NAME).then(() => {
   console.log(`Database ${process.env.DB_NAME} is ready`);
 
