@@ -5,10 +5,14 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "concurrently": "^5.0.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongodb": "^3.3.3"
   },
   "scripts": {
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "dev:server": "npm run build && cd .. && npm start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

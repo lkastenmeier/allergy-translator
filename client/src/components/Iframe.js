@@ -1,7 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
-const apiKey = `${process.env.REACT_APP_GOOGLE_KEY}`;
+
+// require("dotenv").config({
+//   path: __dirname + "./../../../.env"
+// });
 
 const Frame = styled.article`
   margin: auto;
@@ -24,7 +27,7 @@ export default function Iframe({ location }) {
         title="hospitals"
         location={location}
         style={iframeStyle}
-        src={`https://www.google.com/maps/embed/v1/search?&q=hospital+near+${location}&key=${apiKey}`}
+        src={`https://www.google.com/maps/embed/v1/search?&q=hospital+near+${location}&key=${process.env.REACT_APP_GOOGLE_KEY}`}
       />
     </Frame>
   );

@@ -1,5 +1,6 @@
 import React from "react";
-export default function MainLogo({ className }) {
+
+export default function MainLogo() {
   return (
     <svg width="111.526" height="134.286" viewBox="0 0 111.526 134.286">
       <g>
@@ -46,6 +47,7 @@ export default function MainLogo({ className }) {
             />
           </g>
         </g>
+
         <path
           d="M17.5,30.345l7.07-7.111L7.033,5.621a10.111,10.111,0,0,0,0,14.221ZM34.437,25.8c3.822,1.784,9.193.528,13.165-3.467,4.771-4.8,5.7-11.684,2.023-15.377C45.978,3.285,39.133,4.189,34.337,8.988c-3.972,4-5.221,9.4-3.447,13.241L6.508,46.753,10.03,50.3,27.242,33.034,44.429,50.321l3.522-3.543L30.764,29.491Z"
           transform="translate(19.89 24.937)"

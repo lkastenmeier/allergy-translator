@@ -1,8 +1,10 @@
+require("dotenv").config();
 const express = require("express");
-const { getCollection, initDatabase } = require("./database");
+const { getCollection, initDatabase } = require("./server/database");
 const app = express();
 
-const port = 8080;
+app.use(express.json());
+
 app.get(`/api/allergies`, async (request, response) => {
   try {
     const allergyName = await getAllergies();
@@ -18,10 +20,10 @@ async function getAllergies() {
   return allergies;
 }
 
-initDatabase().then(() => {
-  console.log("Database connected");
+initDatabase(process.env.DB_URL, process.env.DB_NAME).then(() => {
+  console.log(`Database ${process.env.DB_NAME} is ready`);
 
-  app.listen(port, () => {
-    console.log(`Server listens on http://localhost:${port}`);
+  app.listen(process.env.PORT, () => {
+    console.log(`Server is running on http://localhost:${process.env.PORT}`);
   });
 });

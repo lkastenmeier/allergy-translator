@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "dotenv": "^8.2.0",
     "google-maps-react": "^2.0.2",
     "html2canvas": "^1.0.0-rc.5",
     "prop-types": "^15.7.2",
