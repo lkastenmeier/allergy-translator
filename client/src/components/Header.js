@@ -6,7 +6,7 @@ import NavigationItem from "../components/NavigationItem";
 import { MyCardIconDark } from "../icons/MyCardIcon";
 import FindIcon from "../icons/FindIcon";
 import MainLogoSmall from "../icons/MainLogoSmall";
-import BurgerIcon from "../icons/BurgerIcon";
+import BurgerButton from "../components/BurgerButton";
 
 const AppHeader = styled.header`
   position: relative;
@@ -40,20 +40,11 @@ const NavigationBar = styled.nav`
           display: none;
         `};
 `;
-const BurgerButton = styled.button`
-  transition: transform 0.2s ease-in-out;
-  transform: ${({ navigationDisplay }) =>
-    navigationDisplay ? "rotate(-90deg)" : "rotate(0)"};
-  margin-right: 20px;
-  background: transparent;
-  border: none;
-  outline: none;
-`;
 
 const NavName = styled.span`
   margin-left: 15px;
 `;
-export default function Header({ selected }) {
+export default function Header({ selected, children }) {
   function toggleNav() {
     setNavigationDisplay(!navigationDisplay);
   }
@@ -67,9 +58,9 @@ export default function Header({ selected }) {
         </HomeLink>
         <BurgerButton
           navigationDisplay={navigationDisplay}
-          onClick={() => toggleNav()}
+          onToggle={() => toggleNav()}
         >
-          <BurgerIcon />
+          {children}
         </BurgerButton>
       </AppHeader>
       <NavigationBar navigationDisplay={navigationDisplay}>
