@@ -4,11 +4,12 @@ import PropTypes from "prop-types";
 
 const BasicButton = styled.button`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   height: 50px;
   width: 165px;
   padding: 5px;
+  margin: 5px;
   color: ${props => props.theme.text};
   border: 3px solid ${props => props.theme.light};
   background: ${props => props.theme.medium};
@@ -18,9 +19,24 @@ const BasicButton = styled.button`
   :hover {
     transform: scale(1.1);
   }
+  @media (max-width: 330px) {
+    width: 150px;
+  }
+  @media (min-width: 400px) {
+    width: 350px;
+    height: 100px;
+  }
+  @media (min-width: 500px) {
+    width: 450px;
+    height: 100px;
+  }
+  @media (min-width: 600px) {
+    width: 270px;
+    height: 100px;
+  }
 `;
 
-export default function Button({ name, children, onEvent }) {
+export default function Button({ children, onEvent }) {
   return <BasicButton onClick={onEvent}>{children}</BasicButton>;
 }
 Button.propTypes = {

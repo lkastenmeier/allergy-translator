@@ -58,6 +58,7 @@ export default function Header({ selected }) {
     setNavigationDisplay(!navigationDisplay);
   }
   const [navigationDisplay, setNavigationDisplay] = useState(true);
+
   return (
     <>
       <AppHeader>

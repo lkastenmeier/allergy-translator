@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const SelectInput = styled.select`
+  -webkit-appearance: none;
   display: flex;
   text-align-last: center;
   width: 90%;
@@ -15,6 +16,10 @@ const SelectInput = styled.select`
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
+  @media (min-width: 550px) {
+    width: 550px;
+    height: 60px;
+  }
 `;
 
 export default function Select({ select, allergies }) {
