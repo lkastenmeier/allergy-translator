@@ -3,6 +3,10 @@ const ButtonContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: 5px;
+  margin: 5px auto;
+  position: fixed;
+  bottom: 12px;
+  width: 100%;
+  background: ${props => props.theme.medium};
 `;
 export default ButtonContainer;

@@ -18,7 +18,7 @@ const StartAnimation = styled.section`
   align-items: center;
   margin: 30px;
   width: 170px;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: bold;
 `;
 const appearAnimation = keyframes`
@@ -45,7 +45,7 @@ const Title = styled.h1`
   margin-bottom: 80px;
   color: ${props => props.theme.highlight};
   font-weight: bold;
-  font-size: 32px;
+  font-size: 2rem;
   letter-spacing: 1px;
   font-family: "Comfortaa", cursive;
 `;

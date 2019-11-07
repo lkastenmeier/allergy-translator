@@ -3,8 +3,9 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const PictureBox = styled.img`
-  height: 111px;
+  height: 80%;
   background-color: white;
+  padding: 3px;
 `;
 
 export default function Picture({ src, alt }) {

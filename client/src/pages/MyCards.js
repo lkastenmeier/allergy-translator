@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import Navigation from "../components/Navigation";
 import MyCardBox from "../components/MyCardBox";
 import { getCardsFromStorage } from "../api/storage";
 import SelectionContainer from "../components/SelectionContainer";
@@ -10,8 +9,7 @@ export default function MyCard() {
   const mycards = getCardsFromStorage();
   return (
     <>
-      <Header />
-      <Navigation selected={window.location.pathname} />
+      <Header selected={window.location.pathname} />
       <Title>Your Warning-Cards</Title>
       <SelectionContainer>
         {mycards.map(card => (

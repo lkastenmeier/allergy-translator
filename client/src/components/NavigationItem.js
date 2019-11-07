@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const NavigationButton = styled(Link)`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 60px;
   width: 90%;
@@ -16,7 +16,6 @@ const NavigationButton = styled(Link)`
   border-width: 3px 1.5px 3px 1.5px;
   border-color: ${props => props.theme.medium};
   border-style: ${props => (props.active ? "none" : "solid")};
-  font-size: 15px;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;

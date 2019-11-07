@@ -12,10 +12,12 @@ const BasicButton = styled.button`
   color: ${props => props.theme.text};
   border: 3px solid ${props => props.theme.light};
   background: ${props => props.theme.medium};
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
-
   text-transform: uppercase;
+  :hover {
+    transform: scale(1.1);
+  }
 `;
 
 export default function Button({ name, children, onEvent }) {

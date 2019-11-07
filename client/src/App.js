@@ -2,7 +2,6 @@ import React from "react";
 import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Help from "./pages/Help";
-import Info from "./pages/Info";
 import Start from "./pages/Start";
 import Main from "./pages/Main";
 import MyCards from "./pages/MyCards";
@@ -14,7 +13,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: 15px;
-  font-size: 16px;
+  font-size: 1rem;
   margin: 1px;
   background-image: linear-gradient(#e3ebee, #bfccdd);
   height: 100vh;
@@ -31,7 +30,6 @@ function App() {
           <Route path="/main" component={Main} />
           <Route path="/help" component={Help} />
           <Route path="/mycards" component={MyCards} />
-          <Route path="/info" component={Info} />
         </Router>
       </Container>
     </ThemeProvider>
