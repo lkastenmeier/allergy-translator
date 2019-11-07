@@ -45,6 +45,9 @@ const BurgerButton = styled.button`
   transform: ${({ navigationDisplay }) =>
     navigationDisplay ? "rotate(-90deg)" : "rotate(0)"};
   margin-right: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
 `;
 
 const NavName = styled.span`

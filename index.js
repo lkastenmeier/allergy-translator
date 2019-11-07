@@ -4,7 +4,6 @@ const { getCollection, initDatabase } = require("./server/database");
 const path = require("path");
 const app = express();
 
-console.log("Start server", process.env.DB_URL);
 app.use(express.json());
 
 app.get(`/api/allergies`, async (request, response) => {
