@@ -1,8 +1,7 @@
 const { MongoClient } = require("mongodb");
 let db = null;
-async function initDatabase() {
-  const dbName = "allergytranslator";
-  const url = `mongodb://localhost:27017/${dbName}`;
+collectionName = "allergies";
+async function initDatabase(url, dbName) {
   const client = new MongoClient(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -10,10 +9,9 @@ async function initDatabase() {
   await client.connect();
   db = client.db(dbName);
 }
-
 async function getCollection() {
   if (!db) {
-    await initDatabase();
+    throw new Error("You have to initialize the database first");
   }
   return db.collection("allergies");
 }
