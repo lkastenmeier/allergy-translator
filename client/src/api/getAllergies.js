@@ -1,8 +1,12 @@
-export default async function getAllergies() {
-  const allergies = await fetch("/api/allergies").then(response =>
-    response.json()
-  );
-  return arrayToObject(allergies);
+export default function getAllergies() {
+  return fetch("/api/allergies")
+    .then(response => {
+      if (response.status !== 200) {
+        throw new Error(response.statusText);
+      }
+      return arrayToObject(response);
+    })
+    .then(response => response.json());
 }
 function arrayToObject(array) {
   const allergyObject = {};
