@@ -4,7 +4,8 @@
   "author": "lkastenmeier",
   "license": "MIT",
   "engines": {
-    "node": "10.16.2"
+    "node": "0.6.12",
+    "npm": "1.1.4"
   },
   "private": true,
   "dependencies": {
