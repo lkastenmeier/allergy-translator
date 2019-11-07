@@ -25,6 +25,6 @@ export default function Searchfield({ input, placeholder }) {
   return <InputField placeholder={placeholder} onChange={onLocationInput} />;
 }
 
-SearchField.propTypes = {
+Searchfield.propTypes = {
   onChange: PropTypes.func
 };
