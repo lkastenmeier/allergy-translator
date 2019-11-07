@@ -18,8 +18,13 @@ app.get(`/api/allergies`, async (request, response) => {
 async function getAllergies() {
   const allergyCollection = await getCollection();
   const allergies = await allergyCollection.find({}).toArray();
+
+  if (!allergies) {
+    throw new Error("can't find allergies");
+  }
   return allergies;
 }
+
 if (process.env.NODE_ENV === "production") {
   // Serve any static files
   app.use(express.static(path.join(__dirname, "client/build")));
