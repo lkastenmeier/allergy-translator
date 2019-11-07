@@ -11,7 +11,8 @@ app.get(`/api/allergies`, async (request, response) => {
     const allergyName = await getAllergies();
     return response.json(allergyName);
   } catch (error) {
-    return response.end("Error");
+    console.error(`Thats the error: ${error}`);
+    return response.status(404).end("Error");
   }
 });
 
