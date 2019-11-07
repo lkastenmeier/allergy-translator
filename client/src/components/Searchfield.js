@@ -17,7 +17,7 @@ const InputField = styled.input`
   }
 `;
 
-export default function SearchField({ input, placeholder }) {
+export default function Searchfield({ input, placeholder }) {
   function onLocationInput(event) {
     const { value } = event.target;
     input(value);
@@ -25,6 +25,6 @@ export default function SearchField({ input, placeholder }) {
   return <InputField placeholder={placeholder} onChange={onLocationInput} />;
 }
 
-SearchField.propTypes = {
+Searchfield.propTypes = {
   onChange: PropTypes.func
 };

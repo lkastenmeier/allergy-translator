@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
-import SearchField from "../components/SearchField";
+import Searchfield from "../components/Searchfield";
 import Iframe from "../components/Iframe";
 
 export default function Help() {
@@ -11,7 +11,7 @@ export default function Help() {
   return (
     <>
       <Header selected={window.location.pathname} />
-      <SearchField input={onLocationInput} placeholder="Enter your location" />
+      <Searchfield input={onLocationInput} placeholder="Enter your location" />
       <Iframe location={location} />
     </>
   );

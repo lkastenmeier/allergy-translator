@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "author": "lkastenmeier",
   "license": "MIT",
+  "engines": {
+    "node": "10.16.2"
+  },
   "private": true,
   "dependencies": {
     "concurrently": "^5.0.0",
@@ -10,14 +13,18 @@
     "express": "^4.17.1",
     "mongodb": "^3.3.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lkastenmeier/allergy-translator"
+  },
   "scripts": {
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "dev:server": "npm run build && cd .. && npm start",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "start": "node index.js",
+    "heroku-prebuild": "cd client && npm ci --only=prod"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"
