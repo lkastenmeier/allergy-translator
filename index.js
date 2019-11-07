@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const { getCollection, initDatabase } = require("./server/database");
+const path = require("path");
 const app = express();
 
 app.use(express.json());
