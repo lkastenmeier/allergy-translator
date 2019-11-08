@@ -12,9 +12,5 @@ body {
   font-size: 16px;
 
 }
-button, input, select, textarea {
-&:focus {
-    outline: none;
-  }
-}
+
 `;

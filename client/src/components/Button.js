@@ -22,6 +22,7 @@ const BasicButton = styled.button`
   }
   :focus {
     border: 5px solid ${props => props.theme.text};
+    outline: none;
   }
   @media (max-width: 330px) {
     width: 150px;

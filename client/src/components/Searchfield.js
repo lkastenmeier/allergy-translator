@@ -15,6 +15,9 @@ const InputField = styled.input`
   @media (min-width: 500px) {
     width: 300px;
   }
+  :focus {
+    outline: none;
+  }
 `;
 
 export default function Searchfield({ input, placeholder }) {

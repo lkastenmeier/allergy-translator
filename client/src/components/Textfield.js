@@ -16,6 +16,9 @@ const TextInput = styled.textarea`
   ::-webkit-input-placeholder {
     color: red;
   }
+  :focus {
+    outline: none;
+  }
 `;
 
 export default function Textfield({ placeholder }) {

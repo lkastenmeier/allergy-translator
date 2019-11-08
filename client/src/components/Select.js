@@ -20,6 +20,9 @@ const SelectInput = styled.select`
     width: 550px;
     height: 60px;
   }
+  :focus {
+    outline: none;
+  }
 `;
 
 export default function Select({ select, allergies }) {

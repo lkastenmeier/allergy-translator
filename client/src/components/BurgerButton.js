@@ -13,6 +13,9 @@ const Burger = styled.button`
   cursor: pointer;
   padding: 0;
   border: none;
+  :focus {
+    outline: none;
+  }
 
   div {
     width: 1.9rem;
