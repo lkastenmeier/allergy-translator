@@ -5,7 +5,7 @@ import Iframe from "../components/Iframe";
 import styled, { css, keyframes } from "styled-components";
 import MainLogo from "../icons/MainLogo";
 
-const turner = keyframes`
+const rotate = keyframes`
   from {
     transform: rotateY(0deg);
   }
@@ -34,7 +34,7 @@ const Loading = styled.div`
           flex-direction: column;
           justify-content: center;
           margin: auto;
-          animation: ${turner} 4s infinite linear;
+          animation: ${rotate} 4s infinite linear;
         `};
 `;
 
