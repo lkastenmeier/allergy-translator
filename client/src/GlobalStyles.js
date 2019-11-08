@@ -15,6 +15,7 @@ body {
 }
 html, body {
   overflow-x: hidden;
+  ::-webkit-scrollbar {display:none;}
 }
 
 `;
