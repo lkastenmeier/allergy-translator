@@ -16,7 +16,8 @@ const InputField = styled.input`
     width: 300px;
   }
   :focus {
-    outline: 0px solid transparent;
+    outline: 0px solid transparent !important;
+    outline-offset: none !important;
   }
 `;
 

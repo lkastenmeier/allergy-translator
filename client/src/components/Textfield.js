@@ -17,7 +17,8 @@ const TextInput = styled.textarea`
     color: red;
   }
   :focus {
-    outline: 0px solid transparent;
+    outline: 0px solid transparent !important;
+    outline-offset: none !important;
   }
 `;
 

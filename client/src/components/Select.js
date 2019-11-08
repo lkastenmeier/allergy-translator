@@ -21,7 +21,8 @@ const SelectInput = styled.select`
     height: 60px;
   }
   :focus {
-    outline: 0px solid transparent;
+    outline: 0px solid transparent !important;
+    outline-offset: none !important;
   }
 `;
 

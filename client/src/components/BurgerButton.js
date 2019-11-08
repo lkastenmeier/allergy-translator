@@ -14,7 +14,8 @@ const Burger = styled.button`
   padding: 0;
   border: none;
   :focus {
-    outline: 0px solid transparent;
+    outline: 0px solid transparent !important;
+    outline-offset: none !important;
   }
 
   div {
