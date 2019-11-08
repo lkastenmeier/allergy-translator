@@ -21,7 +21,7 @@ const SelectInput = styled.select`
     height: 60px;
   }
   :focus {
-    outline: none;
+    outline: 0px solid transparent;
   }
 `;
 
