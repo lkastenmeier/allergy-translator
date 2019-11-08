@@ -67,6 +67,7 @@ export default function CardPage({ allergies, match }) {
               }}
             >
               <DownloadIcon />
+
               <ButtonName>Download</ButtonName>
             </Button>
             <Button
@@ -75,6 +76,7 @@ export default function CardPage({ allergies, match }) {
               }}
             >
               <MyCardIconLight />
+
               <ButtonName>save</ButtonName>
             </Button>
           </ButtonContainer>

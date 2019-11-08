@@ -16,8 +16,12 @@ const BasicButton = styled.button`
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
+
   :hover {
     transform: scale(1.1);
+  }
+  :focus {
+    border: 5px solid ${props => props.theme.text};
   }
   @media (max-width: 330px) {
     width: 150px;
@@ -36,8 +40,12 @@ const BasicButton = styled.button`
   }
 `;
 
-export default function Button({ children, onEvent }) {
-  return <BasicButton onClick={onEvent}>{children}</BasicButton>;
+export default function Button({ children, onEvent, buttonFeedback }) {
+  return (
+    <BasicButton buttonFeedback={buttonFeedback} onClick={onEvent}>
+      {children}
+    </BasicButton>
+  );
 }
 Button.propTypes = {
   children: PropTypes.node.isRequired,
