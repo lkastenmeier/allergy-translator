@@ -8,7 +8,11 @@ import styled from "styled-components";
 import DownloadIcon from "../icons/DownloadIcon";
 import CardContainer from "../components/CardContainer";
 import html2canvas from "html2canvas";
-import { setCardsToStorage } from "../api/storage";
+import {
+  setCardsToStorage,
+  getCardsFromStorage,
+  removeCardsFromStorage
+} from "../api/storage";
 import { MyCardIconLight } from "../icons/MyCardIcon";
 
 const Article = styled.article`
@@ -33,6 +37,14 @@ export default function CardPage({ allergies, match }) {
   }
   function handleAddCard() {
     setCardsToStorage([allergy, language, cardURL]);
+  }
+  function handleRemoveCard() {
+    removeCardsFromStorage([allergy, language, cardURL]);
+  }
+  function checkStorage() {
+    if (!getCardsFromStorage().find(parsedCard => parsedCard[2] === cardURL)) {
+      return true;
+    }
   }
 
   useEffect(() => {
@@ -67,18 +79,28 @@ export default function CardPage({ allergies, match }) {
               }}
             >
               <DownloadIcon />
-
               <ButtonName>Download</ButtonName>
             </Button>
-            <Button
-              onEvent={() => {
-                handleAddCard();
-              }}
-            >
-              <MyCardIconLight />
-
-              <ButtonName>save</ButtonName>
-            </Button>
+            {checkStorage() && (
+              <Button
+                onEvent={() => {
+                  handleAddCard();
+                }}
+              >
+                <MyCardIconLight />
+                <ButtonName>save</ButtonName>
+              </Button>
+            )}
+            {!checkStorage() && (
+              <Button
+                onEvent={() => {
+                  handleRemoveCard();
+                }}
+              >
+                <MyCardIconLight />
+                <ButtonName>remove</ButtonName>
+              </Button>
+            )}
           </ButtonContainer>
         </>
       )}

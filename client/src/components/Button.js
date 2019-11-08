@@ -17,11 +17,8 @@ const BasicButton = styled.button`
   font-weight: bold;
   text-transform: uppercase;
 
-  :hover {
-    transform: scale(1.1);
-  }
   :focus {
-    border: 5px solid ${props => props.theme.text};
+    border: 4px solid ${props => props.theme.text};
     outline: none !important;
     outline-offset: none !important;
   }
