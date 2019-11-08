@@ -23,6 +23,10 @@ const HomeLink = styled(Link)`
   :hover {
     transform: scale(1.1);
   }
+  :focus {
+    outline: none !important;
+    outline-offset: none !important;
+  }
 `;
 const NavigationBar = styled.nav`
   ${props =>
