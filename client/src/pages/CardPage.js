@@ -26,11 +26,13 @@ export default function CardPage({ allergies, match }) {
   const [languageFilterSelection, setLanguageFilterSelection] = useState(
     window.location.search.substr(6)
   );
+
   const history = useHistory();
   const allergy = match.params.name;
   const language = window.location.search.substr(6);
   const cardToPrint = createRef(null);
   const cardURL = `/main/card/${allergy}${window.location.search}`;
+  const [storageButton, setStorageButton] = useState(checkStorage());
 
   function onFilterSelect(value) {
     setLanguageFilterSelection(value);
@@ -42,8 +44,10 @@ export default function CardPage({ allergies, match }) {
     removeCardsFromStorage([allergy, language, cardURL]);
   }
   function checkStorage() {
-    if (!getCardsFromStorage().find(parsedCard => parsedCard[2] === cardURL)) {
+    if (getCardsFromStorage().find(parsedCard => parsedCard[2] === cardURL)) {
       return true;
+    } else {
+      return false;
     }
   }
 
@@ -81,20 +85,22 @@ export default function CardPage({ allergies, match }) {
               <DownloadIcon />
               <ButtonName>Download</ButtonName>
             </Button>
-            {checkStorage() && (
+            {!storageButton && (
               <Button
                 onEvent={() => {
                   handleAddCard();
+                  setStorageButton(!storageButton);
                 }}
               >
                 <MyCardIconLight />
                 <ButtonName>save</ButtonName>
               </Button>
             )}
-            {!checkStorage() && (
+            {storageButton && (
               <Button
                 onEvent={() => {
                   handleRemoveCard();
+                  setStorageButton(!storageButton);
                 }}
               >
                 <MyCardIconLight />
