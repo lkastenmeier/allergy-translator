@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const BasicButton = styled.div`
+const StyledButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,8 +19,6 @@ const BasicButton = styled.div`
 
   :focus {
     border: 4px solid ${props => props.theme.text};
-    outline: none !important;
-    outline-offset: none !important;
   }
   @media (max-width: 330px) {
     width: 150px;
@@ -39,14 +37,10 @@ const BasicButton = styled.div`
   }
 `;
 
-export default function Button({ children, onEvent, buttonFeedback }) {
-  return (
-    <BasicButton buttonFeedback={buttonFeedback} onClick={onEvent}>
-      {children}
-    </BasicButton>
-  );
+export default function Button({ children, onEvent }) {
+  return <StyledButton onClick={onEvent}>{children}</StyledButton>;
 }
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func
+  onEvent: PropTypes.func
 };

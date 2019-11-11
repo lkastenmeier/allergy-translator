@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const SelectInput = styled.select`
+const StyledSelect = styled.select`
   -webkit-appearance: none;
   display: flex;
   text-align-last: center;
@@ -32,16 +32,18 @@ export default function Select({ select, allergies }) {
     select(value);
   }
   return (
-    <SelectInput onChange={onFilterSelect} all>
+    <StyledSelect onChange={onFilterSelect} all>
       <option value="0">change language</option>
-      {Object.entries(allergies.milk.languages).map(([key]) => (
-        <option key={key}>{key}</option>
+      {Object.keys(allergies.milk.languages).map(key => (
+        <option key={key} value={key}>
+          {key}
+        </option>
       ))}
-    </SelectInput>
+    </StyledSelect>
   );
 }
 
 Select.propTypes = {
   key: PropTypes.string,
-  onChange: PropTypes.func
+  onFilterSelect: PropTypes.func
 };

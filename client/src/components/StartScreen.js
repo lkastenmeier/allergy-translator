@@ -11,7 +11,7 @@ const StartPage = styled.main`
   margin-top: 120px;
 `;
 
-const StartAnimation = styled.section`
+const StyledAnimation = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -21,26 +21,26 @@ const StartAnimation = styled.section`
   font-size: 2rem;
   font-weight: bold;
 `;
-const appearAnimation = keyframes`
+const appear = keyframes`
 
   0% { opacity: 1; }
   50%   { opacity: 0; }
   100% { opacity: 1; }
 `;
 
-const SpanPrimary = styled.span`
+const StyledPrimary = styled.span`
   color: ${props => props.theme.highlight};
-  animation: ${appearAnimation} 2s ease-in-out;
+  animation: ${appear} 2s ease-in-out;
   animation-delay: ${props => props.delay};
 `;
 
-const SpanSecondary = styled.span`
+const StyledSecondary = styled.span`
   color: ${props => props.theme.text};
-  animation: ${appearAnimation} 1.5s ease-in-out;
+  animation: ${appear} 1.5s ease-in-out;
   animation-delay: ${props => props.delay};
 `;
 
-const Title = styled.h1`
+const StyledName = styled.h1`
   text-align: center;
   margin-bottom: 80px;
   color: ${props => props.theme.highlight};
@@ -53,15 +53,15 @@ const Title = styled.h1`
 export default function StartScreen() {
   return (
     <StartPage>
-      <Title>Trallergy</Title>
+      <StyledName>Trallergy</StyledName>
       <MainLogo className="cuttlery" />
-      <StartAnimation>
-        <SpanPrimary delay="0.4s">eat</SpanPrimary>
-        <SpanSecondary delay="0.8s">safe</SpanSecondary>
+      <StyledAnimation>
+        <StyledPrimary delay="0.4s">eat</StyledPrimary>
+        <StyledSecondary delay="0.8s">safe</StyledSecondary>
         <br />
-        <SpanSecondary delay="1.2s">travel</SpanSecondary>
-        <SpanPrimary delay="1.6s">much</SpanPrimary>
-      </StartAnimation>
+        <StyledSecondary delay="1.2s">travel</StyledSecondary>
+        <StyledPrimary delay="1.6s">much</StyledPrimary>
+      </StyledAnimation>
     </StartPage>
   );
 }

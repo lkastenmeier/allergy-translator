@@ -7,8 +7,9 @@ import { MyCardIconDark } from "../icons/MyCardIcon";
 import FindIcon from "../icons/FindIcon";
 import MainLogoSmall from "../icons/MainLogoSmall";
 import BurgerButton from "../components/BurgerButton";
+import PropTypes from "prop-types";
 
-const AppHeader = styled.header`
+const StyledAppHeader = styled.header`
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -17,7 +18,7 @@ const AppHeader = styled.header`
   padding: 5px;
   background-color: ${props => props.theme.medium};
 `;
-const HomeLink = styled(Link)`
+const StyledHomeLink = styled(Link)`
   position: absolute;
   left: 50%;
   :hover {
@@ -28,7 +29,7 @@ const HomeLink = styled(Link)`
     outline-offset: none !important;
   }
 `;
-const NavigationBar = styled.nav`
+const StyledNavBar = styled.nav`
   ${props =>
     props.navigationDisplay
       ? css`
@@ -56,18 +57,15 @@ export default function Header({ selected, children }) {
 
   return (
     <>
-      <AppHeader>
-        <HomeLink to="/main">
+      <StyledAppHeader>
+        <StyledHomeLink to="/main">
           <MainLogoMedium />
-        </HomeLink>
-        <BurgerButton
-          navigationDisplay={navigationDisplay}
-          onToggle={() => toggleNav()}
-        >
+        </StyledHomeLink>
+        <BurgerButton active={navigationDisplay} onToggle={() => toggleNav()}>
           {children}
         </BurgerButton>
-      </AppHeader>
-      <NavigationBar navigationDisplay={navigationDisplay}>
+      </StyledAppHeader>
+      <StyledNavBar navigationDisplay={navigationDisplay}>
         <NavigationItem path="/main" active={"/main" === selected}>
           <MainLogoSmall />
           <NavName>Home</NavName>
@@ -82,7 +80,11 @@ export default function Header({ selected, children }) {
           <MyCardIconDark />
           <NavName>Saved</NavName>
         </NavigationItem>
-      </NavigationBar>
+      </StyledNavBar>
     </>
   );
 }
+Header.propTypes = {
+  selected: PropTypes.string,
+  children: PropTypes.node
+};

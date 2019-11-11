@@ -16,6 +16,7 @@ export default function Main() {
       setAllergies(fetchedAllergies);
     });
   }, []);
+
   function onAllergySelect(key) {
     setAllergyFilterSelection(key);
     history.push(`/main/card/${key}?lang=english`);

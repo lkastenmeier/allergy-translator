@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const NavigationButton = styled(Link)`
+const StyledNavButton = styled(Link)`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -41,7 +41,7 @@ const NavigationButton = styled(Link)`
 `;
 
 export default function NavButton({ path, name }) {
-  return <NavigationButton to={path}>{name}</NavigationButton>;
+  return <StyledNavButton to={path}>{name}</StyledNavButton>;
 }
 
 NavButton.propTypes = {

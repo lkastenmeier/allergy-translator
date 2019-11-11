@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import Picture from "../components/Picture";
 import AllergyName from "../components/AllergyName";
 
-const CardButton = styled(Link)`
+const StyledMyCardBox = styled(Link)`
   display: flex;
   flex-direction: column;
   width: 146px;
@@ -23,13 +23,15 @@ const CardButton = styled(Link)`
 `;
 export default function MyCardBox({ path, allergy, language }) {
   return (
-    <CardButton to={path}>
+    <StyledMyCardBox to={path}>
       <Picture src={`/images/${allergy}Warning.svg`} alt={allergy} />
       <AllergyName>{language}</AllergyName>
-    </CardButton>
+    </StyledMyCardBox>
   );
 }
 
 MyCardBox.propTypes = {
-  path: PropTypes.string.isRequired
+  path: PropTypes.string.isRequired,
+  allergy: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired
 };

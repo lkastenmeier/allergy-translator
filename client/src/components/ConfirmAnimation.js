@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
-import { MyCardIconDark } from "../icons/MyCardIcon";
-import Title from "../components/Title";
+import CheckIcon from "../icons/CheckIcon";
 
 export const alert = keyframes`
  0% {
@@ -11,26 +10,22 @@ export const alert = keyframes`
     40% {
       bottom: 30%;
     }
-
     50% {
       bottom: 30%;
     }
     60% {
       bottom: 30%;
-
     }
-
     100% {
       bottom: -20%;
     }
   }
 `;
 
-const MessageBox = styled.div`
+const StyledConfirmationAnimation = styled.div`
   box-shadow: 5px 5px 5px grey;
   background: ${props => props.theme.light};
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -48,9 +43,8 @@ const MessageBox = styled.div`
 
 export default function ConfirmationAnimation() {
   return (
-    <MessageBox>
-      <MyCardIconDark />
-      <Title>DONE</Title>
-    </MessageBox>
+    <StyledConfirmationAnimation>
+      <CheckIcon />
+    </StyledConfirmationAnimation>
   );
 }
