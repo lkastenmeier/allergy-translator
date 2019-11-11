@@ -14,6 +14,7 @@ import {
   removeCardsFromStorage
 } from "../api/storage";
 import { MyCardIconLight } from "../icons/MyCardIcon";
+import ConfirmationAnimation from "../components/ConfirmAnimation";
 
 const Article = styled.article`
   display: flex;
@@ -26,6 +27,7 @@ export default function CardPage({ allergies, match }) {
   const [languageFilterSelection, setLanguageFilterSelection] = useState(
     window.location.search.substr(6)
   );
+  const [startAnimation, setStartAnimation] = useState(false);
 
   const history = useHistory();
   const allergy = match.params.name;
@@ -90,6 +92,10 @@ export default function CardPage({ allergies, match }) {
                 onEvent={() => {
                   handleAddCard();
                   setStorageButton(!storageButton);
+                  setStartAnimation(true);
+                  setTimeout(() => {
+                    setStartAnimation(false);
+                  }, 2000);
                 }}
               >
                 <MyCardIconLight />
@@ -101,6 +107,10 @@ export default function CardPage({ allergies, match }) {
                 onEvent={() => {
                   handleRemoveCard();
                   setStorageButton(!storageButton);
+                  setStartAnimation(true);
+                  setTimeout(() => {
+                    setStartAnimation(false);
+                  }, 2000);
                 }}
               >
                 <MyCardIconLight />
@@ -108,6 +118,7 @@ export default function CardPage({ allergies, match }) {
               </Button>
             )}
           </ButtonContainer>
+          {startAnimation && <ConfirmationAnimation />}
         </>
       )}
     </>

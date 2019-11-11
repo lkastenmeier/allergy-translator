@@ -5,7 +5,7 @@ const ButtonContainer = styled.section`
   justify-content: space-around;
   margin: auto;
   width: 100%;
-  @media (min-width: 400px) {
+  @media (min-width: 420px) {
     justify-content: center;
     flex-direction: column;
   }

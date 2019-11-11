@@ -42,7 +42,7 @@ export default function Help() {
   const [animation, setAnimation] = useState(false);
   const [location, setlocation] = useState("");
   React.useEffect(() => {
-    const timeout = () => setTimeout(() => setAnimation(true), 4000);
+    const timeout = () => setTimeout(() => setAnimation(true), 2000);
     timeout();
   }, []);
   function onLocationInput(value) {

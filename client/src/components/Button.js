@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const BasicButton = styled.button`
+const BasicButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,7 @@ const BasicButton = styled.button`
   @media (max-width: 330px) {
     width: 150px;
   }
-  @media (min-width: 400px) {
+  @media (min-width: 420px) {
     width: 350px;
     height: 100px;
   }

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const Burger = styled.button`
+const Burger = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
