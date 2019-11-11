@@ -14,8 +14,4 @@ body, html {
   overflow-x: hidden;
   ::-webkit-scrollbar {display:none;}
   border: none;
-
-}
-
-
-`;
+}`;

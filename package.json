@@ -1,7 +1,7 @@
 {
   "name": "allergy-translator",
   "version": "0.1.0",
-  "author": "lkastenmeier",
+  "author": "Lena Kastenmeier",
   "license": "MIT",
   "engines": {
     "node": "10.16.2"
