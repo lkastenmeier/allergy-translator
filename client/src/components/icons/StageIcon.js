@@ -1,5 +1,5 @@
 import React from "react";
-export default function LanguageIcon({ className }) {
+export default function LanguageIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

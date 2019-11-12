@@ -1,3 +1,6 @@
+//Container for arrangement and responisve alignment of allergy- and mycard-boxes
+
+//Dependencies
 import styled from "styled-components";
 
 const SelectionContainer = styled.main`

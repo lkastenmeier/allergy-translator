@@ -1,3 +1,6 @@
+//Selectbox with eventhandler for languageselection
+
+//Dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
@@ -19,10 +22,6 @@ const StyledSelect = styled.select`
   @media (min-width: 550px) {
     width: 550px;
     height: 60px;
-  }
-  :focus {
-    outline: none !important;
-    outline-offset: none !important;
   }
 `;
 

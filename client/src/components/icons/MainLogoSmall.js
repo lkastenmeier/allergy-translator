@@ -1,5 +1,5 @@
 import React from "react";
-export default function MainLogoSmall({ className }) {
+export default function MainLogoSmall() {
   return (
     <svg width="20.948" height="25.286" viewBox="0 0 20.948 25.286">
       <g>

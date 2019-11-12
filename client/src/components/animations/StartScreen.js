@@ -1,6 +1,25 @@
+//Animation for splashscreen on app-start
+
+//Dependencies
 import React from "react";
 import styled, { keyframes } from "styled-components";
+
+//Functions & Components
 import MainLogo from "../icons/MainLogo";
+
+const radient = keyframes`
+  0% {
+    background: #BFCCDD;
+  }
+
+  25% {
+    background: #E3EBEE;
+  }
+
+  50% {
+    background: #BFCCDD;
+  }
+}`;
 
 const StartPage = styled.main`
   display: flex;
@@ -8,7 +27,8 @@ const StartPage = styled.main`
   align-items: center;
   width: 100vw;
   height: 100vh;
-  margin-top: 120px;
+  padding-top: 120px;
+  animation: ${radient} 3.2s ease-in-out;
 `;
 
 const StyledAnimation = styled.section`

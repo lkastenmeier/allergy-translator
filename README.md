@@ -1,69 +1,45 @@
 ![TrallergyLogo](client/public/images/Logo.svg)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Trallergy - eat safe travel much
 
-In the project directory, you can run:
+This application allows you to travel safely despite dietary restrictions. Generate warning-cards based on your allergy and a selected language! You can download them or save them to your favoutites for easy access and/or offline use. In case of an emergency Trallergy shows you all hospitals closeby! So eat safe and travel much!
 
-### `npm start`
+# Hosting
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Trallergy is hosted on Heroku.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+[Trallergy](https://trallergy.herokuapp.com/)
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run Tralergy, clone the repository and install the client and server dependencies:
 
-### `npm run build`
+```
+npm install
+cd client
+npm install
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Start Trallergy:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```
+cd server
+npm run server
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+and
 
-### `npm run eject`
+```
+cd client
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Make Trallergy Grow!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You speak a language that is not represented in Trallergy yet? Send your translation and become a hero for travelers with allergies! :)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**Please translate the following sentence:
+"I am allergic to [...] - to prevent a severe allergic reaction, please make sure my food does not contain any [...]!"
+For these allergies: milk, soy, peanuts, treenuts, soy, eggs, wheat, fish, shellfish**

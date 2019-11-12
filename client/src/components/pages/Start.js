@@ -1,6 +1,11 @@
+//Splashscreen with animation upon app-start
+
+//Dependencies
 import React, { useState } from "react";
-import StartScreen from "../components/StartScreen";
 import { useHistory } from "react-router-dom";
+
+//Functions & Components
+import StartScreen from "../animations/StartScreen";
 
 export default function StartAnimation() {
   const history = useHistory();

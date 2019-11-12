@@ -1,7 +1,12 @@
+//Styling of boxes for saved cards from localStorage on MyCards-Page
+
+//Dependencies
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+
+//Functions and Components
 import Picture from "../components/Picture";
 import AllergyName from "../components/AllergyName";
 
