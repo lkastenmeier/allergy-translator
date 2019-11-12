@@ -45,7 +45,6 @@ export default function CardPage({ allergies }) {
   const [storageButton, setStorageButton] = useState(checkStorage());
 
   //Functions
-
   function handleAddCard() {
     addCardToStorage({
       allergy: allergy,

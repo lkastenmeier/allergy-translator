@@ -8,6 +8,16 @@ const app = express();
 // Run parse for every request
 app.use(express.json());
 
+async function getAllergies() {
+  const allergyCollection = await getCollection();
+  const allergies = await allergyCollection.find({}).toArray();
+
+  if (!allergies) {
+    throw new Error("can't find allergies");
+  }
+  return allergies;
+}
+
 // Serve Collection allergies from DB
 app.get("/api/allergies", async (request, response) => {
   try {
@@ -20,16 +30,6 @@ app.get("/api/allergies", async (request, response) => {
       .end("Error: The connection with the database failed");
   }
 });
-
-async function getAllergies() {
-  const allergyCollection = await getCollection();
-  const allergies = await allergyCollection.find({}).toArray();
-
-  if (!allergies) {
-    throw new Error("can't find allergies");
-  }
-  return allergies;
-}
 
 if (process.env.NODE_ENV === "production") {
   // Load environment

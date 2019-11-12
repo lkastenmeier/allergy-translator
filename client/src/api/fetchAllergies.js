@@ -5,6 +5,9 @@ export default async function fetchAllergies() {
   const allergies = await fetch("/api/allergies").then(response =>
     response.json()
   );
+  if (!allergies) {
+    throw new Error("Allergies can't be fetched");
+  }
   return arrayToObject(allergies);
 }
 function arrayToObject(array) {
