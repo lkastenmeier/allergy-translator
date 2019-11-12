@@ -1,3 +1,6 @@
+//Togglebutton to open/close the navigation
+
+//Dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
@@ -13,10 +16,6 @@ const StyledBurgerButton = styled.div`
   cursor: pointer;
   padding: 0;
   border: none;
-  :focus {
-    outline: none !important;
-    outline-offset: none !important;
-  }
 
   div {
     width: 1.9rem;

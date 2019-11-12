@@ -1,5 +1,5 @@
 import React from "react";
-export default function FindIcon({ className }) {
+export default function FindIcon() {
   return (
     <svg width="23" height="23.007" viewBox="0 0 23 23.007">
       <g id="Icon_ionic-ios-search" data-name="Icon ionic-ios-search">

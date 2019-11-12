@@ -1,3 +1,6 @@
+//Searchfield to specify userlocation on HelpPage
+
+//Dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
@@ -19,7 +22,7 @@ const StyledSearchfield = styled.input`
 
 export default function Searchfield({ input, placeholder }) {
   function onLocationInput(event) {
-    //
+    //extract value and pass it to map via Help.js
     const { value } = event.target;
     input(value);
   }

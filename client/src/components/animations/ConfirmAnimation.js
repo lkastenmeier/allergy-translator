@@ -1,9 +1,14 @@
+//Animation for userfeedback on localStorage add/remove
+
+//Dependencies
 import React from "react";
 import styled from "styled-components";
 import { keyframes } from "styled-components";
+
+//Functions & Components
 import CheckIcon from "../icons/CheckIcon";
 
-export const alert = keyframes`
+const alert = keyframes`
  0% {
       bottom: -20%;
     }

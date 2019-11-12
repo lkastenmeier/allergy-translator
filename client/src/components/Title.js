@@ -1,3 +1,6 @@
+//H1 for headlines
+
+//Dependencies
 import styled from "styled-components";
 
 const Title = styled.h1`

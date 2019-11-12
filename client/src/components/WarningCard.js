@@ -1,3 +1,6 @@
+//Warning-card with flexible image and text based on filterselections in Main.js
+
+//Dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";

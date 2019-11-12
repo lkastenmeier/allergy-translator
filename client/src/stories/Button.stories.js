@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../components/Button";
+import Button from "../components/buttons/Button";
 import DownloadIcon from "../icons/downloadIcon";
 
 export default {

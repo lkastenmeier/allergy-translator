@@ -1,20 +1,25 @@
+//Get warning-card, select language, download card, localStorage add/remove
+
+//Dependencies
 import React, { useState, createRef, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import Select from "../components/Select";
-import WarningCard from "../components/WarningCard";
-import Button from "../components/Button";
-import ButtonContainer from "../components/ButtonContainer";
 import styled from "styled-components";
-import DownloadIcon from "../icons/DownloadIcon";
-import CardContainer from "../components/CardContainer";
 import html2canvas from "html2canvas";
-import {
-  setCardsToStorage,
-  getCardsFromStorage,
-  removeCardsFromStorage
-} from "../api/storage";
+
+//Functions & Components
+import Select from "../Select";
+import WarningCard from "../WarningCard";
+import Button from "../buttons/Button";
+import ButtonContainer from "../buttons/ButtonContainer";
+import DownloadIcon from "../icons/DownloadIcon";
+import CardContainer from "../CardContainer";
 import { MyCardIconLight } from "../icons/MyCardIcon";
-import ConfirmationAnimation from "../components/ConfirmAnimation";
+import ConfirmationAnimation from "../animations/ConfirmAnimation";
+import {
+  addCardToStorage,
+  getCardFromStorage,
+  removeCardFromStorage
+} from "../../api/storage";
 
 const Article = styled.article`
   display: flex;
@@ -24,38 +29,60 @@ const ButtonName = styled.span`
   margin-left: 15px;
 `;
 export default function CardPage({ allergies }) {
-  const [startAnimation, setStartAnimation] = useState(false);
-
+  //Variables
+  const history = useHistory();
+  const cardToPrint = createRef(null);
+  const cardURL = `/main/card/${window.location.search}`;
   const url = new URL(window.location.href);
+  const allergy = url.searchParams.get("all");
   const language = url.searchParams.get("lang");
+
+  //States
   const [languageFilterSelection, setLanguageFilterSelection] = useState(
     language
   );
-  const history = useHistory();
-  const allergy = url.searchParams.get("all");
-  const cardToPrint = createRef(null);
-  const cardURL = `/main/card/${window.location.search}`;
+  const [startAnimation, setStartAnimation] = useState(false);
   const [storageButton, setStorageButton] = useState(checkStorage());
 
+  //Functions
+
   function handleAddCard() {
-    setCardsToStorage([allergy, languageFilterSelection, cardURL]);
+    addCardToStorage({
+      allergy: allergy,
+      language: languageFilterSelection,
+      url: cardURL
+    });
   }
 
   function handleRemoveCard() {
-    removeCardsFromStorage([allergy, languageFilterSelection, cardURL]);
+    removeCardFromStorage({
+      allergy: allergy,
+      language: languageFilterSelection,
+      url: cardURL
+    });
   }
 
   function checkStorage() {
-    if (getCardsFromStorage().find(parsedCard => parsedCard[2] === cardURL)) {
+    //check if current card is already in localStorage and render save/remove-button accordingly
+    if (getCardFromStorage().find(parsedCard => parsedCard.url === cardURL)) {
       return true;
     } else {
       return false;
     }
   }
+  function handleButton(action) {
+    //handle click of save/remove-button
+    action();
+    setStorageButton(!storageButton);
+    setStartAnimation(true);
+    setTimeout(() => {
+      setStartAnimation(false);
+    }, 2000);
+  }
 
   function saveAs(uri, filename) {
+    //save current warning-card from canvas as png
     const link = document.createElement("a");
-
     if (typeof link.download === "string") {
       link.href = uri;
       link.download = filename;
@@ -68,12 +95,13 @@ export default function CardPage({ allergies }) {
   }
 
   useEffect(() => {
+    //add languageselection as searchparameter to url
     const newParams = new URLSearchParams();
     newParams.append("lang", languageFilterSelection);
     history.push(
       `${window.location.pathname}?all=${allergy}&${newParams.toString()}`
     );
-  }, [history, languageFilterSelection]);
+  }, [history, languageFilterSelection, allergy]);
 
   return (
     <>
@@ -92,6 +120,7 @@ export default function CardPage({ allergies }) {
           <ButtonContainer>
             <Button
               onEvent={() => {
+                //create canvas from warning-card via library html2canvas
                 html2canvas(cardToPrint.current).then(function(canvas) {
                   saveAs(
                     canvas.toDataURL(),
@@ -106,12 +135,7 @@ export default function CardPage({ allergies }) {
             {!storageButton && (
               <Button
                 onEvent={() => {
-                  handleAddCard();
-                  setStorageButton(!storageButton);
-                  setStartAnimation(true);
-                  setTimeout(() => {
-                    setStartAnimation(false);
-                  }, 2000);
+                  handleButton(handleAddCard);
                 }}
               >
                 <MyCardIconLight />
@@ -121,12 +145,7 @@ export default function CardPage({ allergies }) {
             {storageButton && (
               <Button
                 onEvent={() => {
-                  handleRemoveCard();
-                  setStorageButton(!storageButton);
-                  setStartAnimation(true);
-                  setTimeout(() => {
-                    setStartAnimation(false);
-                  }, 2000);
+                  handleButton(handleRemoveCard);
                 }}
               >
                 <MyCardIconLight />

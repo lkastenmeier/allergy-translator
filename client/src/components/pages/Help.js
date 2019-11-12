@@ -1,10 +1,16 @@
+//Display map with preset searchparameter "hospitals" via google-maps-iframe
+
+//Dependencies
 import React, { useState } from "react";
-import Header from "../components/Header";
-import Searchfield from "../components/Searchfield";
-import Iframe from "../components/Iframe";
 import styled, { css, keyframes } from "styled-components";
+
+//Functions & Components
+import Iframe from "../Iframe";
+import Header from "../Header";
+import Searchfield from "../Searchfield";
 import MainLogo from "../icons/MainLogo";
 
+//loadinganimation
 const rotate = keyframes`
   from {
     transform: rotateY(0deg);
@@ -13,6 +19,8 @@ const rotate = keyframes`
     transform: rotateY(360deg);
   }
 `;
+
+//render map after loadinganimation
 const LoadedContent = styled.section`
   ${props =>
     props.animation
@@ -23,6 +31,8 @@ const LoadedContent = styled.section`
           display: none;
         `};
 `;
+
+//display loadinganimation before map
 const Loading = styled.div`
   ${props =>
     props.animation
@@ -41,13 +51,13 @@ const Loading = styled.div`
 export default function Help() {
   const [animation, setAnimation] = useState(false);
   const [location, setlocation] = useState("");
+
   React.useEffect(() => {
+    //set timeout for loadinganimation
     const timeout = () => setTimeout(() => setAnimation(true), 2000);
     timeout();
   }, []);
-  function onLocationInput(value) {
-    setlocation(value);
-  }
+
   return (
     <>
       <Header selected={window.location.pathname} />
@@ -55,10 +65,7 @@ export default function Help() {
         <MainLogo />
       </Loading>
       <LoadedContent animation={animation}>
-        <Searchfield
-          input={onLocationInput}
-          placeholder="Enter your location"
-        />
+        <Searchfield input={setlocation} placeholder="Enter your location" />
         <Iframe location={location} />
       </LoadedContent>
     </>

@@ -1,3 +1,6 @@
+//Items in navbar with changing styling based on current route
+
+//Dependencies
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";

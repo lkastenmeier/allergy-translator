@@ -1,8 +1,13 @@
+//selectiondisplays on StartPage
+
+//Dependencise
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
+
+//Functions and Components
 import AllergyName from "../components/AllergyName";
 import Picture from "./Picture";
-import PropTypes from "prop-types";
 
 const StyledAllergySelection = styled.section`
   display: flex;

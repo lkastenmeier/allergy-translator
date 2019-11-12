@@ -1,5 +1,5 @@
 import React from "react";
-import StartScreen from "../components/StartScreen";
+import StartScreen from "../components/animations/StartScreen";
 export default {
   title: "StartScreenAnimation"
 };

@@ -1,11 +1,14 @@
+//Dependencies
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Help from "./pages/Help";
-import Start from "./pages/Start";
-import Main from "./pages/Main";
-import MyCards from "./pages/MyCards";
 import styled, { ThemeProvider } from "styled-components";
+
+//Functions & Components
+import Help from "./components/pages/Help";
+import Start from "./components/pages/Start";
+import Main from "./components/pages/Main";
+import MyCards from "./components/pages/MyCards";
 import defaultTheme from "./themes/default";
 
 const Container = styled.div`

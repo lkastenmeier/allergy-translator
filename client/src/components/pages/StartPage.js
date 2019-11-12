@@ -1,7 +1,13 @@
+//Homepage for allergyselection and redirect to CardPage upon allergyselect
+
+//Dependencies
 import React from "react";
-import SelectionContainer from "../components/SelectionContainer";
-import AllergySelection from "../components/AllergySelection";
-import Title from "../components/Title";
+import PropTypes from "prop-types";
+
+//Functions & Components
+import SelectionContainer from "../SelectionContainer";
+import AllergySelection from "../AllergySelection";
+import Title from "../Title";
 
 export default function StartPage({ allergies, onAllergySelect }) {
   return (
@@ -22,3 +28,6 @@ export default function StartPage({ allergies, onAllergySelect }) {
     </>
   );
 }
+StartPage.propTypes = {
+  onAllergySelect: PropTypes.func
+};

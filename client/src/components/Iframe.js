@@ -1,3 +1,6 @@
+//Google-maps iframe with preset searchparameter "hospitals"
+
+//Dependencies
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
@@ -9,7 +12,9 @@ const StyledIframe = styled.article`
   border-radius: 2px;
   border: 3px solid ${props => props.theme.light};
 `;
+
 const iframeStyle = {
+  //avoid inline-styling for iframe for better readability
   border: "0",
   margin: "auto",
   width: "100%",

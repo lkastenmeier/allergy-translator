@@ -1,13 +1,18 @@
+//Header with HomeLink, Burgerbutton and NavBar including displaytoggle for the navigation
+
+//Dependencies
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
-import MainLogoMedium from "../icons/MainLogoMedium";
 import { Link } from "react-router-dom";
-import NavigationItem from "../components/NavigationItem";
-import { MyCardIconDark } from "../icons/MyCardIcon";
-import FindIcon from "../icons/FindIcon";
-import MainLogoSmall from "../icons/MainLogoSmall";
-import BurgerButton from "../components/BurgerButton";
 import PropTypes from "prop-types";
+
+//Functions & Components
+import MainLogoMedium from "./icons/MainLogoMedium";
+import NavigationItem from "../components/NavigationItem";
+import { MyCardIconDark } from "./icons/MyCardIcon";
+import FindIcon from "./icons/FindIcon";
+import MainLogoSmall from "./icons/MainLogoSmall";
+import BurgerButton from "../components/buttons/BurgerButton";
 
 const StyledAppHeader = styled.header`
   position: relative;
@@ -29,6 +34,8 @@ const StyledHomeLink = styled(Link)`
     outline-offset: none !important;
   }
 `;
+
+//displaytoggle navbar
 const StyledNavBar = styled.nav`
   ${props =>
     props.navigationDisplay
@@ -49,8 +56,10 @@ const StyledNavBar = styled.nav`
 const NavName = styled.span`
   margin-left: 15px;
 `;
+
 export default function Header({ selected, children }) {
   function toggleNav() {
+    //change state to toggle navigationdisplay on click of BurgerButton
     setNavigationDisplay(!navigationDisplay);
   }
   const [navigationDisplay, setNavigationDisplay] = useState(true);

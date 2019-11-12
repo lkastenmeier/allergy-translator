@@ -1,4 +1,8 @@
+//Container to arrange buttons/ navbuttons including responsiveness
+
+//Dependencies
 import styled from "styled-components";
+
 const ButtonContainer = styled.section`
   display: flex;
   align-items: center;

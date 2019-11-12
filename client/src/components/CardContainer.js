@@ -1,3 +1,6 @@
+//Container to define download-area for library html2print
+
+//Dependencies
 import styled from "styled-components";
 
 const CardContainer = styled.div`
