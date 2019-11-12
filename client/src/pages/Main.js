@@ -19,7 +19,10 @@ export default function Main() {
 
   function onAllergySelect(key) {
     setAllergyFilterSelection(key);
-    history.push(`/main/card/${key}?lang=english`);
+    const newParams = new URLSearchParams();
+    newParams.append("all", allergyFilterSelection);
+    history.push(`${window.location.pathname}?${newParams.toString()}`);
+    history.push(`/main/card/?all=${key}&lang=english`);
   }
 
   return (
@@ -29,7 +32,7 @@ export default function Main() {
         <Route exact path="/main">
           <StartPage allergies={allergies} onAllergySelect={onAllergySelect} />
         </Route>
-        <Route path="/main/card/:name">
+        <Route path="/main/card/">
           {props => (
             <CardPage
               {...props}

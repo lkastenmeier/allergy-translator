@@ -23,28 +23,28 @@ const Article = styled.article`
 const ButtonName = styled.span`
   margin-left: 15px;
 `;
-export default function CardPage({ allergies, match }) {
-  const [languageFilterSelection, setLanguageFilterSelection] = useState(
-    window.location.search.substr(6)
-  );
+export default function CardPage({ allergies }) {
   const [startAnimation, setStartAnimation] = useState(false);
 
+  const url = new URL(window.location.href);
+  const language = url.searchParams.get("lang");
+  const [languageFilterSelection, setLanguageFilterSelection] = useState(
+    language
+  );
   const history = useHistory();
-  const allergy = match.params.name;
-  const language = window.location.search.substr(6);
+  const allergy = url.searchParams.get("all");
   const cardToPrint = createRef(null);
-  const cardURL = `/main/card/${allergy}${window.location.search}`;
+  const cardURL = `/main/card/${window.location.search}`;
   const [storageButton, setStorageButton] = useState(checkStorage());
 
-  function onFilterSelect(value) {
-    setLanguageFilterSelection(value);
-  }
   function handleAddCard() {
-    setCardsToStorage([allergy, language, cardURL]);
+    setCardsToStorage([allergy, languageFilterSelection, cardURL]);
   }
+
   function handleRemoveCard() {
-    removeCardsFromStorage([allergy, language, cardURL]);
+    removeCardsFromStorage([allergy, languageFilterSelection, cardURL]);
   }
+
   function checkStorage() {
     if (getCardsFromStorage().find(parsedCard => parsedCard[2] === cardURL)) {
       return true;
@@ -53,23 +53,39 @@ export default function CardPage({ allergies, match }) {
     }
   }
 
+  function saveAs(uri, filename) {
+    const link = document.createElement("a");
+
+    if (typeof link.download === "string") {
+      link.href = uri;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      window.open(uri);
+    }
+  }
+
   useEffect(() => {
     const newParams = new URLSearchParams();
-    newParams.append("lang", `${languageFilterSelection}`);
-    history.push(`${window.location.pathname}?${newParams.toString()}`);
+    newParams.append("lang", languageFilterSelection);
+    history.push(
+      `${window.location.pathname}?all=${allergy}&${newParams.toString()}`
+    );
   }, [history, languageFilterSelection]);
 
   return (
     <>
-      {language && allergy && allergies && (
+      {languageFilterSelection && allergy && allergies && (
         <>
-          <Select allergies={allergies} select={onFilterSelect} />
+          <Select allergies={allergies} select={setLanguageFilterSelection} />
           <Article>
             <CardContainer ref={cardToPrint} key={allergy}>
               <WarningCard
                 src={allergies[allergy].images.warning}
                 alt={`no ${allergy}`}
-                text={allergies[allergy].languages[language]}
+                text={allergies[allergy].languages[languageFilterSelection]}
               />
             </CardContainer>
           </Article>
@@ -123,17 +139,4 @@ export default function CardPage({ allergies, match }) {
       )}
     </>
   );
-}
-function saveAs(uri, filename) {
-  const link = document.createElement("a");
-
-  if (typeof link.download === "string") {
-    link.href = uri;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  } else {
-    window.open(uri);
-  }
 }
