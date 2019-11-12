@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const AllergyNameField = styled.div`
+const StyledAllergyName = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +15,7 @@ const AllergyNameField = styled.div`
 `;
 
 export default function AllergyName({ children }) {
-  return <AllergyNameField>{children}</AllergyNameField>;
+  return <StyledAllergyName>{children}</StyledAllergyName>;
 }
 
 AllergyName.propTypes = {

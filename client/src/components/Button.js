@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const BasicButton = styled.button`
+const StyledButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,13 +16,14 @@ const BasicButton = styled.button`
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  :hover {
-    transform: scale(1.1);
+
+  :focus {
+    border: 4px solid ${props => props.theme.text};
   }
   @media (max-width: 330px) {
     width: 150px;
   }
-  @media (min-width: 400px) {
+  @media (min-width: 420px) {
     width: 350px;
     height: 100px;
   }
@@ -37,9 +38,9 @@ const BasicButton = styled.button`
 `;
 
 export default function Button({ children, onEvent }) {
-  return <BasicButton onClick={onEvent}>{children}</BasicButton>;
+  return <StyledButton onClick={onEvent}>{children}</StyledButton>;
 }
 Button.propTypes = {
   children: PropTypes.node.isRequired,
-  onClick: PropTypes.func
+  onEvent: PropTypes.func
 };

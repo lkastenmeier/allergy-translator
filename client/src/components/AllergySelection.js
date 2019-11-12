@@ -4,7 +4,7 @@ import AllergyName from "../components/AllergyName";
 import Picture from "./Picture";
 import PropTypes from "prop-types";
 
-const AllergySelectionBox = styled.section`
+const StyledAllergySelection = styled.section`
   display: flex;
   flex-direction: column;
   width: 146px;
@@ -23,15 +23,14 @@ const AllergySelectionBox = styled.section`
 
 export default function AllergySelection({ onAllergySelect, src, name }) {
   return (
-    <AllergySelectionBox onClick={onAllergySelect}>
+    <StyledAllergySelection onClick={onAllergySelect}>
       <Picture src={src} alt={name} />
       <AllergyName>{name}</AllergyName>
-    </AllergySelectionBox>
+    </StyledAllergySelection>
   );
 }
 AllergySelection.propTypes = {
   src: PropTypes.string.isRequired,
-  alt: PropTypes.string,
   name: PropTypes.string.isRequired,
-  onClick: PropTypes.func
+  onAllergySelect: PropTypes.func
 };

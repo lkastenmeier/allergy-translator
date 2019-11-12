@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const Burger = styled.button`
+const StyledBurgerButton = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -13,6 +13,10 @@ const Burger = styled.button`
   cursor: pointer;
   padding: 0;
   border: none;
+  :focus {
+    outline: none !important;
+    outline-offset: none !important;
+  }
 
   div {
     width: 1.9rem;
@@ -36,17 +40,17 @@ const Burger = styled.button`
   }
 `;
 
-export default function BurgerButton({ navigationDisplay, onToggle }) {
+export default function BurgerButton({ active, onToggle }) {
   return (
-    <Burger onClick={onToggle} active={navigationDisplay}>
+    <StyledBurgerButton onClick={onToggle} active={active}>
       <div />
       <div />
       <div />
-    </Burger>
+    </StyledBurgerButton>
   );
 }
 
 BurgerButton.propTypes = {
-  onClick: PropTypes.func,
+  onToggle: PropTypes.func,
   active: PropTypes.bool
 };

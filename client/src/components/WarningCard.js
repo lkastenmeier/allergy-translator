@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const WarningCardDiv = styled.div`
+const StyledWarningCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,12 +11,12 @@ const WarningCardDiv = styled.div`
   background: white;
   border: 6px solid ${props => props.theme.highlight};
 `;
-const Image = styled.img`
+const StyledImage = styled.img`
   width: 50%;
   height: 50%;
 `;
 
-const Paragraph = styled.p`
+const StyledText = styled.p`
   width: 83%;
   font-size: 1.2rem;
   color: ${props => props.theme.highlight};
@@ -27,10 +27,10 @@ const Paragraph = styled.p`
 
 export default function WarningCard({ src, alt, text }) {
   return (
-    <WarningCardDiv>
-      <Image src={src} alt={alt} />
-      <Paragraph>{text}</Paragraph>
-    </WarningCardDiv>
+    <StyledWarningCard>
+      <StyledImage src={src} alt={alt} />
+      <StyledText>{text}</StyledText>
+    </StyledWarningCard>
   );
 }
 
