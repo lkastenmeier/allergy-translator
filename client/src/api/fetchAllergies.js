@@ -2,14 +2,19 @@
 
 export default async function fetchAllergies() {
   //fetch Data
-  const allergies = await fetch("/api/allergies").then(response =>
-    response.json()
-  );
-  if (!allergies) {
-    throw new Error("Allergies can't be fetched");
+  try {
+    const allergies = await fetch("/api/allergies").then(response =>
+      response.json()
+    );
+    if (!allergies) {
+      throw new Error("Allergies can't be fetched");
+    }
+    return arrayToObject(allergies);
+  } catch (error) {
+    console.log(`An error occured during fetch: ${error}`);
   }
-  return arrayToObject(allergies);
 }
+
 function arrayToObject(array) {
   //change Datastructure from Array to Object for further use
   const allergyObject = {};
