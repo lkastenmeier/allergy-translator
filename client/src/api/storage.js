@@ -13,18 +13,18 @@ export function getCardFromStorage() {
 export function addCardToStorage(newCard) {
   //add data to localStorage if no matching dataset exists already
   const parsedCards = getCardFromStorage();
-  if (!parsedCards.find(parsedCard => parsedCard.url === newCard.url)) {
-    // check for matching datasets by comparing the url(=id) of existing and new Data
+  if (!parsedCards.find(parsedCard => parsedCard.id === newCard.id)) {
+    //check for matching datasets by comparing the id of existing and new Data
     parsedCards.push(newCard);
     localStorage.setItem("cards", JSON.stringify(parsedCards));
   }
 }
-export function removeCardFromStorage(card) {
+export function removeCardFromStorage(cardId) {
   //remove data to localStorage by matching with existing datasets
   const parsedCards = getCardFromStorage();
   for (let i = 0; i < parsedCards.length; i++) {
-    if (parsedCards.find(parsedCard => parsedCard.url === card.url)) {
-      // check for matching datasets by comparing the url(=id) of existing and new Data and splicing the matching object
+    if (parsedCards.find(parsedCard => parsedCard.id === cardId)) {
+      //check for matching datasets by comparing the id of existing and new Data and splicing the matching object
       parsedCards.splice(i, 1);
       localStorage.setItem("cards", JSON.stringify(parsedCards));
       break;

@@ -36,6 +36,7 @@ export default function CardPage({ allergies }) {
   const url = new URL(window.location.href);
   const allergy = url.searchParams.get("all");
   const language = url.searchParams.get("lang");
+  const id = `${allergy}_${language}`;
 
   //States
   const [languageFilterSelection, setLanguageFilterSelection] = useState(
@@ -49,16 +50,13 @@ export default function CardPage({ allergies }) {
     addCardToStorage({
       allergy: allergy,
       language: languageFilterSelection,
-      url: cardURL
+      url: cardURL,
+      id: id
     });
   }
 
   function handleRemoveCard() {
-    removeCardFromStorage({
-      allergy: allergy,
-      language: languageFilterSelection,
-      url: cardURL
-    });
+    removeCardFromStorage(id);
   }
 
   function checkStorage() {
