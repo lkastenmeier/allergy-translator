@@ -5,9 +5,6 @@ const { getCollection, initDatabase } = require("./server/database");
 const path = require("path");
 const app = express();
 
-// Run parse for every request
-app.use(express.json());
-
 async function getAllergies() {
   const allergyCollection = await getCollection();
   const allergies = await allergyCollection.find({}).toArray();
@@ -18,33 +15,38 @@ async function getAllergies() {
   return allergies;
 }
 
-// Serve Collection allergies from DB
+//Serve Collection allergies from DB
 app.get("/api/allergies", async (request, response) => {
   try {
-    const allergyName = await getAllergies();
-    return response.json(allergyName);
+    const allergies = await getAllergies();
+    return response.json(allergies);
   } catch (error) {
-    console.error(`Thats the error: ${error}`);
+    console.error(`Database-error: ${error}`);
     return response
       .status(500)
-      .end("Error: The connection with the database failed");
+      .end("Error: Connection with the database failed");
   }
 });
 
 if (process.env.NODE_ENV === "production") {
-  // Load environment
+  //Load environment
   app.use(express.static(path.join(__dirname, "client/build")));
-  // Serve static files
   app.get("*", function(req, res) {
-    // Return requests to React app
+    //Return file to React app
     res.sendFile(path.join(__dirname, "client/build", "index.html"));
   });
 }
-initDatabase(process.env.DB_URL, process.env.DB_NAME).then(() => {
-  // Initalize DB
-  console.log(`Database ${process.env.DB_NAME} is ready`);
 
-  app.listen(process.env.PORT, () => {
-    console.log(`Server is running on http://localhost:${process.env.PORT}`);
-  });
-});
+const initDbAndListen = async () => {
+  try {
+    //initialize database
+    await initDatabase(process.env.DB_URL, process.env.DB_NAME);
+    console.log(`Database ${process.env.DB_NAME} is ready`);
+    app.listen(process.env.PORT, () => {
+      console.log(`Server is listening on port ${process.env.PORT}`);
+    });
+  } catch (error) {
+    console.log(`Error during database initialization ${error}`);
+  }
+};
+initDbAndListen();
