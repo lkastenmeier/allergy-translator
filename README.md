@@ -6,6 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This application allows you to travel safely despite dietary restrictions. Generate warning-cards based on your allergy and a selected language! You can download them or save them to your favoutites for easy access and/or offline use. In case of an emergency Trallergy shows you all hospitals closeby! So eat safe and travel much!
 
+![TrallergyScreenshot1](client/public/images/HomepageTrallergy.jpg)
+![TrallergyScreenshot2](client/public/images/Warning-CardTrallergy.jpg)
+![TrallergyScreenshot3](client/public/images/MapTrallergy.jpg)
+
 # Hosting
 
 Trallergy is hosted on Heroku.

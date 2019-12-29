@@ -27,6 +27,8 @@
     "heroku-prebuild": "cd client && npm ci --only=prod"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "react-testing-library": "^8.0.1"
   }
 }
