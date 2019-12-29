@@ -6,8 +6,8 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 //Functions and Components
-import AllergyName from "../components/AllergyName";
-import Picture from "./Picture";
+import AllergyName from "../AllergyName/AllergyName";
+import Picture from "../Picture/Picture";
 
 const StyledAllergySelection = styled.section`
   display: flex;

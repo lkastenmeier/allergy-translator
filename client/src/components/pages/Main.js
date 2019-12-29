@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import { Switch, Route } from "react-router-dom";
 
 //Functions & Components
-import Header from "../Header";
+import Header from "../Header/Header";
 import fetchAllergies from "../../api/fetchAllergies";
 import StartPage from "../pages/StartPage";
 import CardPage from "../pages/CardPage";

@@ -41,7 +41,11 @@ const StyledButton = styled.div`
 `;
 
 export default function Button({ children, onEvent }) {
-  return <StyledButton onClick={onEvent}>{children}</StyledButton>;
+  return (
+    <StyledButton data-testid="button" onClick={onEvent}>
+      {children}
+    </StyledButton>
+  );
 }
 Button.propTypes = {
   children: PropTypes.node.isRequired,

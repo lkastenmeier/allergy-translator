@@ -1,6 +1,6 @@
 import React from "react";
-import AllergySelectionContainer from "../components/AllergySelectionContainer";
-import AllergySelection from "../components/AllergySelection";
+import AllergySelectionContainer from "../components/AllergySelectionContainer/AllergySelectionContainer";
+import AllergySelection from "../components/AllergySelection/AllergySelection";
 
 export default {
   title: "AllergySelectionContainer"
