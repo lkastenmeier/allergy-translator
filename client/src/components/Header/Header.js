@@ -7,12 +7,12 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 //Functions & Components
-import MainLogoMedium from "./icons/MainLogoMedium";
-import NavigationItem from "../components/NavigationItem";
-import { MyCardIconDark } from "./icons/MyCardIcon";
-import FindIcon from "./icons/FindIcon";
-import MainLogoSmall from "./icons/MainLogoSmall";
-import BurgerButton from "../components/buttons/BurgerButton";
+import MainLogoMedium from "../icons/MainLogoMedium";
+import NavigationItem from "../NavigationItem/NavigationItem";
+import { MyCardIconDark } from "../icons/MyCardIcon";
+import FindIcon from "../icons/FindIcon";
+import MainLogoSmall from "../icons/MainLogoSmall";
+import BurgerButton from "../buttons/BurgerButton/BurgerButton";
 
 const StyledAppHeader = styled.header`
   position: relative;

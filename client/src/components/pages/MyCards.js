@@ -5,13 +5,13 @@ import React from "react";
 import styled from "styled-components";
 
 //Functions & Components
-import Header from "../Header";
-import MyCardBox from "../MyCardBox";
+import Header from "../Header/Header";
+import MyCardBox from "../MyCardBox/MyCardBox";
 import { getCardFromStorage } from "../../api/storage";
-import SelectionContainer from "../SelectionContainer";
-import Title from "../Title";
+import SelectionContainer from "../SelectionContainer/SelectionContainer";
+import Title from "../Title/Title";
 import MainLogo from "../icons/MainLogo";
-import NavButton from "../buttons/NavButton";
+import NavButton from "../buttons/NavButton/NavButton";
 
 const Container = styled.section`
   display: flex;
