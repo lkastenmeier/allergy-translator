@@ -5,9 +5,9 @@ import React, { useState } from "react";
 import styled, { css, keyframes } from "styled-components";
 
 //Functions & Components
-import Iframe from "../Iframe";
-import Header from "../Header";
-import Searchfield from "../Searchfield";
+import Iframe from "../Iframe/Iframe";
+import Header from "../Header/Header";
+import Searchfield from "../Searchfield/Searchfield";
 import MainLogo from "../icons/MainLogo";
 
 //loadinganimation

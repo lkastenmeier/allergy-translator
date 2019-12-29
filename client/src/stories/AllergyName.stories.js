@@ -1,5 +1,5 @@
 import React from "react";
-import AllergyName from "../components/AllergyName";
+import AllergyName from "../components/AllergyName/AllergyName";
 
 export default {
   title: "AllergyName"

@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 //Functions and Components
-import Picture from "../components/Picture";
-import AllergyName from "../components/AllergyName";
+import Picture from "../Picture/Picture";
+import AllergyName from "../AllergyName/AllergyName";
 
 const StyledMyCardBox = styled(Link)`
   display: flex;

@@ -5,9 +5,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 //Functions & Components
-import SelectionContainer from "../SelectionContainer";
-import AllergySelection from "../AllergySelection";
-import Title from "../Title";
+import SelectionContainer from "../SelectionContainer/SelectionContainer";
+import AllergySelection from "../AllergySelection/AllergySelection";
+import Title from "../Title/Title";
 
 const StartPage = ({ allergies, onAllergySelect }) => {
   return (

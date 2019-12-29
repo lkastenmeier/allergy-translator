@@ -7,12 +7,12 @@ import styled from "styled-components";
 import html2canvas from "html2canvas";
 
 //Functions & Components
-import Select from "../Select";
-import WarningCard from "../WarningCard";
-import Button from "../buttons/Button";
-import ButtonContainer from "../buttons/ButtonContainer";
+import Select from "../Select/Select";
+import WarningCard from "../WarningCard/WarningCard";
+import Button from "../buttons/Button/Button";
+import ButtonContainer from "../buttons/ButtonContainer/ButtonContainer";
 import DownloadIcon from "../icons/DownloadIcon";
-import CardContainer from "../CardContainer";
+import CardContainer from "../CardContainer/CardContainer";
 import { MyCardIconLight } from "../icons/MyCardIcon";
 import ConfirmationAnimation from "../animations/ConfirmAnimation";
 import {
