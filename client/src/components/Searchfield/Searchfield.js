@@ -27,7 +27,11 @@ export default function Searchfield({ input, placeholder }) {
     input(value);
   }
   return (
-    <StyledSearchfield placeholder={placeholder} onChange={onLocationInput} />
+    <StyledSearchfield
+      data-testid="searchfield"
+      placeholder={placeholder}
+      onChange={onLocationInput}
+    />
   );
 }
 
