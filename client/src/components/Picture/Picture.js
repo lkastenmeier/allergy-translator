@@ -12,7 +12,7 @@ const StyledPicture = styled.img`
 `;
 
 export default function Picture({ src, alt }) {
-  return <StyledPicture src={src} alt={alt} />;
+  return <StyledPicture data-testid="picture" src={src} alt={alt} />;
 }
 
 Picture.propTypes = {
