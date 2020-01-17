@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<img
+  alt="alt"
+  className="sc-bdVaJa wQRFw"
+  data-testid="picture"
+  src="/icons/MainLogo"
+/>
+`;
