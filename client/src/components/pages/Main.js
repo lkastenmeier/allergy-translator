@@ -11,7 +11,7 @@ import fetchAllergies from "../../api/fetchAllergies";
 import StartPage from "../pages/StartPage";
 import CardPage from "../pages/CardPage";
 
-export default function Main() {
+const Main = () => {
   const [allergies, setAllergies] = useState(false);
   const [allergyFilterSelection, setAllergyFilterSelection] = useState("milk");
   const history = useHistory(); //dom-method to change route
@@ -23,14 +23,14 @@ export default function Main() {
     });
   }, []);
 
-  function onAllergySelect(key) {
+  const onAllergySelect = key => {
     //save allergyselection as searchparameter in url and redirect to CardPage
     setAllergyFilterSelection(key);
     const newParams = new URLSearchParams();
     newParams.append("all", allergyFilterSelection);
     history.push(`${window.location.pathname}?${newParams.toString()}`);
     history.push(`/main/card/?all=${key}&lang=english`);
-  }
+  };
 
   return (
     <>
@@ -48,4 +48,5 @@ export default function Main() {
       </Switch>
     </>
   );
-}
+};
+export default Main;

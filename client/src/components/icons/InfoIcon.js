@@ -1,5 +1,5 @@
 import React from "react";
-export default function InfoIcon() {
+const InfoIcon = () => {
   return (
     <svg width="22" height="22" viewBox="0 0 19 19">
       <g transform="translate(1 1)">
@@ -33,4 +33,5 @@ export default function InfoIcon() {
       </g>
     </svg>
   );
-}
+};
+export default InfoIcon;

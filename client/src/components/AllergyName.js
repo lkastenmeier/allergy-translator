@@ -17,10 +17,10 @@ const StyledAllergyName = styled.div`
   text-transform: lowercase;
 `;
 
-export default function AllergyName({ children }) {
+const AllergyName = ({ children }) => {
   return <StyledAllergyName>{children}</StyledAllergyName>;
-}
-
+};
+export default AllergyName;
 AllergyName.propTypes = {
   children: PropTypes.node.isRequired
 };

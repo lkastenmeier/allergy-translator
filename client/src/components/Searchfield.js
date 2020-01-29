@@ -20,7 +20,7 @@ const StyledSearchfield = styled.input`
   }
 `;
 
-export default function Searchfield({ input, placeholder }) {
+const Searchfield = ({ input, placeholder }) => {
   function onLocationInput(event) {
     //extract value and pass it to map via Help.js
     const { value } = event.target;
@@ -29,7 +29,8 @@ export default function Searchfield({ input, placeholder }) {
   return (
     <StyledSearchfield placeholder={placeholder} onChange={onLocationInput} />
   );
-}
+};
+export default Searchfield;
 
 Searchfield.propTypes = {
   input: PropTypes.func,

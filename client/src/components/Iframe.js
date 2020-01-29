@@ -21,7 +21,7 @@ const iframeStyle = {
   height: "100%"
 };
 
-export default function Iframe({ location }) {
+const Iframe = ({ location }) => {
   return (
     <StyledIframe>
       <iframe
@@ -32,7 +32,8 @@ export default function Iframe({ location }) {
       />
     </StyledIframe>
   );
-}
+};
+export default Iframe;
 
 Iframe.propTypes = {
   location: PropTypes.string

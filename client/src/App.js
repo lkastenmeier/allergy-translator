@@ -23,7 +23,7 @@ const Container = styled.div`
   overflow-y: scroll;
 `;
 
-function App() {
+const App = () => {
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container>
@@ -37,6 +37,6 @@ function App() {
       </Container>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

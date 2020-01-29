@@ -57,7 +57,7 @@ const NavName = styled.span`
   margin-left: 15px;
 `;
 
-export default function Header({ selected, children }) {
+const Header = ({ selected, children }) => {
   function toggleNav() {
     //change state to toggle navigationdisplay on click of BurgerButton
     setNavigationDisplay(!navigationDisplay);
@@ -92,7 +92,8 @@ export default function Header({ selected, children }) {
       </StyledNavBar>
     </>
   );
-}
+};
+export default Header;
 Header.propTypes = {
   selected: PropTypes.string,
   children: PropTypes.node

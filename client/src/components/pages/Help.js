@@ -48,7 +48,7 @@ const Loading = styled.div`
         `};
 `;
 
-export default function Help() {
+const Help = () => {
   const [animation, setAnimation] = useState(false);
   const [location, setlocation] = useState("");
 
@@ -70,4 +70,5 @@ export default function Help() {
       </LoadedContent>
     </>
   );
-}
+};
+export default Help;

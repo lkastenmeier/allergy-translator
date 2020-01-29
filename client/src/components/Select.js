@@ -25,7 +25,7 @@ const StyledSelect = styled.select`
   }
 `;
 
-export default function Select({ select, allergies }) {
+const Select = ({ select, allergies }) => {
   function onFilterSelect(event) {
     const { value } = event.target;
     select(value);
@@ -40,7 +40,8 @@ export default function Select({ select, allergies }) {
       ))}
     </StyledSelect>
   );
-}
+};
+export default Select;
 
 Select.propTypes = {
   key: PropTypes.string,

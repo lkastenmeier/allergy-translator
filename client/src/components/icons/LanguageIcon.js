@@ -1,5 +1,5 @@
 import React from "react";
-export default function LanguageIcon() {
+const LanguageIcon = () => {
   return (
     <svg height="22.929" viewBox="0 0 25.543 22.929">
       <g transform="translate(1 1)">
@@ -22,4 +22,5 @@ export default function LanguageIcon() {
       </g>
     </svg>
   );
-}
+};
+export default LanguageIcon;

@@ -9,7 +9,7 @@ import SelectionContainer from "../SelectionContainer";
 import AllergySelection from "../AllergySelection";
 import Title from "../Title";
 
-export default function StartPage({ allergies, onAllergySelect }) {
+const StartPage = ({ allergies, onAllergySelect }) => {
   return (
     <>
       <Title>what is your dietary restriction?</Title>
@@ -27,7 +27,9 @@ export default function StartPage({ allergies, onAllergySelect }) {
       </SelectionContainer>
     </>
   );
-}
+};
+export default StartPage;
+
 StartPage.propTypes = {
   onAllergySelect: PropTypes.func
 };

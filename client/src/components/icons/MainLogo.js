@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function MainLogo() {
+const MainLogo = () => {
   return (
     <svg width="111.526" height="134.286" viewBox="0 0 111.526 134.286">
       <g>
@@ -56,4 +56,5 @@ export default function MainLogo() {
       </g>
     </svg>
   );
-}
+};
+export default MainLogo;
