@@ -46,10 +46,12 @@ const StyledConfirmationAnimation = styled.div`
   animation: ${alert} 2s ease-in-out;
 `;
 
-export default function ConfirmationAnimation() {
+const ConfirmationAnimation = () => {
   return (
     <StyledConfirmationAnimation>
       <CheckIcon />
     </StyledConfirmationAnimation>
   );
-}
+};
+
+export default ConfirmationAnimation;

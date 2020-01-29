@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 //Functions & Components
 import StartScreen from "../animations/StartScreen";
 
-export default function StartAnimation() {
+const StartAnimation = () => {
   const history = useHistory();
 
   const redirect = () => {
@@ -23,4 +23,5 @@ export default function StartAnimation() {
   }, []);
 
   return <>{animation ? <StartScreen /> : redirect()}</>;
-}
+};
+export default StartAnimation;

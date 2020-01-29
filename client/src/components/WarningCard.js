@@ -28,14 +28,15 @@ const StyledText = styled.p`
   line-height: 30px;
 `;
 
-export default function WarningCard({ src, alt, text }) {
+const WarningCard = ({ src, alt, text }) => {
   return (
     <StyledWarningCard>
       <StyledImage src={src} alt={alt} />
       <StyledText>{text}</StyledText>
     </StyledWarningCard>
   );
-}
+};
+export default WarningCard;
 
 WarningCard.propTypes = {
   src: PropTypes.string.isRequired,

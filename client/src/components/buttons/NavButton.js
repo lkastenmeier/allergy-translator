@@ -43,9 +43,14 @@ const StyledNavButton = styled(Link)`
   }
 `;
 
-export default function NavButton({ path, name }) {
-  return <StyledNavButton to={path}>{name}</StyledNavButton>;
-}
+const NavButton = ({ path, name }) => {
+  return (
+    <StyledNavButton data-testid="navbutton" to={path}>
+      {name}
+    </StyledNavButton>
+  );
+};
+export default NavButton;
 
 NavButton.propTypes = {
   path: PropTypes.string.isRequired,

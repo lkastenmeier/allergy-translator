@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CheckIcon() {
+const CheckIcon = () => {
   return (
     <svg
       id="haekchen_1_"
@@ -34,4 +34,5 @@ export default function CheckIcon() {
       </g>
     </svg>
   );
-}
+};
+export default CheckIcon;

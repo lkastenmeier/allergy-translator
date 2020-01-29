@@ -24,13 +24,14 @@ const StyledNavigationItem = styled(Link)`
   text-decoration: none;
 `;
 
-export default function NavigationItem({ path, active, children }) {
+const NavigationItem = ({ path, active, children }) => {
   return (
     <StyledNavigationItem to={path} active={active ? 1 : 0}>
       {children}
     </StyledNavigationItem>
   );
-}
+};
+export default NavigationItem;
 
 NavigationItem.propTypes = {
   path: PropTypes.string.isRequired,

@@ -70,7 +70,7 @@ const StyledName = styled.h1`
   font-family: "Comfortaa", cursive;
 `;
 
-export default function StartScreen() {
+const StartScreen = () => {
   return (
     <StartPage>
       <StyledName>Trallergy</StyledName>
@@ -84,4 +84,5 @@ export default function StartScreen() {
       </StyledAnimation>
     </StartPage>
   );
-}
+};
+export default StartScreen;

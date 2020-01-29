@@ -28,7 +28,7 @@ const Article = styled.article`
 const ButtonName = styled.span`
   margin-left: 15px;
 `;
-export default function CardPage({ allergies }) {
+const CardPage = ({ allergies }) => {
   //Variables
   const history = useHistory();
   const cardToPrint = createRef(null);
@@ -46,18 +46,18 @@ export default function CardPage({ allergies }) {
   const [storageButton, setStorageButton] = useState(checkStorage());
 
   //Functions
-  function handleAddCard() {
+  const handleAddCard = () => {
     addCardToStorage({
       allergy: allergy,
       language: languageFilterSelection,
       url: cardURL,
       id: id
     });
-  }
+  };
 
-  function handleRemoveCard() {
+  const handleRemoveCard = () => {
     removeCardFromStorage(id);
-  }
+  };
 
   function checkStorage() {
     //check if current card is already in localStorage and render save/remove-button accordingly
@@ -67,7 +67,7 @@ export default function CardPage({ allergies }) {
       return false;
     }
   }
-  function handleButton(action) {
+  const handleButton = action => {
     //handle click of save/remove-button
     action();
     setStorageButton(!storageButton);
@@ -75,9 +75,9 @@ export default function CardPage({ allergies }) {
     setTimeout(() => {
       setStartAnimation(false);
     }, 2000);
-  }
+  };
 
-  function saveAs(uri, filename) {
+  const saveAs = (uri, filename) => {
     //save current warning-card from canvas as png
     const link = document.createElement("a");
     if (typeof link.download === "string") {
@@ -89,7 +89,7 @@ export default function CardPage({ allergies }) {
     } else {
       window.open(uri);
     }
-  }
+  };
 
   useEffect(() => {
     //add languageselection as searchparameter to url
@@ -155,4 +155,5 @@ export default function CardPage({ allergies }) {
       )}
     </>
   );
-}
+};
+export default CardPage;

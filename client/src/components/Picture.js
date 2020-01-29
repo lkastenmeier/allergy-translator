@@ -11,9 +11,10 @@ const StyledPicture = styled.img`
   padding: 3px;
 `;
 
-export default function Picture({ src, alt }) {
-  return <StyledPicture src={src} alt={alt} />;
-}
+const Picture = ({ src, alt }) => {
+  return <StyledPicture data-testid="picture" src={src} alt={alt} />;
+};
+export default Picture;
 
 Picture.propTypes = {
   src: PropTypes.string.isRequired,

@@ -20,7 +20,7 @@ const Container = styled.section`
   margin: 15% auto;
 `;
 
-export default function MyCard() {
+const MyCard = () => {
   const mycards = getCardFromStorage();
   return (
     <>
@@ -49,4 +49,5 @@ export default function MyCard() {
       )}
     </>
   );
-}
+};
+export default MyCard;

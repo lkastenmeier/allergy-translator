@@ -40,9 +40,15 @@ const StyledButton = styled.div`
   }
 `;
 
-export default function Button({ children, onEvent }) {
-  return <StyledButton onClick={onEvent}>{children}</StyledButton>;
-}
+const Button = ({ children, onEvent }) => {
+  return (
+    <StyledButton data-testid="button" onClick={onEvent}>
+      {children}
+    </StyledButton>
+  );
+};
+export default Button;
+
 Button.propTypes = {
   children: PropTypes.node.isRequired,
   onEvent: PropTypes.func

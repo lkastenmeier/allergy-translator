@@ -26,15 +26,15 @@ const StyledMyCardBox = styled(Link)`
     height: 221px;
   }
 `;
-export default function MyCardBox({ path, allergy, language }) {
+const MyCardBox = ({ path, allergy, language }) => {
   return (
     <StyledMyCardBox to={path}>
       <Picture src={`/images/${allergy}Warning.svg`} alt={allergy} />
       <AllergyName>{language}</AllergyName>
     </StyledMyCardBox>
   );
-}
-
+};
+export default MyCardBox;
 MyCardBox.propTypes = {
   path: PropTypes.string.isRequired,
   allergy: PropTypes.string.isRequired,

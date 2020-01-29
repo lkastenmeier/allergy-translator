@@ -39,7 +39,7 @@ const StyledBurgerButton = styled.div`
   }
 `;
 
-export default function BurgerButton({ active, onToggle }) {
+const BurgerButton = ({ active, onToggle }) => {
   return (
     <StyledBurgerButton onClick={onToggle} active={active}>
       <div />
@@ -47,7 +47,8 @@ export default function BurgerButton({ active, onToggle }) {
       <div />
     </StyledBurgerButton>
   );
-}
+};
+export default BurgerButton;
 
 BurgerButton.propTypes = {
   onToggle: PropTypes.func,

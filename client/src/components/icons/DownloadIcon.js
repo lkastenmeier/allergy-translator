@@ -1,5 +1,5 @@
 import React from "react";
-export default function DownloadIcon() {
+const DownloadIcon = () => {
   return (
     <svg width="18.5" height="23" viewBox="0 0 18.5 23">
       <path
@@ -9,4 +9,5 @@ export default function DownloadIcon() {
       />
     </svg>
   );
-}
+};
+export default DownloadIcon;

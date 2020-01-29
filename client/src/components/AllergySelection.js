@@ -26,14 +26,15 @@ const StyledAllergySelection = styled.section`
   }
 `;
 
-export default function AllergySelection({ onAllergySelect, src, name }) {
+const AllergySelection = ({ onAllergySelect, src, name }) => {
   return (
     <StyledAllergySelection onClick={onAllergySelect}>
       <Picture src={src} alt={name} />
       <AllergyName>{name}</AllergyName>
     </StyledAllergySelection>
   );
-}
+};
+export default AllergySelection;
 AllergySelection.propTypes = {
   src: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
