@@ -1,4 +1,8 @@
 import React from "react";
+
+// Unit test of the Searchfield Component
+
+//imports
 import ReactDOM from "react-dom";
 import Searchfield from "./../Searchfield";
 import "@testing-library/jest-dom/extend-expect";

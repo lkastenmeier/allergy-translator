@@ -1,3 +1,6 @@
+// Unit test of the Picture Component
+
+//imports
 import React from "react";
 import ReactDOM from "react-dom";
 import Picture from "./../Picture";
